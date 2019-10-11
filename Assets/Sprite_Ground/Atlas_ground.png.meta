@@ -1,0 +1,2455 @@
+fileFormatVersion: 2
+guid: a6d332b961224ee449f039f8b00d7490
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4920265541882117592
+    second: Atlas_ground_0
+  - first:
+      213: -8481759455968925894
+    second: Atlas_ground_1
+  - first:
+      213: -8070532417574259212
+    second: Atlas_ground_2
+  - first:
+      213: -5865960723528808206
+    second: Atlas_ground_3
+  - first:
+      213: 6477992828054085794
+    second: Atlas_ground_4
+  - first:
+      213: -4248543745844896987
+    second: Atlas_ground_5
+  - first:
+      213: 587218036633801890
+    second: Atlas_ground_6
+  - first:
+      213: 3459674700722907113
+    second: Atlas_ground_7
+  - first:
+      213: 984102140402920591
+    second: Atlas_ground_8
+  - first:
+      213: 4267820873286414092
+    second: Atlas_ground_9
+  - first:
+      213: -292813039238978979
+    second: Atlas_ground_10
+  - first:
+      213: 9130892378483813892
+    second: Atlas_ground_11
+  - first:
+      213: -6454168043016264802
+    second: Atlas_ground_12
+  - first:
+      213: 3371329831213072472
+    second: Atlas_ground_13
+  - first:
+      213: 298280306293675214
+    second: Atlas_ground_14
+  - first:
+      213: 2683688526572982994
+    second: Atlas_ground_15
+  - first:
+      213: 6940967933811126917
+    second: Atlas_ground_16
+  - first:
+      213: -7896419020733270413
+    second: Atlas_ground_17
+  - first:
+      213: 2358930053011081744
+    second: Atlas_ground_18
+  - first:
+      213: 7795404830959560431
+    second: Atlas_ground_19
+  - first:
+      213: -5840922897113805069
+    second: Atlas_ground_20
+  - first:
+      213: 3247211480741703121
+    second: Atlas_ground_21
+  - first:
+      213: 7570029033640173743
+    second: Atlas_ground_22
+  - first:
+      213: -1914831504859149800
+    second: Atlas_ground_23
+  - first:
+      213: 3191218644544635539
+    second: Atlas_ground_24
+  - first:
+      213: 2819158631180290047
+    second: Atlas_ground_25
+  - first:
+      213: 3188871502821478135
+    second: Atlas_ground_26
+  - first:
+      213: -5337483325846337255
+    second: Atlas_ground_27
+  - first:
+      213: -4960844158344774777
+    second: Atlas_ground_28
+  - first:
+      213: 165124351028434290
+    second: Atlas_ground_29
+  - first:
+      213: -1764208971242272697
+    second: Atlas_ground_30
+  - first:
+      213: 3356660554882508483
+    second: Atlas_ground_31
+  - first:
+      213: -5503078160232361624
+    second: Atlas_ground_32
+  - first:
+      213: 1631137388223358494
+    second: Atlas_ground_33
+  - first:
+      213: -3469223810702210482
+    second: Atlas_ground_34
+  - first:
+      213: 3583926620698828756
+    second: Atlas_ground_35
+  - first:
+      213: -790862089042183816
+    second: Atlas_ground_36
+  - first:
+      213: -6749226298379381018
+    second: Atlas_ground_37
+  - first:
+      213: 8373445603455552533
+    second: Atlas_ground_38
+  - first:
+      213: 1794916061462030697
+    second: Atlas_ground_39
+  - first:
+      213: -6261424893243612243
+    second: Atlas_ground_40
+  - first:
+      213: 366768615704256652
+    second: Atlas_ground_41
+  - first:
+      213: -5095703904371613598
+    second: Atlas_ground_42
+  - first:
+      213: 912672786984670345
+    second: Atlas_ground_43
+  - first:
+      213: -1605577170459451510
+    second: Atlas_ground_44
+  - first:
+      213: -4211100281839626427
+    second: Atlas_ground_45
+  - first:
+      213: 1341698204542279351
+    second: Atlas_ground_46
+  - first:
+      213: -7882438704645364881
+    second: Atlas_ground_47
+  - first:
+      213: -5525168863254449330
+    second: Atlas_ground_48
+  - first:
+      213: -8330150701052214691
+    second: Atlas_ground_49
+  - first:
+      213: -4650690641360582744
+    second: Atlas_ground_50
+  - first:
+      213: -1298822663018104148
+    second: Atlas_ground_51
+  - first:
+      213: 116709550409573192
+    second: Atlas_ground_52
+  - first:
+      213: -6908631109142951709
+    second: Atlas_ground_53
+  - first:
+      213: -8172882989428807299
+    second: Atlas_ground_54
+  - first:
+      213: 7162263417620769062
+    second: Atlas_ground_55
+  - first:
+      213: 2323986144614055546
+    second: Atlas_ground_56
+  - first:
+      213: -3344681353290256543
+    second: Atlas_ground_57
+  - first:
+      213: 5532860081906140268
+    second: Atlas_ground_58
+  - first:
+      213: 6590075710241478336
+    second: Atlas_ground_59
+  - first:
+      213: -5372783365044687838
+    second: Atlas_ground_60
+  - first:
+      213: -241962891920572709
+    second: Atlas_ground_61
+  - first:
+      213: 9136809897750800141
+    second: Atlas_ground_62
+  - first:
+      213: -1869726920760891543
+    second: Atlas_ground_63
+  - first:
+      213: -1464333340036306663
+    second: Atlas_ground_64
+  - first:
+      213: -5006940748362883618
+    second: Atlas_ground_65
+  - first:
+      213: 8578671070137294774
+    second: Atlas_ground_66
+  - first:
+      213: 926875546227354185
+    second: Atlas_ground_67
+  - first:
+      213: 6185853300638216898
+    second: Atlas_ground_68
+  - first:
+      213: -8764772697503202239
+    second: Atlas_ground_69
+  - first:
+      213: -630442716107513249
+    second: Atlas_ground_70
+  - first:
+      213: 1490480585636037530
+    second: Atlas_ground_71
+  - first:
+      213: 4683267839402337612
+    second: Atlas_ground_72
+  - first:
+      213: 3596339353071541741
+    second: Atlas_ground_73
+  - first:
+      213: -2232228286437748040
+    second: Atlas_ground_74
+  - first:
+      213: 1767502290889624418
+    second: Atlas_ground_75
+  - first:
+      213: -4832429836263618016
+    second: Atlas_ground_76
+  - first:
+      213: 6647835047051551175
+    second: Atlas_ground_77
+  - first:
+      213: -8134264408190051036
+    second: Atlas_ground_78
+  - first:
+      213: -8776526638872251362
+    second: Atlas_ground_79
+  - first:
+      213: 4018695588499407998
+    second: Atlas_ground_80
+  - first:
+      213: -4165159756902553461
+    second: Atlas_ground_81
+  - first:
+      213: 6886210750757642983
+    second: Atlas_ground_82
+  - first:
+      213: 2000452793264700532
+    second: Atlas_ground_83
+  - first:
+      213: 2920335030445305278
+    second: Atlas_ground_84
+  - first:
+      213: 3336819368714150858
+    second: Atlas_ground_85
+  - first:
+      213: 3283293812770174198
+    second: Atlas_ground_86
+  - first:
+      213: -4548401836749230550
+    second: Atlas_ground_87
+  - first:
+      213: -5442899269352112615
+    second: Atlas_ground_88
+  - first:
+      213: 8121044281580816885
+    second: Atlas_ground_89
+  - first:
+      213: 5213142155501376687
+    second: Atlas_ground_90
+  - first:
+      213: -3691254761771553201
+    second: Atlas_ground_91
+  - first:
+      213: 6064333837876453445
+    second: Atlas_ground_92
+  - first:
+      213: -2074871471578832765
+    second: Atlas_ground_93
+  - first:
+      213: 6224296964592209631
+    second: Atlas_ground_94
+  - first:
+      213: 5426361517375585062
+    second: Atlas_ground_95
+  - first:
+      213: -5346657621362018441
+    second: Atlas_ground_96
+  - first:
+      213: -9131221531426446957
+    second: Atlas_ground_97
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 52
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Atlas_ground_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 845
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6708f64f2a78fee459e39226467ff39c
+      internalID: -4920265541882117592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 845
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1928868f097c54fb2438cc4168b4ea
+      internalID: -8481759455968925894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 845
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509533c6e6cb18743a2206bef3a5a62b
+      internalID: -8070532417574259212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 962
+        width: 94
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce17e7e425fb69244ac237d24aa2cef6
+      internalID: -5865960723528808206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 911
+        width: 118
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2805a3606f0a37e41bdbd7034af829e4
+      internalID: 6477992828054085794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 771
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86eab108e1259449b748b28dbfa6828
+      internalID: -4248543745844896987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_6
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 773
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7172fd343edbe4083ab782dc75b147
+      internalID: 587218036633801890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_7
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 772
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ace45cb7c54dfb4d869e616e20ebb8a
+      internalID: 3459674700722907113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_8
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 801
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c146d59648b9fe84684a1c8594c4e9ab
+      internalID: 984102140402920591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 801
+        width: 60
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd9e8dcd6d70de459dcb53ef10cd996
+      internalID: 4267820873286414092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_10
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 803
+        width: 38
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736c2744b542c2d449d56a9bad2bad8c
+      internalID: -292813039238978979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_11
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 795
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b9dc8cf4beea84f9bd259ab8d3bcd1
+      internalID: 9130892378483813892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_12
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 795
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0dfc64e2e678243b2258007283e8f1
+      internalID: -6454168043016264802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 700
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7267b53c2dc0a434396f088819acfd57
+      internalID: 3371329831213072472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_14
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 707
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a8b899f85176b45841487e816b031e
+      internalID: 298280306293675214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 707
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8f1f75cd01851479f3629cfd240260
+      internalID: 2683688526572982994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 715
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cc548beb2f0bd468919b38e8d96b94
+      internalID: 6940967933811126917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_17
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 726
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57203b8885ca39c4180a84dc674fdad7
+      internalID: -7896419020733270413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_18
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 725
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cdd9bbb04f6224eb9ee79bcf5d9575
+      internalID: 2358930053011081744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_19
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 694
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b69aa6ddcf38f49b59ce063313e01b
+      internalID: 7795404830959560431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_20
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 702
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ad33fce633f8f48b66ce84da65041a
+      internalID: -5840922897113805069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 637
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0608268825926094f878524e76b9cf50
+      internalID: 3247211480741703121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 631
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72734cc92a3bfe541b73bbceb11cdfca
+      internalID: 7570029033640173743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_23
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 631
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f7b349c4fd16f4ebc5e086a66f54a3
+      internalID: -1914831504859149800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_24
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 613
+        width: 127
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a300cc44ec4aeac4aa769517a44b962b
+      internalID: 3191218644544635539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_25
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 672
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cad9b00c12568b4baa3c88cf61c9767
+      internalID: 2819158631180290047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_26
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 679
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c550549b9bdbdd7428dd36e2102f393c
+      internalID: 3188871502821478135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_27
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 631
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c1deff15aec1d41bdb9c45bfecc8b4
+      internalID: -5337483325846337255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_28
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 672
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d320368ef32fa45a5de49df2550788
+      internalID: -4960844158344774777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 655
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1498c768f3fd3754885f62b5ef61306f
+      internalID: 165124351028434290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_30
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 651
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44b5197d3f5d224bb4d32237f19237c
+      internalID: -1764208971242272697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_31
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 665
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5cdf908ee101b45b3c5041438ca66a
+      internalID: 3356660554882508483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 643
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f930148edc6ea428d908dad68534f0
+      internalID: -5503078160232361624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_33
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 655
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282927959b52bab4aa880feec4f0f2bc
+      internalID: 1631137388223358494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_34
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 657
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f18259c039983e468e85c587fa06ce2
+      internalID: -3469223810702210482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_35
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 643
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db3064b1cdbd7c49b74366abee56b82
+      internalID: 3583926620698828756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 536
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1589caa7763aa47b3574348590aa66
+      internalID: -790862089042183816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_37
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 536
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8bd936afb60b94fa45866c5333e0f8
+      internalID: -6749226298379381018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_38
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 536
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047f59d863340ed4294596cf8e932b7a
+      internalID: 8373445603455552533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_39
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 536
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7d7a6189a6bd14a93f9e8f3c53b9d8
+      internalID: 1794916061462030697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_40
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 536
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d023e52cccd573c47abf6446ee451ee4
+      internalID: -6261424893243612243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_41
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 583
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4309a0c504d4740b7e27b92f795677
+      internalID: 366768615704256652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_42
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 583
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ff381c90294f7418c4361bbdd5dce3
+      internalID: -5095703904371613598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_43
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 588
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485aae3864841a8409e1372c3b17dcdf
+      internalID: 912672786984670345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_44
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 588
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7604a3acb4d78d746804cff235b89f17
+      internalID: -1605577170459451510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_45
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 512
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726420aa015395a46a3bb8f2ff8cecac
+      internalID: -4211100281839626427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_46
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 562
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d13e937ef0b3e4e8307f98e300360e
+      internalID: 1341698204542279351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_47
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 562
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ed8ae9fb8fb1049b0bfa413f678882
+      internalID: -7882438704645364881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_48
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 473
+        width: 12
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a376b4fee14ff046a03795457cda53d
+      internalID: -5525168863254449330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_49
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 454
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6fcae1bbe27844195f825c5e1ecfa7
+      internalID: -8330150701052214691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_50
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 454
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532b1f1529f02594da3c7c290d6e202f
+      internalID: -4650690641360582744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_51
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 454
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db08c74fd372fb64cb4396ca4f5dfa3f
+      internalID: -1298822663018104148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_52
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 500
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0160a7759c322445bc6638f4c5835fc
+      internalID: 116709550409573192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_53
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 461
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2a4bd4eb76ba04c8b53ac920fbe698
+      internalID: -6908631109142951709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_54
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 461
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052593fef1511d447a728295f4d39055
+      internalID: -8172882989428807299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_55
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 315
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a187912daf58d46b108e3c8100459d
+      internalID: 7162263417620769062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_56
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 315
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceff222bc2d23fc46b44f8bb0b0cdded
+      internalID: 2323986144614055546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_57
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 315
+        width: 110
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7638a0ba3f0c44db3ca85031401d2c
+      internalID: -3344681353290256543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_58
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 365
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5b9efed711e52429d96c59ce54f4a7
+      internalID: 5532860081906140268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_59
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 367
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e7ca896a6538d4391f3d004dbc3cad
+      internalID: 6590075710241478336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_60
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 367
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b593c6e349e348d4888c31f82565601e
+      internalID: -5372783365044687838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_61
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 316
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9231ea06894ef94bbcb100a03477be4
+      internalID: -241962891920572709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_62
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 168
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c896f5847553c343a2983d167d595a0
+      internalID: 9136809897750800141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_63
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 168
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4450a9d66d097e64db5a1b1f8ba19b22
+      internalID: -1869726920760891543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_64
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 168
+        width: 110
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c40a20a2bef9804b8ebbd8a2dae752f
+      internalID: -1464333340036306663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_65
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 242
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb82d774e8329541a7804185f8af432
+      internalID: -5006940748362883618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_66
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 235
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272a6b8636592d3409a25197c3951b1c
+      internalID: 8578671070137294774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_67
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 174
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531c0dde2a619554b932a3c27d3d2ea1
+      internalID: 926875546227354185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_68
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 165
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc67731c30bba844c8710cafddb17ba4
+      internalID: 6185853300638216898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_69
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bde074e8fefe3b49b94be8280233732
+      internalID: -8764772697503202239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_70
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d3af17d92b7614a851f5fd0466266b
+      internalID: -630442716107513249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_71
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 153
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bce0ddf5d26dc44fb45ae9e57de2202
+      internalID: 1490480585636037530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_72
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 153
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526838a993259e048a3755b2a92f01e0
+      internalID: 4683267839402337612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 153
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0343c38a326a22c49b7a84571497f419
+      internalID: 3596339353071541741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_74
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 153
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf57e51a39d853439135c3ca1e83d3e
+      internalID: -2232228286437748040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_75
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 153
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810e7c5269ec83b4a8e0926038602f40
+      internalID: 1767502290889624418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_76
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 153
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a0dfe69d1d9ef43b822f1c6b95e42c
+      internalID: -4832429836263618016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_77
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 153
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d897d3ddbc14c41a2995e6b79e1967
+      internalID: 6647835047051551175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_78
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 153
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f2dae9470676f459a2ca5fa25d2b50
+      internalID: -8134264408190051036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_79
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 153
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9490f0ea06b2f141a2536d1c9d577d3
+      internalID: -8776526638872251362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_80
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 14
+        width: 99
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d5f9b460709cc468359e31d557b101
+      internalID: 4018695588499407998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_81
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 133
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73002107b66c7234785f9baa1b2e4c0b
+      internalID: -4165159756902553461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_82
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 133
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec56b68feba65174e9ee5fdb5af76bb2
+      internalID: 6886210750757642983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_83
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 5
+        width: 67
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb998067d63a2274dba0504d2b6d20f2
+      internalID: 2000452793264700532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_84
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 105
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8f27149f18b31478155d751c2e0340
+      internalID: 2920335030445305278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_85
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 105
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2809a0fafa5bcb646abb31afb1e22ff1
+      internalID: 3336819368714150858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_86
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 81
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa20806d3877ff468e7aed378c86a64
+      internalID: 3283293812770174198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_87
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 88
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c4edb707c78764b91a3864d00fa773
+      internalID: -4548401836749230550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_88
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 93
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a720f69ef19ada4468e64875a7fea062
+      internalID: -5442899269352112615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_89
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 78
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c24f2dbb2e7654e822a7f2c51a3e70
+      internalID: 8121044281580816885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_90
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 75
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85823890d292db041b2a313e2846ba6a
+      internalID: 5213142155501376687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_91
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 62
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ff06d22a10a8e4aaa0552298896bfd
+      internalID: -3691254761771553201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_92
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 57
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb2a04e2020bf54b8b09cf6623becce
+      internalID: 6064333837876453445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_93
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 35
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b2b0c28035e254d97a02adb200c3b3
+      internalID: -2074871471578832765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_94
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 36
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bae06205974f24cb5cdfe5f6d26fd3
+      internalID: 6224296964592209631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_95
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 15
+        width: 4
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b50d1e52874c5469409215cc0e0e7d
+      internalID: 5426361517375585062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_96
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 14
+        width: 4
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed297bab75573474cb37ffea7721893d
+      internalID: -5346657621362018441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_ground_97
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 34
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7325a35d57f0ba478a12420d867073f
+      internalID: -9131221531426446957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2263 @@
+fileFormatVersion: 2
+guid: 5327aa4436dc13c44b7e9e74e80685ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -975407992219147953
+    second: Atlas_natural_elements_0
+  - first:
+      213: -8154494662280415658
+    second: Atlas_natural_elements_1
+  - first:
+      213: -2541849458100322676
+    second: Atlas_natural_elements_2
+  - first:
+      213: -7361205098312842760
+    second: Atlas_natural_elements_3
+  - first:
+      213: 2674915945086330609
+    second: Atlas_natural_elements_4
+  - first:
+      213: 1751331213807747927
+    second: Atlas_natural_elements_5
+  - first:
+      213: 4573997740318510822
+    second: Atlas_natural_elements_6
+  - first:
+      213: -1113548056539588459
+    second: Atlas_natural_elements_7
+  - first:
+      213: 2409082270042751293
+    second: Atlas_natural_elements_8
+  - first:
+      213: -404061005968364931
+    second: Atlas_natural_elements_9
+  - first:
+      213: 6863278918673695765
+    second: Atlas_natural_elements_10
+  - first:
+      213: 6431212944511179931
+    second: Atlas_natural_elements_11
+  - first:
+      213: 11285402846489049
+    second: Atlas_natural_elements_12
+  - first:
+      213: 8384114110563465388
+    second: Atlas_natural_elements_13
+  - first:
+      213: -2149510368846403300
+    second: Atlas_natural_elements_14
+  - first:
+      213: 1681852694283647084
+    second: Atlas_natural_elements_15
+  - first:
+      213: 5060103560537141227
+    second: Atlas_natural_elements_16
+  - first:
+      213: 7051134383807769899
+    second: Atlas_natural_elements_17
+  - first:
+      213: 3351647238861352732
+    second: Atlas_natural_elements_18
+  - first:
+      213: 7023592021057373559
+    second: Atlas_natural_elements_19
+  - first:
+      213: 6892968218057943906
+    second: Atlas_natural_elements_20
+  - first:
+      213: -4268917179997836125
+    second: Atlas_natural_elements_21
+  - first:
+      213: 1372506937602077868
+    second: Atlas_natural_elements_22
+  - first:
+      213: 5183401031758892653
+    second: Atlas_natural_elements_23
+  - first:
+      213: -6867315829974785938
+    second: Atlas_natural_elements_24
+  - first:
+      213: -3367108442111693954
+    second: Atlas_natural_elements_25
+  - first:
+      213: -9019026130377987592
+    second: Atlas_natural_elements_26
+  - first:
+      213: 6752323961363618897
+    second: Atlas_natural_elements_27
+  - first:
+      213: 7674835621459161205
+    second: Atlas_natural_elements_28
+  - first:
+      213: 4296550424403027103
+    second: Atlas_natural_elements_29
+  - first:
+      213: 6668807740897956885
+    second: Atlas_natural_elements_30
+  - first:
+      213: -4094338858446033893
+    second: Atlas_natural_elements_31
+  - first:
+      213: 1334228751951247862
+    second: Atlas_natural_elements_32
+  - first:
+      213: -5440070027108353707
+    second: Atlas_natural_elements_33
+  - first:
+      213: -6873463913273072768
+    second: Atlas_natural_elements_34
+  - first:
+      213: 4871959788403696496
+    second: Atlas_natural_elements_35
+  - first:
+      213: 600723977768998042
+    second: Atlas_natural_elements_36
+  - first:
+      213: -1114837409591110872
+    second: Atlas_natural_elements_37
+  - first:
+      213: 6597319868835552686
+    second: Atlas_natural_elements_38
+  - first:
+      213: 7288370952768743713
+    second: Atlas_natural_elements_39
+  - first:
+      213: -9082739677563464682
+    second: Atlas_natural_elements_40
+  - first:
+      213: 4322629353178838391
+    second: Atlas_natural_elements_41
+  - first:
+      213: -9061051748346304041
+    second: Atlas_natural_elements_42
+  - first:
+      213: 8306248741066142561
+    second: Atlas_natural_elements_43
+  - first:
+      213: 2650448439465198224
+    second: Atlas_natural_elements_44
+  - first:
+      213: 5617839233236988735
+    second: Atlas_natural_elements_45
+  - first:
+      213: -2900446415229616416
+    second: Atlas_natural_elements_46
+  - first:
+      213: 3129614113251247768
+    second: Atlas_natural_elements_47
+  - first:
+      213: -4144115191636288522
+    second: Atlas_natural_elements_48
+  - first:
+      213: -8255601809770802452
+    second: Atlas_natural_elements_49
+  - first:
+      213: 807067838013923982
+    second: Atlas_natural_elements_50
+  - first:
+      213: 1044513308906885226
+    second: Atlas_natural_elements_51
+  - first:
+      213: -7605696171956533868
+    second: Atlas_natural_elements_52
+  - first:
+      213: 7680171923658342848
+    second: Atlas_natural_elements_53
+  - first:
+      213: -6613705292281802767
+    second: Atlas_natural_elements_54
+  - first:
+      213: 2335912197129365438
+    second: Atlas_natural_elements_55
+  - first:
+      213: 5533369349257903148
+    second: Atlas_natural_elements_56
+  - first:
+      213: -878243077068375756
+    second: Atlas_natural_elements_57
+  - first:
+      213: -1617483799737432463
+    second: Atlas_natural_elements_58
+  - first:
+      213: 5995770179607781919
+    second: Atlas_natural_elements_59
+  - first:
+      213: -4176297612363074481
+    second: Atlas_natural_elements_60
+  - first:
+      213: -8686590782463845749
+    second: Atlas_natural_elements_61
+  - first:
+      213: 5804480910413105733
+    second: Atlas_natural_elements_62
+  - first:
+      213: 2105649823170473488
+    second: Atlas_natural_elements_63
+  - first:
+      213: -3491063181381899906
+    second: Atlas_natural_elements_64
+  - first:
+      213: 2486855511197800354
+    second: Atlas_natural_elements_65
+  - first:
+      213: 8207441279291251982
+    second: Atlas_natural_elements_66
+  - first:
+      213: 5701859667997567967
+    second: Atlas_natural_elements_67
+  - first:
+      213: 3140150549413365569
+    second: Atlas_natural_elements_68
+  - first:
+      213: -6952652760913418093
+    second: Atlas_natural_elements_69
+  - first:
+      213: 738391040977000440
+    second: Atlas_natural_elements_70
+  - first:
+      213: -8671013582006580155
+    second: Atlas_natural_elements_71
+  - first:
+      213: -686915499576831567
+    second: Atlas_natural_elements_72
+  - first:
+      213: 1356937344169554837
+    second: Atlas_natural_elements_73
+  - first:
+      213: -2023374563977884110
+    second: Atlas_natural_elements_74
+  - first:
+      213: 6850874450454041136
+    second: Atlas_natural_elements_75
+  - first:
+      213: 4448680188771488530
+    second: Atlas_natural_elements_76
+  - first:
+      213: -4346261384925386819
+    second: Atlas_natural_elements_77
+  - first:
+      213: 4873957029535342749
+    second: Atlas_natural_elements_78
+  - first:
+      213: -8404853278253627771
+    second: Atlas_natural_elements_79
+  - first:
+      213: 7605544317100690547
+    second: Atlas_natural_elements_80
+  - first:
+      213: -3069605965230408749
+    second: Atlas_natural_elements_81
+  - first:
+      213: 2781041459002128409
+    second: Atlas_natural_elements_82
+  - first:
+      213: -814742943103416774
+    second: Atlas_natural_elements_83
+  - first:
+      213: 2308788184968611952
+    second: Atlas_natural_elements_84
+  - first:
+      213: -2303637502447135642
+    second: Atlas_natural_elements_85
+  - first:
+      213: -5248357788335800518
+    second: Atlas_natural_elements_86
+  - first:
+      213: 6532790004640867023
+    second: Atlas_natural_elements_87
+  - first:
+      213: 3206005610211688367
+    second: Atlas_natural_elements_88
+  - first:
+      213: 2298387423185226772
+    second: Atlas_natural_elements_89
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Atlas_natural_elements_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 457
+        width: 65
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d9652290c788b4abf0ca229be89389
+      internalID: -975407992219147953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 470
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611fadb69a9f6414e88686c55be6fbb0
+      internalID: -8154494662280415658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 419
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08053f91458350c43bb2b819b8140aa9
+      internalID: -2541849458100322676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 455
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965edc461e73d164085c1c13415404ce
+      internalID: -7361205098312842760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_4
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 472
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66ecb513576be8449a502a16011df5b
+      internalID: 2674915945086330609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_5
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 467
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66409516a74c934fa9f24880d6bea47
+      internalID: 1751331213807747927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 447
+        width: 63
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cd26e4a004b534e9410869d5998ffd
+      internalID: 4573997740318510822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_7
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 456
+        width: 77
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339e10ba7ef0adf45bf079253108779f
+      internalID: -1113548056539588459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_8
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 463
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d2c0f8c51570240ae247f070db98e3
+      internalID: 2409082270042751293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 421
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fc954e5b4216e40bdab3ab535bcba1
+      internalID: -404061005968364931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 417
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4fac4ed72240c479721c4d1a20820b
+      internalID: 6863278918673695765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 449
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6521e6c752540a74ba78de1cc840fbec
+      internalID: 6431212944511179931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_12
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 449
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8113553cac3b504bb1c2570efd15fce
+      internalID: 11285402846489049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_13
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 454
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4374e2ebf5f784a9d712fb4607e14d
+      internalID: 8384114110563465388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_14
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 450
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1450f31b5f9324ebfc315e0398f4a9
+      internalID: -2149510368846403300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_15
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 449
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6432c89242bf99408946331bbd28e9a
+      internalID: 1681852694283647084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_16
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 446
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c531793c80a6245b66fb3a0749eaf5
+      internalID: 5060103560537141227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_17
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 437
+        width: 77
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e304972e98018a04093073219deaf2a1
+      internalID: 7051134383807769899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_18
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 421
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc0802f63af51449ad4fc13bb312963
+      internalID: 3351647238861352732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_19
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 378
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e77a71f7ee2250419460c33c37b3433
+      internalID: 7023592021057373559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_20
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 378
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd6c6262d507d0469c95cf90e6ae070
+      internalID: 6892968218057943906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_21
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 407
+        width: 77
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8377bb0c5864bb94face9f2ceb417a3b
+      internalID: -4268917179997836125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_22
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 410
+        width: 125
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad95518864751147b393350f40dc3bc
+      internalID: 1372506937602077868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_23
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 411
+        width: 59
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c47ea049c689864cb5b22a585647bd8
+      internalID: 5183401031758892653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_24
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 416
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90adeb9a1fb468d4daa760ea8ac7a228
+      internalID: -6867315829974785938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_25
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 426
+        width: 59
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd94ed87f1c3bc246abae3fb75a482a2
+      internalID: -3367108442111693954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_26
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 235
+        width: 241
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b749ba3c06c4ec246aa746dca552b8ac
+      internalID: -9019026130377987592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_27
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 373
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db67fe306471d3c48ab94f6e2eb57189
+      internalID: 6752323961363618897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_28
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 374
+        width: 93
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb32b10162c7dd45b7768cda613fedd
+      internalID: 7674835621459161205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_29
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 371
+        width: 79
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5793b21f0cac940ba78de85fda5762
+      internalID: 4296550424403027103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_30
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 379
+        width: 71
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371ed5b59a3ee6a43849fd916b4f669e
+      internalID: 6668807740897956885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_31
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 405
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e4687fe9345274b9a84b57bb571492
+      internalID: -4094338858446033893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_32
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 372
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1be41a36ba3cf3498888178692683ed
+      internalID: 1334228751951247862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 378
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5854657564fe9ed4d951dc699c473be1
+      internalID: -5440070027108353707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_34
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 378
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dce2fc634fbc64db2e8ed09c5cb054
+      internalID: -6873463913273072768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_35
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 373
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741df8c72bb007541b070c5dc0fd45b2
+      internalID: 4871959788403696496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_36
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 373
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f547178208b59459f99527fad5044b
+      internalID: 600723977768998042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_37
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 232
+        width: 238
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800045a131d3c8d4db5f7b449fe0e297
+      internalID: -1114837409591110872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_38
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 304
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f735482b6bce514faa62d21515ec598
+      internalID: 6597319868835552686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_39
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 329
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dfb592822b8ac44937375425c8edfd
+      internalID: 7288370952768743713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_40
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 313
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317f808d486260a48b02697000ec7923
+      internalID: -9082739677563464682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_41
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 295
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0f427e1b8b8504fb8cfc0a54eb345e
+      internalID: 4322629353178838391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_42
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 318
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00d096a430a546489de2d5c2e218371
+      internalID: -9061051748346304041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_43
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 306
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991220a91e841374282c3bb3854b9630
+      internalID: 8306248741066142561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_44
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 268
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5078b45179c7ff54d868ec1dbfe7d52d
+      internalID: 2650448439465198224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_45
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 233
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba74cdc9d39abc41b26a2d774afc61f
+      internalID: 5617839233236988735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_46
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 236
+        width: 21
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c896f5a588b405d4eac13f5d89d9b858
+      internalID: -2900446415229616416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_47
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 261
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4841901bdc0084eb790fe3df94815e
+      internalID: 3129614113251247768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_48
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 239
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e4d66dd4b9caa43b22fd091b0726c0
+      internalID: -4144115191636288522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_49
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 259
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fe488ee4a3941469188fc1581f6823
+      internalID: -8255601809770802452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_50
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 271
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48b99798d1d79b459698b7a42f321f4
+      internalID: 807067838013923982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_51
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 277
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1d9ec14289bca4a843372cc1411e94
+      internalID: 1044513308906885226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_52
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 222
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58001f85d60d9c74a9e69dedef2fb232
+      internalID: -7605696171956533868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_53
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 258
+        width: 62
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d026d574079134095d2f161d09d173
+      internalID: 7680171923658342848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_54
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 228
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d02367daec8d904b9ef627217d4bc10
+      internalID: -6613705292281802767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_55
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 200
+        width: 90
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c121864cf40fe774fb6d8c0e379d78d2
+      internalID: 2335912197129365438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_56
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 232
+        width: 54
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528d62933cad7794e85a570d4674f952
+      internalID: 5533369349257903148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_57
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 206
+        width: 96
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38194f140c0eb644893f1da8dd98e134
+      internalID: -878243077068375756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_58
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 193
+        width: 70
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f73b3ae2a74a6343bd803973a3f3d61
+      internalID: -1617483799737432463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_59
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 200
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a36f79f6122794e8666306c3f56f09
+      internalID: 5995770179607781919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_60
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 20
+        width: 142
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf57057a19a4c09479d2150d8de89bd4
+      internalID: -4176297612363074481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_61
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 181
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855edc7940ba33540a71b664ccb50e7f
+      internalID: -8686590782463845749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_62
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 180
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1858675138b734fab7ba26d611909f
+      internalID: 5804480910413105733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_63
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 188
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f1e54658091c84fafaff29d35527e1
+      internalID: 2105649823170473488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_64
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 26
+        width: 303
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcfd96f115a5974f8e5bdfdd62c5c2b
+      internalID: -3491063181381899906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_65
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 167
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608bd6ea2f13d4c46b836167c1ed6069
+      internalID: 2486855511197800354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_66
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 156
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19be6f5a86a5d0a41b8ab2d2b87d1c88
+      internalID: 8207441279291251982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_67
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 150
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbce042d8282b4641a121a0dd00bcbf3
+      internalID: 5701859667997567967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_68
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 136
+        width: 9
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980a5e600042de34ca219fedd4c7227f
+      internalID: 3140150549413365569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_69
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 152
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4ec07b10908c944b9b2b61a0dcb1e0
+      internalID: -6952652760913418093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_70
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 162
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddb27f3d7f39f34c97a368ee168ee33
+      internalID: 738391040977000440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_71
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 247
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bc632053de3f44cb293279e1e9c155
+      internalID: -8671013582006580155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_72
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 142
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f59c7cb29abde4897e0d9b0f5077dc
+      internalID: -686915499576831567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_73
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 146
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad4eb2aa0dee3c40ac366d51feed28e
+      internalID: 1356937344169554837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_74
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 132
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92e5655a7f076a44bb568207d670be5
+      internalID: -2023374563977884110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_75
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 94
+        width: 5
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410001a9f46cbae419095c3cef71481c
+      internalID: 6850874450454041136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_76
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 86
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013713ecedca1864e8fa89dcfa443e7b
+      internalID: 4448680188771488530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_77
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 113
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8c6b777d68aee40a6da32199c4e528
+      internalID: -4346261384925386819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_78
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 110
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0e25c0ea0bc894cb2030ef9204e217
+      internalID: 4873957029535342749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_79
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 94
+        width: 58
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b868e5ed07d054284557223e374745
+      internalID: -8404853278253627771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_80
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 79
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad616f3469998e548a0cc24a5589d680
+      internalID: 7605544317100690547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_81
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 90
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bc455a2ebf1ea4bb34f02fcfc039b3
+      internalID: -3069605965230408749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_82
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 93
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436424a3ba9ac5b46b6988a9b59a3f0e
+      internalID: 2781041459002128409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_83
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 90
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c02ead7b9b4db147ba2dcf332e14963
+      internalID: -814742943103416774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_84
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 12
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c171c1b83d692534baca25a28012c308
+      internalID: 2308788184968611952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_85
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 12
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c14a8b751fadd140a02122b545183c5
+      internalID: -2303637502447135642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_86
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 36
+        width: 50
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44820cfdc397474c916b38a141d9f1d
+      internalID: -5248357788335800518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_87
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 19
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792015bf4f929934a9b8d9c772697f44
+      internalID: 6532790004640867023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_88
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 16
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf6f7d8e1543024ca2110ddb2349e64
+      internalID: 3206005610211688367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_natural_elements_89
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 10
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2db9634e1b06446b46accece3e246f
+      internalID: 2298387423185226772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

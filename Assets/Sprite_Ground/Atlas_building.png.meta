@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: 1efbe69823818aa4b99d6834dc88820c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5645740357457437039
+    second: Atlas_building_0
+  - first:
+      213: 1936886538594077724
+    second: Atlas_building_1
+  - first:
+      213: 4888244222188312929
+    second: Atlas_building_2
+  - first:
+      213: 5040022854696297978
+    second: Atlas_building_3
+  - first:
+      213: 6955272427478162325
+    second: Atlas_building_4
+  - first:
+      213: -5576426710149370489
+    second: Atlas_building_5
+  - first:
+      213: -3637547941962401300
+    second: Atlas_building_6
+  - first:
+      213: 8856888275245178123
+    second: Atlas_building_7
+  - first:
+      213: 6982887302078714782
+    second: Atlas_building_8
+  - first:
+      213: -6952355640214915925
+    second: Atlas_building_9
+  - first:
+      213: 7848068753244491088
+    second: Atlas_building_10
+  - first:
+      213: -3485701353332251682
+    second: Atlas_building_11
+  - first:
+      213: -4684648013934307655
+    second: Atlas_building_12
+  - first:
+      213: 2691404400307434134
+    second: Atlas_building_13
+  - first:
+      213: 6243478264408666172
+    second: Atlas_building_14
+  - first:
+      213: -6358861239481035300
+    second: Atlas_building_15
+  - first:
+      213: -1489694811052586249
+    second: Atlas_building_16
+  - first:
+      213: -7880658376839703786
+    second: Atlas_building_17
+  - first:
+      213: 8976096573810368166
+    second: Atlas_building_18
+  - first:
+      213: -4815917573212804420
+    second: Atlas_building_19
+  - first:
+      213: -7472984280831252701
+    second: Atlas_building_20
+  - first:
+      213: 6120418961340835387
+    second: Atlas_building_21
+  - first:
+      213: -5802797004144759994
+    second: Atlas_building_22
+  - first:
+      213: 4515833580667809647
+    second: Atlas_building_23
+  - first:
+      213: -4535042860681905458
+    second: Atlas_building_24
+  - first:
+      213: 258770164716825403
+    second: Atlas_building_25
+  - first:
+      213: -7537000812470374384
+    second: Atlas_building_26
+  - first:
+      213: 2739358676650359671
+    second: Atlas_building_27
+  - first:
+      213: -3262448955043752568
+    second: Atlas_building_28
+  - first:
+      213: -7153115528726776784
+    second: Atlas_building_29
+  - first:
+      213: -5172918058587356331
+    second: Atlas_building_30
+  - first:
+      213: 7234871979298113936
+    second: Atlas_building_31
+  - first:
+      213: -3768510561169879556
+    second: Atlas_building_32
+  - first:
+      213: -6304677204644733596
+    second: Atlas_building_33
+  - first:
+      213: 4681029377734177945
+    second: Atlas_building_34
+  - first:
+      213: 3459324532101980748
+    second: Atlas_building_35
+  - first:
+      213: -5949222524403811470
+    second: Atlas_building_36
+  - first:
+      213: -1998961687949144187
+    second: Atlas_building_37
+  - first:
+      213: -7462707594604334155
+    second: Atlas_building_38
+  - first:
+      213: -9002913613868959098
+    second: Atlas_building_39
+  - first:
+      213: 5719729063693076159
+    second: Atlas_building_40
+  - first:
+      213: 2304700030973402402
+    second: Atlas_building_41
+  - first:
+      213: -6666211564722770123
+    second: Atlas_building_42
+  - first:
+      213: -9205776885846675816
+    second: Atlas_building_43
+  - first:
+      213: -7832832904449202048
+    second: Atlas_building_44
+  - first:
+      213: 2577352641487161202
+    second: Atlas_building_45
+  - first:
+      213: -5955623777325470730
+    second: Atlas_building_46
+  - first:
+      213: -7869553880914400278
+    second: Atlas_building_47
+  - first:
+      213: -3749353515645107072
+    second: Atlas_building_48
+  - first:
+      213: -7620344642571822486
+    second: Atlas_building_49
+  - first:
+      213: -3122667895246363070
+    second: Atlas_building_50
+  - first:
+      213: -2939191652827060648
+    second: Atlas_building_51
+  - first:
+      213: -5549277678492073236
+    second: Atlas_building_52
+  - first:
+      213: 339313882076346858
+    second: Atlas_building_53
+  - first:
+      213: -7230239824333077865
+    second: Atlas_building_54
+  - first:
+      213: -1489765949852790785
+    second: Atlas_building_55
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Atlas_building_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 191
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe706ae88f95b1419a6a1b1d45a08d5
+      internalID: -5645740357457437039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 191
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e54a712eea35b4d899f26357740bb0
+      internalID: 1936886538594077724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 191
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d9263b4145f54bab65448267d092b
+      internalID: 4888244222188312929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 191
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bbf39fcd0d951409934543dfcfde0d
+      internalID: 5040022854696297978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 191
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2844289e94ab4854dbffc02f58ceaca8
+      internalID: 6955272427478162325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 42
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a164275abcf5ea54db8b27f0c75d28f3
+      internalID: -5576426710149370489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 195
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8432e9d41ecbd284195dfcaa0ec753b7
+      internalID: -3637547941962401300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 215
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270d4eddda91f2b42a0bd007974f0c8d
+      internalID: 8856888275245178123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 215
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7666b1860bdc9a749aa11ca01588309a
+      internalID: 6982887302078714782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_9
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 201
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93be21fce421b7e4f808443917b56c10
+      internalID: -6952355640214915925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 125
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324e96626bed37448a65cd5281d4ed2b
+      internalID: 7848068753244491088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 125
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdd718d6efb7d04994f4399ba1916b9
+      internalID: -3485701353332251682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 125
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f81aea320f45e40ad3c47b3851b3cc
+      internalID: -4684648013934307655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_13
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 125
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b29303f749e074da220c9041e4e3b9
+      internalID: 2691404400307434134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_14
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 125
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f33f2124ac26734099a5f3ffb593065
+      internalID: 6243478264408666172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_15
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 170
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0141a55442dbcea468a98dd932dcfdf8
+      internalID: -6358861239481035300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_16
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 153
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc0456d653bf4649b5ad74db6be33ca
+      internalID: -1489694811052586249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 159
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1ef4b0f36534149897c66e49eb57cd
+      internalID: -7880658376839703786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 152
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a314596b923b4347b465093b8478807
+      internalID: 8976096573810368166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_19
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 150
+        width: 8
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95aa36522eacb2441a4ec150f4faa226
+      internalID: -4815917573212804420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_20
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 151
+        width: 7
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6daca56ee29e754491967e59c4b1723
+      internalID: -7472984280831252701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_21
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 139
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9755560057bd284c9e027e0a1181873
+      internalID: 6120418961340835387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_22
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 161
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5e7c6882dc89040b046966ee19e8d6
+      internalID: -5802797004144759994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_23
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 109
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2584f0db2888ec499b9b5a2ba94fcc2
+      internalID: 4515833580667809647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_24
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 136
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5ce1739ff8a4442bc4f99607cfa351
+      internalID: -4535042860681905458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 75
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24005b8975f6c2949862a01270b25605
+      internalID: 258770164716825403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_26
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 75
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c89617de52c1f14fb081720c7f024cd
+      internalID: -7537000812470374384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_27
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 65
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca05e6cfcffa9a4fa0cf48f8ad22075
+      internalID: 2739358676650359671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_28
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 5
+        width: 44
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08033fddae02caf4e9b0d0524f22fe44
+      internalID: -3262448955043752568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 102
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8038759ce1fcf134c91326f5f39d881c
+      internalID: -7153115528726776784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_30
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 63
+        width: 20
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942a2b127c4e69a4fba812a33a662b1e
+      internalID: -5172918058587356331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_31
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 13
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26246d78705a34a4b995f0f6ee98c322
+      internalID: 7234871979298113936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_32
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 78
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39674e452a50d94882dfb90e676c3bf
+      internalID: -3768510561169879556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_33
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 95
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a576362d4c33224ca9d6d0288423de3
+      internalID: -6304677204644733596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 17
+        width: 16
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f49358a1b79e64d87e6035db2e7447
+      internalID: 4681029377734177945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_35
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 83
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbc5c1d6d0f71c43af15f4e44a6bab7
+      internalID: 3459324532101980748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_36
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 93
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3cc69a0c28aab44adbc905d70d5d64
+      internalID: -5949222524403811470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 62
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f6a45eda4a105419290e31ae7ee8b6
+      internalID: -1998961687949144187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 54
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb529df6124047469b0e2edbc81e9e7
+      internalID: -7462707594604334155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 54
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e009189baffe9db4ca8c20f28149eb4b
+      internalID: -9002913613868959098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 54
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed3a6227ab0209419ff567339e74343
+      internalID: 5719729063693076159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_41
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 34
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8732c542fff52aa4680d948fb4e26aa8
+      internalID: 2304700030973402402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_42
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 52
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6f8e431ac6838419ce8c70b517aaa9
+      internalID: -6666211564722770123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_43
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 36
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ffa2ff339901e44b44d4fe9b75352f
+      internalID: -9205776885846675816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_44
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 36
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6595e416e60dcba43abb39515fe84fac
+      internalID: -7832832904449202048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_45
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 36
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83cc9f281c748d4a95efee52d45f9eb
+      internalID: 2577352641487161202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_46
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 46
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2485e41a7db72714d89662db1f1a8f03
+      internalID: -5955623777325470730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_47
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 33
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88579c405953334a99b1f0e685318dc
+      internalID: -7869553880914400278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_48
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 29
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585222f25a7578b44b7306532e9fad85
+      internalID: -3749353515645107072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_49
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84057420e6f50ee4890591a45f81e7ee
+      internalID: -7620344642571822486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_50
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 12
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78f658270917094c88b755638934620
+      internalID: -3122667895246363070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_51
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 12
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea92ee5c5ff71f4695888e2c4a59d93
+      internalID: -2939191652827060648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_52
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 13
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef6f97be3d6bab42a8e832c6c235412
+      internalID: -5549277678492073236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_53
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 16
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed655d3da6363f74f85c0f2104ecef0c
+      internalID: 339313882076346858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_54
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 15
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61ae127ecb59c24c98f38e50b44275f
+      internalID: -7230239824333077865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_building_55
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 18
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1deac7aa6db2d7744855fdf123c48687
+      internalID: -1489765949852790785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
