@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
-
+    public bool Str_WallJumped;
     [Space]
 
     private bool groundTouch;
@@ -57,7 +57,10 @@ public class Movement : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-        if (coll.onWall && Input.GetButton("Fire3") && canMove)
+
+        if (Str_WallJumped && rb.velocity.y <= 0)
+            Str_WallJumped = false;
+        if (coll.onWall && Input.GetButton("Fire3") && canMove&&!Str_WallJumped)
         {
             if (side != coll.wallSide)
                 anim.Flip(side * -1);
@@ -110,8 +113,14 @@ public class Movement : MonoBehaviour
             {
                 Jump(Vector2.up, false);
             }
-            if (coll.onWall && !coll.onGround)
+            if (coll.onWall && !coll.onGround&&!Input.GetButton("Fire3"))
                 WallJump();
+            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3"))
+            {
+                wallGrab = false;
+                Str_WallJumped = true;
+                Jump(Vector2.up, true);
+            }
         }
         WallParticle(y);
 
