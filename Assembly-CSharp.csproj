@@ -166,6 +166,7 @@
     <Compile Include="Assets\Sricpt\GhostTrail.cs" />
     <Compile Include="Assets\Sricpt\LedgeController.cs" />
     <Compile Include="Assets\Sricpt\Movement.cs" />
+    <Compile Include="Assets\s4m_ur4i_2D-metroidvania-tileset\Scripts\movement.cs" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
