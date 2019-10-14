@@ -7,6 +7,9 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private Collision coll;
     private AnimationScript anim;
+    private  Color raw_Color;
+    
+
 
     [Space]
     [Header("Stats")]
@@ -15,6 +18,13 @@ public class Movement : MonoBehaviour
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
+    public float enduranceBar = 100;
+    public float walljumpDecrease = 10;
+    public float wallGrabDecrease = 5;
+    public float blink_Time_1 = 0f;
+    public float blink_Time_2 = 0f;
+
+
 
     [Space]
     [Header("Booleans")]
@@ -24,6 +34,9 @@ public class Movement : MonoBehaviour
     public bool wallSlide;
     public bool isDashing;
     public bool Str_WallJumped;
+    public bool wallLedge;
+
+
     [Space]
 
     private bool groundTouch;
@@ -44,11 +57,13 @@ public class Movement : MonoBehaviour
         coll = GetComponent<Collision>();
         rb.freezeRotation= true;
         anim = GetComponentInChildren<AnimationScript>();
+        raw_Color = GetComponent<SpriteRenderer>().material.color;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
@@ -57,10 +72,13 @@ public class Movement : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
+        if (coll.onGround)
+            enduranceBar = 100;
 
         if (Str_WallJumped && rb.velocity.y <= 0)
             Str_WallJumped = false;
-        if (coll.onWall && Input.GetButton("Fire3") && canMove&&!Str_WallJumped)
+
+        if (coll.onWall && Input.GetButton("Fire3") && canMove&&!Str_WallJumped&&enduranceBar>0)
         {
             if (side != coll.wallSide)
                 anim.Flip(side * -1);
@@ -68,7 +86,16 @@ public class Movement : MonoBehaviour
             wallSlide = false;
         }
 
-        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove)
+        if(coll.onLedge && wallGrab && Input.GetKey("up"))
+        {
+            wallGrab = false;
+            wallLedge = true;
+        }
+
+        if (!coll.onLedge)
+            wallLedge = false;
+
+        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove||enduranceBar<=0)
         {
             wallGrab = false;
             wallSlide = false;
@@ -89,6 +116,7 @@ public class Movement : MonoBehaviour
             float speedModifier = y > 0 ? .5f : 1;
 
             rb.velocity = new Vector2(rb.velocity.x, y * (speed * speedModifier));
+            enduranceBar -= wallGrabDecrease * Time.deltaTime;
         }
         else
         {
@@ -113,16 +141,23 @@ public class Movement : MonoBehaviour
             {
                 Jump(Vector2.up, false);
             }
-            if (coll.onWall && !coll.onGround&&!Input.GetButton("Fire3"))
+            if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
+            {
                 WallJump();
+                enduranceBar -= walljumpDecrease;
+            }
             if (coll.onWall && !coll.onGround && Input.GetButton("Fire3"))
             {
                 wallGrab = false;
                 Str_WallJumped = true;
                 Jump(Vector2.up, true);
+                enduranceBar -= walljumpDecrease;
             }
         }
         WallParticle(y);
+
+        Blink_To_Red();
+
 
         if (wallGrab || wallSlide || !canMove)
             return;
@@ -155,6 +190,7 @@ public class Movement : MonoBehaviour
             side = -1;
             anim.Flip(side);
         }
+
     }
 
     void GroundTouch()
@@ -180,6 +216,7 @@ public class Movement : MonoBehaviour
         }
         float push = pushingWall ? 0 : rb.velocity.x;
         rb.velocity = new Vector2(push, -slideSpeed);
+        slideParticle.Play();
     }
 
     private void Dash(float x, float y)
@@ -200,6 +237,7 @@ public class Movement : MonoBehaviour
 
     private void Walk(Vector2 dir)
     {
+
         if (!canMove)
             return;
 
@@ -207,9 +245,13 @@ public class Movement : MonoBehaviour
             return;
 
         if (!wallJumped)
+        {
             rb.velocity = (new Vector2(dir.x * speed, rb.velocity.y));
+        }
         else
+        {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
+        }
     }
     private void Jump(Vector2 dir, bool wall)
     {
@@ -293,4 +335,31 @@ public class Movement : MonoBehaviour
         if (coll.onGround)
             hasDashed = false;
     }
+
+    void Blink_To_Red()
+    {
+        if (enduranceBar <= 50 && enduranceBar >= 25)
+        {
+   
+            blink_Time_1 += Time.deltaTime;
+            if (blink_Time_1 % 0.5f > 0.25f)
+                this.GetComponent<SpriteRenderer>().material.color = Color.red;
+            else
+                this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+        }
+        else if (enduranceBar <= 25)
+        {
+
+            blink_Time_1 += Time.deltaTime;
+            if (blink_Time_1 % 0.3f > 0.15f)
+                this.GetComponent<SpriteRenderer>().material.color = Color.red;
+            else
+                this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+        }
+        else
+            this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+
+    }
+
+  
 }

@@ -164,6 +164,7 @@
     <Compile Include="Assets\Sricpt\BetterJumping.cs" />
     <Compile Include="Assets\Sricpt\Collision.cs" />
     <Compile Include="Assets\Sricpt\GhostTrail.cs" />
+    <Compile Include="Assets\Sricpt\LedgeController.cs" />
     <Compile Include="Assets\Sricpt\Movement.cs" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />

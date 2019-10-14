@@ -7,6 +7,7 @@ public class Collision : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask groundLayer;
+    public LayerMask legdeLayer;
 
     [Space]
 
@@ -16,6 +17,7 @@ public class Collision : MonoBehaviour
     public bool onLeftWall;
     public int wallSide;
 
+    public bool onLedge;
     [Space]
 
     [Header("Collision")]
@@ -39,6 +41,10 @@ public class Collision : MonoBehaviour
 
         onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
         onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
+
+        onLedge = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, legdeLayer)
+           || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, legdeLayer);
+
 
         wallSide = onRightWall ? -1 : 1;
     }
