@@ -166,8 +166,6 @@ public class Movement : MonoBehaviour
         Blink_To_Red();
 
 
-        if (wallGrab || wallSlide || !canMove)
-            return;
 
         if (Input.GetKeyDown("x") && !hasDashed)
         {
@@ -187,6 +185,8 @@ public class Movement : MonoBehaviour
             groundTouch = false;
         }
 
+        if (wallGrab || wallSlide || !canMove)
+            return;
         if (x > 0)
         {
             side = 1;
@@ -230,6 +230,7 @@ public class Movement : MonoBehaviour
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
+        FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
 
         hasDashed = true;
 
@@ -259,6 +260,8 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
         }
+
+
     }
     private void Jump(Vector2 dir, bool wall)
     {
@@ -301,16 +304,17 @@ public class Movement : MonoBehaviour
     {
      //   FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
-        rb.gravityScale = 0;
         DOVirtual.Float(14, 0, .5f, RigidbodyDrag);
 
-
+        rb.gravityScale = 0;
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
         ghost.makeGhost = true;
         dashParticle.Play();
-        dashParticle_2.Play();
+      //  dashParticle_2.Play();
+
+
         yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         GetComponent<BetterJumping>().enabled = true;

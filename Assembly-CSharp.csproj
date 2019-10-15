@@ -160,6 +160,7 @@
     <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetClip.cs" />
     <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetMixerBehaviour.cs" />
     <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetTrack.cs" />
+    <Compile Include="Assets\RippleEffect\RippleEffect.cs" />
     <Compile Include="Assets\Sricpt\AnimationScript.cs" />
     <Compile Include="Assets\Sricpt\BetterJumping.cs" />
     <Compile Include="Assets\Sricpt\Collision.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Assets\Sricpt\Movement.cs" />
     <Compile Include="Assets\s4m_ur4i_2D-metroidvania-tileset\Scripts\movement.cs" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
+    <None Include="Assets\RippleEffect\RippleEffect.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
     <None Include="Assets\ProCamera2D\Code\Helpers\Letterbox\Resources\Letterbox.shader" />
@@ -783,16 +785,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a3/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{86AC93F5-B641-F132-D502-D412D7288D9D}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{02878E88-EDA4-64D5-E749-5743C25AF697}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

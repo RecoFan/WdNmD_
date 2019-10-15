@@ -733,14 +733,6 @@
       <Project>{7A4A72C7-C51C-DD52-827B-D5F9E9B56464}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{86AC93F5-B641-F132-D502-D412D7288D9D}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{02878E88-EDA4-64D5-E749-5743C25AF697}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
