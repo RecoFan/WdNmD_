@@ -50,6 +50,12 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
+    public ParticleSystem dashParticle_2;
+    public GhostTrail ghost;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +96,7 @@ public class Movement : MonoBehaviour
         {
             wallGrab = false;
             wallLedge = true;
+            
         }
 
         if (!coll.onLedge)
@@ -162,7 +169,7 @@ public class Movement : MonoBehaviour
         if (wallGrab || wallSlide || !canMove)
             return;
 
-        if (Input.GetButtonDown("Fire1") && !hasDashed)
+        if (Input.GetKeyDown("x") && !hasDashed)
         {
             if (xRaw != 0 || yRaw != 0)
             {
@@ -231,13 +238,13 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
 
         rb.velocity += dir.normalized * dashSpeed;
+
         StartCoroutine(DashWait());
     }
 
 
     private void Walk(Vector2 dir)
     {
-
         if (!canMove)
             return;
 
@@ -248,7 +255,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = (new Vector2(dir.x * speed, rb.velocity.y));
         }
-        else
+        else if(!isDashing)
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
         }
@@ -292,21 +299,24 @@ public class Movement : MonoBehaviour
 
     IEnumerator DashWait()
     {
+     //   FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
-        DOVirtual.Float(14, 0, .5f, RigidbodyDrag);
-
         rb.gravityScale = 0;
+        DOVirtual.Float(14, 0, .5f, RigidbodyDrag);
 
 
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+        ghost.makeGhost = true;
         dashParticle.Play();
+        dashParticle_2.Play();
         yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
+        ghost.makeGhost = false;
     }
 
     void WallParticle(float vertical)
@@ -360,6 +370,8 @@ public class Movement : MonoBehaviour
             this.GetComponent<SpriteRenderer>().material.color = raw_Color;
 
     }
+
+
 
   
 }
