@@ -53,6 +53,10 @@ public class Movement : MonoBehaviour
     public ParticleSystem dashParticle_2;
     public GhostTrail ghost;
 
+    [Space]
+    [Header("Grace")]
+    public int graceJumpTime = 10;
+    public int graceTimer;
 
 
 
@@ -79,7 +83,12 @@ public class Movement : MonoBehaviour
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
         if (coll.onGround)
+        {
             enduranceBar = 100;
+            graceTimer = graceJumpTime;
+        }
+        else
+            graceTimer--;
 
         if (Str_WallJumped && rb.velocity.y <= 0)
             Str_WallJumped = false;
@@ -144,9 +153,10 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("jump");
-            if (coll.onGround)
+            if ((coll.onGround||graceTimer>0)&&!coll.onWall)
             {
                 Jump(Vector2.up, false);
+                graceTimer = 0;
             }
             if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
             {
@@ -161,6 +171,7 @@ public class Movement : MonoBehaviour
                 enduranceBar -= walljumpDecrease;
             }
         }
+
         WallParticle(y);
 
         Blink_To_Red();
