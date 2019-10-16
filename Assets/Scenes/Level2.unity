@@ -664,6 +664,11 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 2049
       objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943474, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4ae8824e5cc33439c0e9f48c30fd39, type: 3}
 --- !u!1 &509752671 stripped
@@ -686,8 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestheight: 0
   maxraylength: 1
-  maxrayheight: 10
-  jumpable: 0.5
+  jumpable: 0.2
   OnLedge: 0
 --- !u!1 &600981775
 GameObject:

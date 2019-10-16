@@ -7,12 +7,11 @@ public class raycast : MonoBehaviour
 {
     private Collision coll;
     private RaycastHit2D hitl, hitr, hit1;
-    private Vector2 Originpos, rayStart;
+    private Vector2 Originpos, ray_drc;
     private LayerMask mask;
     
     public float chestheight;
     public float maxraylength;
-    public float maxrayheight;
     public float jumpable;
     public bool OnLedge;
     
@@ -33,33 +32,36 @@ public class raycast : MonoBehaviour
         
         if (coll.onRightWall)
         {
+            
             hitr = Physics2D.Raycast(Originpos, transform.right, maxraylength, mask);
             if (hitr.collider != null)
             {
-                rayStart = hitr.point + (Vector2)transform.right * 0.1f;
-                rayStart.y += 10.0f;
-                hit1 = Physics2D.Raycast(rayStart, Vector2.down, maxrayheight, mask);
-            }
-            if (hit1.collider != null)
-            {
-                if (Mathf.Abs(transform.position.y - hit1.point.y) < jumpable)
+                ray_drc = new Vector2(maxraylength, jumpable).normalized;
+                hit1 = Physics2D.Raycast(Originpos, ray_drc, 2, mask);
+                if (hit1.collider == null)
+                {
                     OnLedge = true;
+                }
+                else OnLedge = false;
             }
+            else OnLedge = false;
+
         }
         else if (coll.onLeftWall)
         {
             hitl = Physics2D.Raycast(Originpos, -transform.right, maxraylength, mask);
             if (hitl.collider != null)
             {
-                rayStart = hitl.point - (Vector2)transform.right * 0.1f;
-                rayStart.y += 10.0f;
-                hit1 = Physics2D.Raycast(rayStart, Vector2.down, maxrayheight, mask);
-            }
-            if (hit1.collider != null)
-            {
-                if (Mathf.Abs(transform.position.y - hit1.point.y) < jumpable)
+                ray_drc = new Vector2(-maxraylength, jumpable).normalized;
+                hit1 = Physics2D.Raycast(Originpos, ray_drc, 2, mask);
+                if (hit1.collider == null)
+                {
                     OnLedge = true;
+                }
+                else OnLedge = false;
             }
+            else OnLedge = false;
+
         }
         else OnLedge = false;
     }
