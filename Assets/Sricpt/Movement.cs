@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     private Collision coll;
     private AnimationScript anim;
     private  Color raw_Color;
+    private raycast Ledge_judge;
     
 
 
@@ -53,6 +54,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Ledge_judge = GetComponent<raycast>();
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collision>();
         rb.freezeRotation= true;
@@ -86,13 +88,13 @@ public class Movement : MonoBehaviour
             wallSlide = false;
         }
 
-        if(coll.onLedge && wallGrab && Input.GetKey("up"))
+        if(Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
         {
             wallGrab = false;
             wallLedge = true;
         }
 
-        if (!coll.onLedge)
+        if (!Ledge_judge.OnLedge)
             wallLedge = false;
 
         if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove||enduranceBar<=0)
