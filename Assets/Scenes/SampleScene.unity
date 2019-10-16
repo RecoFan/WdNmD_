@@ -7068,7 +7068,7 @@ GameObject:
   - component: {fileID: 848273634}
   - component: {fileID: 848273633}
   - component: {fileID: 848273632}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: mountainForest.platform.regular.small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21684,29 +21684,6 @@ Transform:
   m_Father: {fileID: 1915254785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1584490744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4525599354532943480, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-    type: 3}
-  m_PrefabInstance: {fileID: 4525599355841498424}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1584490756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584490744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5e280b91693da45b6f9955aca50715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestheight: 0
-  maxraylength: 1
-  maxrayheight: 10
-  jumpable: 0.5
-  OnLedge: 0
 --- !u!1 &1706396851
 GameObject:
   m_ObjectHideFlags: 0
@@ -22185,16 +22162,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4525599354532943487, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 1025
-      objectReference: {fileID: 0}
-    - target: {fileID: 4525599354532943474, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: speed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4ae8824e5cc33439c0e9f48c30fd39, type: 3}

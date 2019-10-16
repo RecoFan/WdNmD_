@@ -64,12 +64,12 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Ledge_judge = GetComponent<raycast>();
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collision>();
         rb.freezeRotation= true;
         anim = GetComponentInChildren<AnimationScript>();
-        raw_Color = GetComponent<SpriteRenderer>().material.color;
+        raw_Color = GetComponent<SpriteRenderer>().color;
+        Ledge_judge = GetComponent<raycast>();
     }
 
     // Update is called once per frame
@@ -370,21 +370,21 @@ public class Movement : MonoBehaviour
    
             blink_Time_1 += Time.deltaTime;
             if (blink_Time_1 % 0.5f > 0.25f)
-                this.GetComponent<SpriteRenderer>().material.color = Color.red;
+                this.GetComponent<SpriteRenderer>().color = Color.red;
             else
-                this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+                this.GetComponent<SpriteRenderer>().color = raw_Color;
         }
         else if (enduranceBar <= 25)
         {
 
             blink_Time_1 += Time.deltaTime;
             if (blink_Time_1 % 0.3f > 0.15f)
-                this.GetComponent<SpriteRenderer>().material.color = Color.red;
+                this.GetComponent<SpriteRenderer>().color = Color.red;
             else
-                this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+                this.GetComponent<SpriteRenderer>().color = raw_Color;
         }
         else
-            this.GetComponent<SpriteRenderer>().material.color = raw_Color;
+            this.GetComponent<SpriteRenderer>().color = raw_Color;
 
     }
 
