@@ -51,6 +51,16 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
+    public ParticleSystem dashParticle_2;
+    public GhostTrail ghost;
+
+    [Space]
+    [Header("Grace")]
+    public int graceJumpTime = 10;
+    public int graceTimer;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +85,12 @@ public class Movement : MonoBehaviour
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
         if (coll.onGround)
+        {
             enduranceBar = 100;
+            graceTimer = graceJumpTime;
+        }
+        else
+            graceTimer--;
 
         if (Str_WallJumped && rb.velocity.y <= 0)
             Str_WallJumped = false;
@@ -92,6 +107,7 @@ public class Movement : MonoBehaviour
         {
             wallGrab = false;
             wallLedge = true;
+            
         }
 
         if (!Ledge_judge.OnLedge)
@@ -139,9 +155,10 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("jump");
-            if (coll.onGround)
+            if ((coll.onGround||graceTimer>0)&&!coll.onWall)
             {
                 Jump(Vector2.up, false);
+                graceTimer = 0;
             }
             if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
             {
@@ -156,15 +173,14 @@ public class Movement : MonoBehaviour
                 enduranceBar -= walljumpDecrease;
             }
         }
+
         WallParticle(y);
 
         Blink_To_Red();
 
 
-        if (wallGrab || wallSlide || !canMove)
-            return;
 
-        if (Input.GetButtonDown("Fire1") && !hasDashed)
+        if (Input.GetKeyDown("x") && !hasDashed)
         {
             if (xRaw != 0 || yRaw != 0)
             {
@@ -182,6 +198,8 @@ public class Movement : MonoBehaviour
             groundTouch = false;
         }
 
+        if (wallGrab || wallSlide || !canMove)
+            return;
         if (x > 0)
         {
             side = 1;
@@ -225,6 +243,7 @@ public class Movement : MonoBehaviour
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
+        FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
 
         hasDashed = true;
 
@@ -233,13 +252,13 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
 
         rb.velocity += dir.normalized * dashSpeed;
+
         StartCoroutine(DashWait());
     }
 
 
     private void Walk(Vector2 dir)
     {
-
         if (!canMove)
             return;
 
@@ -250,10 +269,12 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = (new Vector2(dir.x * speed, rb.velocity.y));
         }
-        else
+        else if(!isDashing)
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
         }
+
+
     }
     private void Jump(Vector2 dir, bool wall)
     {
@@ -294,21 +315,25 @@ public class Movement : MonoBehaviour
 
     IEnumerator DashWait()
     {
+     //   FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
         DOVirtual.Float(14, 0, .5f, RigidbodyDrag);
 
         rb.gravityScale = 0;
-
-
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+        ghost.makeGhost = true;
         dashParticle.Play();
+      //  dashParticle_2.Play();
+
+
         yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
+        ghost.makeGhost = false;
     }
 
     void WallParticle(float vertical)
@@ -362,6 +387,8 @@ public class Movement : MonoBehaviour
             this.GetComponent<SpriteRenderer>().material.color = raw_Color;
 
     }
+
+
 
   
 }
