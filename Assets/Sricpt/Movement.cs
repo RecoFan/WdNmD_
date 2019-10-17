@@ -152,10 +152,10 @@ public class Movement : MonoBehaviour
         if (!coll.onWall || coll.onGround)
             wallSlide = false;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && enduranceBar > 0)
         {
             anim.SetTrigger("jump");
-            if ((coll.onGround||graceTimer>0)&&!coll.onWall)
+            if (coll.onGround || graceTimer > 0)
             {
                 Jump(Vector2.up, false);
                 graceTimer = 0;
@@ -165,7 +165,13 @@ public class Movement : MonoBehaviour
                 WallJump();
                 enduranceBar -= walljumpDecrease;
             }
-            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3"))
+            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") && (Input.GetKey("right") || Input.GetKey("left")))
+            {
+                WallJump();
+                enduranceBar -= walljumpDecrease;
+            }
+
+            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") && !(Input.GetKey("right") || Input.GetKey("left")))
             {
                 wallGrab = false;
                 Str_WallJumped = true;
@@ -180,13 +186,15 @@ public class Movement : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown("x") && !hasDashed)
+
+        if (Input.GetKeyDown("x") && !hasDashed && enduranceBar > 0)
         {
             if (xRaw != 0 || yRaw != 0)
             {
                 Dash(xRaw, yRaw);
             }
         }
+
         if (coll.onGround && !groundTouch)
         {
             GroundTouch();

@@ -16442,7 +16442,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestheight: 0
   maxraylength: 0
-  maxrayheight: 0
   jumpable: 0
   OnLedge: 0
 --- !u!1 &1310259979
@@ -22209,5 +22208,15 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943487, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 2049
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943472, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fe88a82d21403ac4085957639a93cc39, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4ae8824e5cc33439c0e9f48c30fd39, type: 3}
