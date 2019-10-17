@@ -7,12 +7,14 @@ public class LedgeController : MonoBehaviour
     private Animator anim;
     private bool is_Ledge;
     private Collision Side_judge;
+    private Rigidbody2D rb;
 
-    public float speed = 3;
-    
+    public float jumpforce = 3;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Side_judge = GetComponent<Collision>();
         anim = GetComponent<Animator>();
     }
@@ -23,18 +25,20 @@ public class LedgeController : MonoBehaviour
         if(is_Ledge)
         {
             if (Side_judge.onRightWall)
-            {
+            {/*
                 Vector3 newPosition = transform.position;
                 newPosition.y += speed * Time.deltaTime;
                 newPosition.x += speed * Time.deltaTime;
-                transform.position = newPosition;
+                transform.position = newPosition;*/
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * jumpforce;
             }
             else if (Side_judge.onLeftWall)
             {
-                Vector3 newPosition = transform.position;
-                newPosition.y += speed * Time.deltaTime;
-                newPosition.x += -speed * Time.deltaTime;
-                transform.position = newPosition;
+                //Vector3 newPosition = transform.position;
+                //newPosition.y += speed * Time.deltaTime;
+                //newPosition.x += -speed * Time.deltaTime;
+                //transform.position = newPosition;
 
             }
             

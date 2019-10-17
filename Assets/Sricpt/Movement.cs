@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using DG.Tweening;
 public class Movement : MonoBehaviour
@@ -58,7 +60,14 @@ public class Movement : MonoBehaviour
     public int graceJumpTime = 10;
     public int graceTimer;
 
-
+    [Space]
+    [Header("Ledge")]
+    public float Ledge_Timer = 0.2f;
+    public int Ledge_Is = 0;
+    public bool HasLedged;
+    public float HasLedged_Time = 0.1f;
+    public float LedgeSpeed = 10f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -74,150 +83,201 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        float xRaw = Input.GetAxisRaw("Horizontal");
-        float yRaw = Input.GetAxisRaw("Vertical");
-        Vector2 dir = new Vector2(x, y);
-        Walk(dir);
-        anim.SetHorizontalMovement(x, y, rb.velocity.y);
-
-        if (coll.onGround)
+        if (Ledge_Is != 0)
         {
-            enduranceBar = 100;
-            graceTimer = graceJumpTime;
-        }
-        else
-            graceTimer--;
-
-        if (Str_WallJumped && rb.velocity.y <= 0)
-            Str_WallJumped = false;
-
-        if (coll.onWall && Input.GetButton("Fire3") && canMove&&!Str_WallJumped&&enduranceBar>0)
-        {
-            if (side != coll.wallSide)
-                anim.Flip(side * -1);
-            wallGrab = true;
-            wallSlide = false;
-        }
-
-        if(Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
-        {
-            wallGrab = false;
-            wallLedge = true;
-            
-        }
-
-        if (!Ledge_judge.OnLedge)
-            wallLedge = false;
-
-        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove||enduranceBar<=0)
-        {
-            wallGrab = false;
-            wallSlide = false;
-        }
-
-        if (coll.onGround &&!isDashing)
-        {
-            wallJumped = false;
-            GetComponent<BetterJumping>().enabled = true;
-        }
-
-        if (wallGrab && !isDashing)
-        {
-            rb.gravityScale = 0;
-            if (x > .2f || x < -.2f)
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-
-            float speedModifier = y > 0 ? .5f : 1;
-
-            rb.velocity = new Vector2(rb.velocity.x, y * (speed * speedModifier));
-            enduranceBar -= wallGrabDecrease * Time.deltaTime;
+            Ledge_Timer -= Time.deltaTime;
+            if (Ledge_Timer <= 0)
+            {
+                if (Ledge_Is > 0)
+                    rb.velocity += Vector2.right * LedgeSpeed;
+                else if (Ledge_Is < 0) 
+                    rb.velocity += Vector2.left * LedgeSpeed;
+                HasLedged = true;
+                Ledge_Is = 0;
+            }
         }
         else
         {
-            rb.gravityScale = 3;
+            Ledge_Timer = 0.2f;
         }
 
-        if (coll.onWall && !coll.onGround)
+        if (HasLedged)
         {
-            if (x != 0 && !wallGrab)
+            HasLedged_Time -= Time.deltaTime;
+            if (HasLedged_Time <= 0)
             {
-                wallSlide = true;
-                WallSlide();
+                HasLedged = false;
             }
+                
         }
-        if (!coll.onWall || coll.onGround)
-            wallSlide = false;
-
-        if (Input.GetButtonDown("Jump") && enduranceBar > 0)
+        else
         {
-            anim.SetTrigger("jump");
-            if (coll.onGround || graceTimer > 0)
+            HasLedged_Time = 0.1f;
+        }
+        if (!HasLedged)
+        {
+            float x = Input.GetAxis("Horizontal");
+            float y = Input.GetAxis("Vertical");
+            float xRaw = Input.GetAxisRaw("Horizontal");
+            float yRaw = Input.GetAxisRaw("Vertical");
+            Vector2 dir = new Vector2(x, y);
+
+            Walk(dir);
+            anim.SetHorizontalMovement(x, y, rb.velocity.y);
+
+            if (coll.onGround)
             {
-                Jump(Vector2.up, false);
-                graceTimer = 0;
+                enduranceBar = 100;
+                graceTimer = graceJumpTime;
             }
-            if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
+            else
+                graceTimer--;
+
+            if (Str_WallJumped && rb.velocity.y <= 0)
+                Str_WallJumped = false;
+
+            if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped && enduranceBar > 0)
             {
-                WallJump();
-                enduranceBar -= walljumpDecrease;
-            }
-            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") && (Input.GetKey("right") || Input.GetKey("left")))
-            {
-                WallJump();
-                enduranceBar -= walljumpDecrease;
+                if (side != coll.wallSide)
+                    anim.Flip(side * -1);
+                wallGrab = true;
+                wallSlide = false;
             }
 
-            if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") && !(Input.GetKey("right") || Input.GetKey("left")))
+            if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
+            {
+
+                if (coll.onRightWall)
+                {
+                    wallGrab = false;
+                    Str_WallJumped = true;
+                    Jump(Vector2.up, true);
+                    Ledge_Is = 1;
+
+                }
+                else if (coll.onLeftWall)
+                {
+                    wallGrab = false;
+                    Str_WallJumped = true;
+                    Jump(Vector2.up, true);
+                    Ledge_Is = -1;
+                }
+
+            }
+            else wallLedge = false;
+
+            if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove || enduranceBar <= 0)
             {
                 wallGrab = false;
-                Str_WallJumped = true;
-                Jump(Vector2.up, true);
-                enduranceBar -= walljumpDecrease;
+                wallSlide = false;
             }
-        }
 
-        WallParticle(y);
-
-        Blink_To_Red();
-
-
-
-
-        if (Input.GetKeyDown("x") && !hasDashed && enduranceBar > 0)
-        {
-            if (xRaw != 0 || yRaw != 0)
+            if (coll.onGround && !isDashing)
             {
-                Dash(xRaw, yRaw);
+                wallJumped = false;
+                GetComponent<BetterJumping>().enabled = true;
+            }
+
+            if (wallGrab && !isDashing)
+            {
+                rb.gravityScale = 0;
+                if (x > .2f || x < -.2f)
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+
+                float speedModifier = y > 0 ? .5f : 1;
+
+                rb.velocity = new Vector2(rb.velocity.x, y * (speed * speedModifier));
+                enduranceBar -= wallGrabDecrease * Time.deltaTime;
+            }
+            else
+            {
+                rb.gravityScale = 3;
+            }
+
+            if (coll.onWall && !coll.onGround)
+            {
+                if (x != 0 && !wallGrab)
+                {
+                    wallSlide = true;
+                    WallSlide();
+                }
+            }
+
+            if (!coll.onWall || coll.onGround)
+                wallSlide = false;
+
+            if (Input.GetButtonDown("Jump") && enduranceBar > 0)
+            {
+                anim.SetTrigger("jump");
+                if (coll.onGround || graceTimer > 0)
+                {
+                    Jump(Vector2.up, false);
+                    graceTimer = 0;
+                }
+
+                if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
+                {
+                    WallJump();
+                    enduranceBar -= walljumpDecrease;
+                }
+
+                if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
+                    (Input.GetKey("right") || Input.GetKey("left")))
+                {
+                    WallJump();
+                    enduranceBar -= walljumpDecrease;
+                }
+
+                if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
+                    !(Input.GetKey("right") || Input.GetKey("left")))
+                {
+                    wallGrab = false;
+                    Str_WallJumped = true;
+                    Jump(Vector2.up, true);
+                    enduranceBar -= walljumpDecrease;
+                }
+            }
+
+            WallParticle(y);
+
+            Blink_To_Red();
+
+
+
+
+            if (Input.GetKeyDown("x") && !hasDashed && enduranceBar > 0)
+            {
+                if (xRaw != 0 || yRaw != 0)
+                {
+                    Dash(xRaw, yRaw);
+                }
+            }
+
+            if (coll.onGround && !groundTouch)
+            {
+                GroundTouch();
+                groundTouch = true;
+            }
+
+            if (!coll.onGround && groundTouch)
+            {
+                groundTouch = false;
+            }
+
+            if (wallGrab || wallSlide || !canMove)
+                return;
+            if (x > 0)
+            {
+                side = 1;
+                anim.Flip(side);
+            }
+
+            if (x < 0)
+            {
+                side = -1;
+                anim.Flip(side);
             }
         }
-
-        if (coll.onGround && !groundTouch)
-        {
-            GroundTouch();
-            groundTouch = true;
-        }
-
-        if (!coll.onGround && groundTouch)
-        {
-            groundTouch = false;
-        }
-
-        if (wallGrab || wallSlide || !canMove)
-            return;
-        if (x > 0)
-        {
-            side = 1;
-            anim.Flip(side);
-        }
-        if (x < 0)
-        {
-            side = -1;
-            anim.Flip(side);
-        }
-
     }
 
     void GroundTouch()

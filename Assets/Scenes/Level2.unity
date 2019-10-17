@@ -594,6 +594,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4525599354532943480, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
       propertyPath: m_Name
@@ -664,10 +668,10 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 2049
       objectReference: {fileID: 0}
-    - target: {fileID: 4525599354532943474, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+    - target: {fileID: 4525599354532943485, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
-      propertyPath: speed
-      value: 25
+      propertyPath: jumpForce
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4ae8824e5cc33439c0e9f48c30fd39, type: 3}
