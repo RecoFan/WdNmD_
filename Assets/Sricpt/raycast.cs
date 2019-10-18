@@ -6,8 +6,8 @@ using UnityEngine;
 public class raycast : MonoBehaviour
 {
     private Collision coll;
-    private RaycastHit2D hitl, hitr, hit1;
-    private Vector2 Originpos, ray_drc;
+    private RaycastHit2D hit1;
+    private Vector2 Originpos, ray_drcL, ray_drcR;
     private LayerMask mask;
     
     public float chestheight;
@@ -15,12 +15,13 @@ public class raycast : MonoBehaviour
     public float jumpable;
     public bool OnLedge;
     
-    private Rigidbody2D example;
     // Start is called before the first frame update
     void Start()
     {
         coll = GetComponent<Collision>();
         mask = LayerMask.GetMask("Test");
+        ray_drcR = new Vector2(maxraylength, jumpable).normalized;
+        ray_drcL = new Vector2(-maxraylength, jumpable).normalized;
     }
 
     // Update is called once per frame
@@ -33,35 +34,23 @@ public class raycast : MonoBehaviour
         if (coll.onRightWall)
         {
             
-            hitr = Physics2D.Raycast(Originpos, transform.right, maxraylength, mask);
-            if (hitr.collider != null)
+            hit1 = Physics2D.Raycast(Originpos, ray_drcR, 2, mask);
+            if (hit1.collider == null)
             {
-                ray_drc = new Vector2(maxraylength, jumpable).normalized;
-                hit1 = Physics2D.Raycast(Originpos, ray_drc, 2, mask);
-                if (hit1.collider == null)
-                {
-                    OnLedge = true;
-                }
-                else OnLedge = false;
+                OnLedge = true;
             }
             else OnLedge = false;
 
         }
         else if (coll.onLeftWall)
         {
-            hitl = Physics2D.Raycast(Originpos, -transform.right, maxraylength, mask);
-            if (hitl.collider != null)
+            hit1 = Physics2D.Raycast(Originpos, ray_drcL, 2, mask);
+            if (hit1.collider == null)
             {
-                ray_drc = new Vector2(-maxraylength, jumpable).normalized;
-                hit1 = Physics2D.Raycast(Originpos, ray_drc, 2, mask);
-                if (hit1.collider == null)
-                {
-                    OnLedge = true;
-                }
-                else OnLedge = false;
+                OnLedge = true;
             }
             else OnLedge = false;
-
+            
         }
         else OnLedge = false;
     }
