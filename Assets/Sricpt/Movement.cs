@@ -144,26 +144,7 @@ public class Movement : MonoBehaviour
                 wallSlide = false;
             }
 
-            if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
-            {
-
-                if (coll.onRightWall)
-                {
-                    wallGrab = false;
-                    Str_WallJumped = true;
-                    Jump(Vector2.up, true);
-                    Ledge_Is = 1;
-
-                }
-                else if (coll.onLeftWall)
-                {
-                    wallGrab = false;
-                    Str_WallJumped = true;
-                    Jump(Vector2.up, true);
-                    Ledge_Is = -1;
-                }
-
-            }
+            
             else wallLedge = false;
 
             if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove || enduranceBar <= 0)
@@ -236,6 +217,33 @@ public class Movement : MonoBehaviour
                     Jump(Vector2.up, true);
                     enduranceBar -= walljumpDecrease;
                 }
+            }
+
+            if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
+            {
+
+                if (coll.onRightWall)
+                {
+                    side = 1;
+                    anim.Flip(side);
+                    wallGrab = false;
+                    Str_WallJumped = true;
+                    rb.velocity += Vector2.up * 15;
+                    //Jump(Vector2.up, true);
+                    Ledge_Is = 1;
+
+                }
+                else if (coll.onLeftWall)
+                {
+                    side = -1;
+                    anim.Flip(side);
+                    wallGrab = false;
+                    Str_WallJumped = true;
+                    rb.velocity += Vector2.up * 215;
+                    //Jump(Vector2.up, true);
+                    Ledge_Is = -1;
+                }
+
             }
 
             WallParticle(y);
