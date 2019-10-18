@@ -9,9 +9,9 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private Collision coll;
     private AnimationScript anim;
-    private  Color raw_Color;
+    private Color raw_Color;
     private raycast Ledge_judge;
-    
+
 
 
     [Space]
@@ -67,6 +67,12 @@ public class Movement : MonoBehaviour
     public bool HasLedged;
     public float HasLedged_Time = 0.1f;
     public float LedgeSpeed = 10f;
+
+    [Space]
+    [Header("ChangeSpeed")]
+    public float Ho_Speed;
+    public float Ve_Speed;
+
     
 
     // Start is called before the first frame update
@@ -228,8 +234,8 @@ public class Movement : MonoBehaviour
                     anim.Flip(side);
                     wallGrab = false;
                     Str_WallJumped = true;
-                    rb.velocity += Vector2.up * 15;
-                    //Jump(Vector2.up, true);
+                  //  rb.velocity += Vector2.up * 15;
+                    Jump(Vector2.up, true);
                     Ledge_Is = 1;
 
                 }
@@ -239,8 +245,8 @@ public class Movement : MonoBehaviour
                     anim.Flip(side);
                     wallGrab = false;
                     Str_WallJumped = true;
-                    rb.velocity += Vector2.up * 215;
-                    //Jump(Vector2.up, true);
+                //    rb.velocity += Vector2.up * 215;
+                    Jump(Vector2.up, true);
                     Ledge_Is = -1;
                 }
 
@@ -342,7 +348,7 @@ public class Movement : MonoBehaviour
 
         if (!wallJumped)
         {
-            rb.velocity = (new Vector2(dir.x * speed, rb.velocity.y));
+            rb.velocity = (new Vector2(dir.x * speed+Ho_Speed, rb.velocity.y+Ve_Speed));
         }
         else if(!isDashing)
         {

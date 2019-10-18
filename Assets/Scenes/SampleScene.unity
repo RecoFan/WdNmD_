@@ -22322,6 +22322,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943487, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 2049
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943485, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: wallJumpLerp
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525599354532943472, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fe88a82d21403ac4085957639a93cc39, type: 2}
+    - target: {fileID: 3129360050544811517, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129360050544811517, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.473
+      objectReference: {fileID: 0}
     - target: {fileID: 4525599354532943482, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -22337,15 +22362,10 @@ PrefabInstance:
       propertyPath: ghostDelay
       value: 0.08
       objectReference: {fileID: 0}
-    - target: {fileID: 3129360050544811517, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
+    - target: {fileID: 2630640427318091208, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129360050544811517, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.473
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3129360050544811515, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
@@ -22392,11 +22412,6 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 0.6
       objectReference: {fileID: 0}
-    - target: {fileID: 2630640427318091208, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3129360050544811516, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
         type: 3}
       propertyPath: m_SortingOrder
@@ -22406,21 +22421,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4525599354532943487, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 2049
-      objectReference: {fileID: 0}
-    - target: {fileID: 4525599354532943472, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: fe88a82d21403ac4085957639a93cc39, type: 2}
-    - target: {fileID: 4525599354532943485, guid: 9a4ae8824e5cc33439c0e9f48c30fd39,
-        type: 3}
-      propertyPath: wallJumpLerp
-      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4ae8824e5cc33439c0e9f48c30fd39, type: 3}

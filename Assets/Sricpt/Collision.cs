@@ -65,7 +65,10 @@ public class Collision : MonoBehaviour
         if (coll_onRightWall != null)
         {
             if (!coll_onRightWall.isTrigger)
+            {
+                Debug.Log("1");
                 onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+            }
         }
         else
             onRightWall = false;
