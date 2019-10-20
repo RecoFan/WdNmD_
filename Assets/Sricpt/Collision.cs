@@ -7,7 +7,7 @@ public class Collision : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask groundLayer;
-    public LayerMask legdeLayer;
+  //  public LayerMask legdeLayer;
 
     [Space]
 
@@ -29,7 +29,11 @@ public class Collision : MonoBehaviour
     [Header("Collision")]
 
     public float collisionRadius = 0.25f;
-    public Vector2 bottomOffset, rightOffset, leftOffset;
+  //  public Vector2 bottomOffset, rightOffset, leftOffset;
+
+    public Vector2 pointRight1, pointRight2, pointLeft1, pointLeft2, pointDown1, pointDown2;
+
+    
     private Color debugCollisionColor = Color.red;
 
     // Start is called before the first frame update
@@ -41,14 +45,15 @@ public class Collision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coll_onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        coll_onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
-        coll_onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
+        coll_onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
+       // coll_onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+        coll_onRightWall = Physics2D.OverlapArea((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, groundLayer);
+        coll_onLeftWall = Physics2D.OverlapArea((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, groundLayer);
 
         if (coll_onGround != null)
         {
             if (!coll_onGround.isTrigger)
-                onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+                onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
         }
         else
             onGround = false;
@@ -66,8 +71,8 @@ public class Collision : MonoBehaviour
         {
             if (!coll_onRightWall.isTrigger)
             {
-                Debug.Log("1");
-                onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+             //   Debug.Log("1");
+                onRightWall = Physics2D.OverlapArea((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, groundLayer);
             }
         }
         else
@@ -76,7 +81,7 @@ public class Collision : MonoBehaviour
         if (coll_onLeftWall != null)
         {
             if (!coll_onLeftWall.isTrigger)
-                onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
+                onLeftWall = Physics2D.OverlapArea((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, groundLayer);
         }
         else
             onLeftWall = false;
@@ -97,10 +102,14 @@ public class Collision : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
+      //  var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
-        Gizmos.DrawWireSphere((Vector2)transform.position  + bottomOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position  + pointRight1, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + pointRight2, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + pointLeft1, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + pointLeft2,collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + pointDown1, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + pointDown2, collisionRadius);
+  
     }
 }

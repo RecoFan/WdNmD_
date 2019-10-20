@@ -145,7 +145,10 @@ public class Movement : MonoBehaviour
             if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped && enduranceBar > 0)
             {
                 if (side != coll.wallSide)
+                {
                     anim.Flip(side * -1);
+                    //this.transform.rotation= new Quaternion()
+                }
                 wallGrab = true;
                 wallSlide = false;
             }
