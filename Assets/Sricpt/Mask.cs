@@ -7,31 +7,56 @@ public class Mask : MonoBehaviour
     Animator ani;
     PostProcessVolume m_Volume;
     Bloom b;
+    public float Static_Exit_Time = 2f;
+    public float Exit_Time;
+    bool is_exit;
     // Start is called before the first frame update
     void Start()
     {
         ani = GetComponent<Animator>();
+        Exit_Time = Static_Exit_Time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(is_exit)
+        {
+            Exit_Time -= Time.deltaTime;
+            if(Exit_Time<=0)
+            {
+                ani.SetBool("InMask", false);
+                is_exit = false;
+                Exit_Time = Static_Exit_Time;
+                Collider2D[] col;
+                col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
+                foreach (var child in col)
+                {
+                    if (child != GetComponent<Collider2D>())
+                    {
+                        child.enabled = false;
+                    }
+                }
+            }
+        }
+        else
+            Exit_Time = Static_Exit_Time;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        is_exit = false;
         ani.SetBool("InMask", true);
+        b = ScriptableObject.CreateInstance<Bloom>();
+        b.enabled.Override(true);
+        b.intensity.Override(25f);
+        m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
         Collider2D[] col;
-       
         col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
         foreach(var child in col)
         {
             if (child != GetComponent<Collider2D>())
             {
-                b = ScriptableObject.CreateInstance<Bloom>();
-                b.enabled.Override(true);
-                b.intensity.Override(25f);
-                m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
+             
 
                 child.enabled = true;
             }
@@ -39,16 +64,10 @@ public class Mask : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        ani.SetBool("InMask", false);
-        Collider2D[] col;
-        col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
-        foreach (var child in col)
-        {
-            if (child != GetComponent<Collider2D>())
-            {
-                RuntimeUtilities.DestroyVolume(m_Volume, true, true);
-                child.enabled = false;
-            }
-        }
+        RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+        is_exit = true;
+
+
+
     }
 }
