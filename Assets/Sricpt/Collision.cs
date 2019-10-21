@@ -18,10 +18,10 @@ public class Collision : MonoBehaviour
     public int wallSide;
 
 
-    private Collider2D coll_onGround;
+  //  private Collider2D[] coll_onGround;
  //   private Collider2D coll_onWall;
-    private Collider2D coll_onRightWall;
-    private Collider2D coll_onLeftWall;
+   // private Collider2D[] coll_onRightWall;
+   // private Collider2D[] coll_onLeftWall;
 
     //public bool onLedge;
     [Space]
@@ -39,53 +39,84 @@ public class Collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        coll_onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
+        Collider2D[] coll_onGround = new Collider2D[10];
+        Collider2D[] coll_onRightWall = new Collider2D[10];
+        Collider2D[] coll_onLeftWall = new Collider2D[10];
+        int ground_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, coll_onGround,groundLayer);
        // coll_onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        coll_onRightWall = Physics2D.OverlapArea((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, groundLayer);
-        coll_onLeftWall = Physics2D.OverlapArea((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, groundLayer);
+        int right_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, coll_onRightWall,groundLayer);
+        Debug.Log(right_count);
+       int left_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, coll_onLeftWall,groundLayer);
 
-        if (coll_onGround != null)
+        if (ground_count != 0)
         {
-            if (!coll_onGround.isTrigger)
-                onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
+            for(int i=0;i<ground_count;i++)
+            {
+                if (!coll_onGround[i].isTrigger)
+                {
+                    //   onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
+                    onGround = true;
+                    break;
+                }
+                else
+                    onGround = false;
+            }
         }
         else
             onGround = false;
-
-     //   if (coll_onLeftWall != null || coll_onRightWall != null)
-       // {
-         //   if ((coll_onLeftWall != null && !coll_onLeftWall.isTrigger) || (coll_onRightWall != null && !coll_onRightWall.isTrigger))
-           //     onWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)
-             //       || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
-       // }
-       // else
-         //   onWall = false;
-
-        if (coll_onRightWall != null)
+        /*
+       if (coll_onLeftWall != null || coll_onRightWall != null)
+       {
+           if ((coll_onLeftWall != null && !coll_onLeftWall.isTrigger) || (coll_onRightWall != null && !coll_onRightWall.isTrigger))
+               onWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)
+                  || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
+       }
+        else
+           onWall = false;
+         */
+         
+        if (right_count!= 0)
         {
-            if (!coll_onRightWall.isTrigger)
+            for (int i = 0; i < right_count;i++)
             {
-             //   Debug.Log("1");
-                onRightWall = Physics2D.OverlapArea((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, groundLayer);
+                if (!coll_onRightWall[i].isTrigger)
+                {
+                    // Debug.Log("1");
+                    //onRightWall = Physics2D.OverlapArea((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, groundLayer);
+                    onRightWall = true;
+                    break;
+                }
+                else
+                    onRightWall = false;
             }
         }
         else
             onRightWall = false;
-
-        if (coll_onLeftWall != null)
+            
+            
+        if (left_count != 0)
         {
-            if (!coll_onLeftWall.isTrigger)
-                onLeftWall = Physics2D.OverlapArea((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, groundLayer);
+            for (int i = 0; i < left_count; i++)
+            {
+                if (!coll_onLeftWall[i].isTrigger)
+                {
+                    onLeftWall = true;
+                    break;
+                    // onLeftWall = Physics2D.OverlapArea((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, groundLayer);
+                }
+                else
+                    onLeftWall = false;
+            }
         }
         else
             onLeftWall = false;
-
+            
         if (onLeftWall || onRightWall)
             onWall = true;
         else
