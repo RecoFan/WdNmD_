@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using DG.Tweening;
 public class Mask : MonoBehaviour
 {
     Animator ani;
@@ -44,6 +45,8 @@ public class Mask : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       // Camera.main.transform.DOComplete();
+        //Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
         is_exit = false;
         ani.SetBool("InMask", true);
         b = ScriptableObject.CreateInstance<Bloom>();
