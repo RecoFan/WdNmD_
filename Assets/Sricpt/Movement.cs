@@ -196,7 +196,7 @@ public class Movement : MonoBehaviour
             if (!coll.onWall || coll.onGround)
                 wallSlide = false;
 
-            if (Input.GetButtonDown("Jump") && enduranceBar > 0)
+            if (Input.GetKeyDown("c") && enduranceBar > 0)
             {
                 anim.SetTrigger("jump");
                 if (coll.onGround || graceTimer > 0)
