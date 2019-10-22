@@ -6,8 +6,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public Transform spawnPosition;
-    public Transform PlayerTransform;
-    public bool isDeath;
+    public GameObject player;
+    private bool isDeath;
     
     // Start is called before the first frame update
     void Start()
@@ -15,18 +15,19 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    public void PosReset()
-    {
-        PlayerTransform.position = spawnPosition.position;
-    }
-
     // Update is called once per frame
     void Update()
     {
-
-        if (PlayerTransform.position.y < -10)
+        if (player.transform.position.y < -10)
         {
             isDeath = true;
+        }
+        
+        if (isDeath)
+        {
+            Destroy(player, 0.01f);
+            Instantiate(player, spawnPosition.position, Quaternion.identity);
+            isDeath = false;
         }
     }
 
