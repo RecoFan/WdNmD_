@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     private AnimationScript anim;
     private Color raw_Color;
     private raycast Ledge_judge;
+    private LevelManager Dead_Judge;
 
 
 
@@ -84,11 +85,24 @@ public class Movement : MonoBehaviour
         anim = GetComponentInChildren<AnimationScript>();
         raw_Color = GetComponent<SpriteRenderer>().color;
         Ledge_judge = GetComponent<raycast>();
+        Dead_Judge = GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Dead_Judge.isDeath)
+        {
+            canMove = false;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Dead_Judge.PosReset();
+                Dead_Judge.isDeath = false;
+                
+            }
+            return;
+        }
+        
         if (Ledge_Is != 0)
         {
             Ledge_Timer -= Time.deltaTime;
