@@ -10,10 +10,12 @@ public class DashBall : MonoBehaviour
     public bool is_Touch;
     Movement move;
     public ParticleSystem disappear;
+    public ParticleSystem idie;
     public float recoverTime;
     public float static_recoverTime = 5f;
     void Start()
     {
+        idie.Play();
         recoverTime = static_recoverTime;
         move = FindObjectOfType<Movement>();
     }
@@ -27,6 +29,7 @@ public class DashBall : MonoBehaviour
             recoverTime -= Time.deltaTime;
             if(recoverTime <=0)
             {
+                idie.Play();
                 recoverTime = static_recoverTime;
                 is_Touch = false;
                 GetComponent<SpriteRenderer>().enabled = true;
@@ -39,6 +42,7 @@ public class DashBall : MonoBehaviour
         if(!is_Touch)
         {
             disappear.Play();
+            idie.Stop();
             Camera.main.transform.DOComplete();
             Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
             GetComponent<SpriteRenderer>().enabled = false;

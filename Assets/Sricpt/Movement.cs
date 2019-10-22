@@ -37,7 +37,6 @@ public class Movement : MonoBehaviour
     public bool wallSlide;
     public bool isDashing;
     public bool Str_WallJumped;
-    public bool wallLedge;
     public bool hasDashed;
 
     [Space]
@@ -61,6 +60,12 @@ public class Movement : MonoBehaviour
     public int graceTimer;
 
     [Space]
+    [Header("Buffer")]
+    public float jumpBufferTimer;
+    public float jumpBuffer = 5f;
+
+
+    [Space]
     [Header("Ledge")]
     public float Ledge_Timer = 0.2f;
     public int Ledge_Is = 0;
@@ -78,6 +83,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        graceTimer = graceJumpTime;
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collision>();
         rb.freezeRotation= true;
@@ -120,7 +126,7 @@ public class Movement : MonoBehaviour
         {
             HasLedged_Time = 0.1f;
         }
-        if (!HasLedged)
+        if (!HasLedged&&Ledge_Is==0)
         {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
@@ -130,6 +136,10 @@ public class Movement : MonoBehaviour
 
             Walk(dir);
             anim.SetHorizontalMovement(x, y, rb.velocity.y);
+
+            if (Input.GetKeyDown("c"))
+                jumpBufferTimer = jumpBuffer;
+            Debug.Log(jumpBufferTimer);
 
             if (coll.onGround)
             {
@@ -147,14 +157,10 @@ public class Movement : MonoBehaviour
                 if (side != coll.wallSide)
                 {
                     anim.Flip(side * -1);
-                    //this.transform.rotation= new Quaternion()
                 }
                 wallGrab = true;
                 wallSlide = false;
             }
-
-            
-            else wallLedge = false;
 
             if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove || enduranceBar <= 0)
             {
@@ -196,19 +202,25 @@ public class Movement : MonoBehaviour
             if (!coll.onWall || coll.onGround)
                 wallSlide = false;
 
+
             if (Input.GetKeyDown("c") && enduranceBar > 0)
+                jumpBufferTimer = jumpBuffer;
+
+            if (jumpBufferTimer > 0)
             {
                 anim.SetTrigger("jump");
                 if (coll.onGround || graceTimer > 0)
                 {
                     Jump(Vector2.up, false);
                     graceTimer = 0;
+                    jumpBufferTimer = 0;
                 }
 
                 if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
                 {
                     WallJump();
                     enduranceBar -= walljumpDecrease;
+                    jumpBufferTimer = 0;
                 }
 
                 if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
@@ -216,6 +228,7 @@ public class Movement : MonoBehaviour
                 {
                     WallJump();
                     enduranceBar -= walljumpDecrease;
+                    jumpBufferTimer = 0;
                 }
 
                 if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
@@ -225,8 +238,11 @@ public class Movement : MonoBehaviour
                     Str_WallJumped = true;
                     Jump(Vector2.up, true);
                     enduranceBar -= walljumpDecrease;
+                    jumpBufferTimer = 0;
                 }
+                jumpBufferTimer--;
             }
+
 
             if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
             {
@@ -237,7 +253,6 @@ public class Movement : MonoBehaviour
                     anim.Flip(side);
                     wallGrab = false;
                     Str_WallJumped = true;
-                  //  rb.velocity += Vector2.up * 15;
                     Jump(Vector2.up, true);
                     Ledge_Is = 1;
 
@@ -248,7 +263,6 @@ public class Movement : MonoBehaviour
                     anim.Flip(side);
                     wallGrab = false;
                     Str_WallJumped = true;
-                //    rb.velocity += Vector2.up * 215;
                     Jump(Vector2.up, true);
                     Ledge_Is = -1;
                 }
@@ -258,8 +272,6 @@ public class Movement : MonoBehaviour
             WallParticle(y);
 
             Blink_To_Red();
-
-
 
 
             if (Input.GetKeyDown("x") && !hasDashed && enduranceBar > 0)

@@ -37,6 +37,6 @@ public class LevelManager : MonoBehaviour
         {
             isDeath = true;
         }
-        throw new NotImplementedException("Nothing");
+    //    throw new NotImplementedException("Nothing");
     }
 }
