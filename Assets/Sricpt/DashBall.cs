@@ -13,8 +13,13 @@ public class DashBall : MonoBehaviour
     public ParticleSystem idie;
     public float recoverTime;
     public float static_recoverTime = 5f;
+    float radian = 0;
+    Vector3 oldPos;
+    public float perRadian = 0.03f;
+    public float radius = 0.08f;
     void Start()
     {
+        oldPos = transform.position;
         idie.Play();
         recoverTime = static_recoverTime;
         move = FindObjectOfType<Movement>();
@@ -23,8 +28,12 @@ public class DashBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // ani.SetBool("Is_Touch", true);
-       if(is_Touch)
+        // ani.SetBool("Is_Touch", true);
+        oldPos = transform.position;
+        radian += perRadian;
+        float dy = Mathf.Cos(radian) * radius;
+        transform.position = oldPos + new Vector3(0, dy, 0);
+        if (is_Touch)
         {
             recoverTime -= Time.deltaTime;
             if(recoverTime <=0)
