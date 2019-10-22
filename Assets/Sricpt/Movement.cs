@@ -93,7 +93,7 @@ public class Movement : MonoBehaviour
     {
         if (Dead_Judge.isDeath)
         {
-            canMove = false;
+            //canMove = false;
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Dead_Judge.PosReset();
