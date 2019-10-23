@@ -38,6 +38,8 @@ public class Movement : MonoBehaviour
     public bool isDashing;
     public bool Str_WallJumped;
     public bool hasDashed;
+    public bool isDeath;
+
 
     [Space]
 
@@ -308,7 +310,13 @@ public class Movement : MonoBehaviour
             }
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Deadly")
+        {
+            isDeath = true;
+        }
+    }
     void GroundTouch()
     {
         hasDashed = false;

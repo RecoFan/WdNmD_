@@ -2,41 +2,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class LevelManager : MonoBehaviour
 {
+    private Animator _anim;
     public Transform spawnPosition;
-    public GameObject player;
-    private bool isDeath;
+    private GameObject _player;
+    public RawImage rawImage;
+    //private bool _controlFlag = false;
+    
+    private void StartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
+    }
+    private void EndScene()
+    {
+        _anim.SetTrigger("OUT");
+    }
+    private void Awake()
+    {
+        _player = GameObject.FindWithTag("Player");
+        _player.transform.position = spawnPosition.position;
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        _anim = GetComponent<Animator>();
+        _player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y < -10)
+        if (_player && _player.GetComponent<Movement>().isDeath)
         {
-            isDeath = true;
-        }
-        
-        if (isDeath)
-        {
-            Destroy(player, 0.01f);
-            Instantiate(player, spawnPosition.position, Quaternion.identity);
-            isDeath = false;
+            Destroy(_player);
+            _player = null;
+            EndScene();
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Deadly")
-        {
-            isDeath = true;
-        }
-    //    throw new NotImplementedException("Nothing");
-    }
+    
 }
