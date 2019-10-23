@@ -1838,20 +1838,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697969978}
     m_Modifications:
-    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
-        type: 3}
-      propertyPath: m_Name
-      value: FallingStone (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.548866
+      value: -8.7
       objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.322998
+      value: -6.86
       objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
@@ -1897,6 +1892,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
+        type: 3}
+      propertyPath: m_Name
+      value: FallingStone (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bacd99c4ccb76b24d89dd43ac1c13b67, type: 3}
@@ -2200,20 +2200,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697969978}
     m_Modifications:
-    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
-        type: 3}
-      propertyPath: m_Name
-      value: FallingStone (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.498871
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4129982
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
@@ -2259,6 +2254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
+        type: 3}
+      propertyPath: m_Name
+      value: FallingStone (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bacd99c4ccb76b24d89dd43ac1c13b67, type: 3}
@@ -17364,11 +17364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697969978}
     m_Modifications:
-    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
-        type: 3}
-      propertyPath: m_Name
-      value: FallingStone
-      objectReference: {fileID: 0}
     - target: {fileID: 1353778684120888122, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17423,6 +17418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353778684120888126, guid: bacd99c4ccb76b24d89dd43ac1c13b67,
+        type: 3}
+      propertyPath: m_Name
+      value: FallingStone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bacd99c4ccb76b24d89dd43ac1c13b67, type: 3}
