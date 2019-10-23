@@ -132,9 +132,40 @@ public class Movement : MonoBehaviour
         {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
+            float x_t = x;
+            float y_t= y;
+
+            if (Input.GetButton("Horizontal"))
+            {
+                if (Mathf.Abs(x) >= 0.5)
+                {
+                    if (x > 0)
+                        x_t = 1;
+                    else
+                        x_t = -1;
+                }
+                else
+                    x_t = (x_t * 2) % 1;
+                if (Mathf.Abs(y) >= 0.5)
+                {
+                    if (y > 0)
+                        y_t = 1;
+                    else
+                        y_t = -1;
+                }
+                else
+                    y_t = (y_t * 2) % 1;
+            }
+            else
+            {
+                
+                x_t = x_t / 2.0f;
+                y_t = y_t / 2.0f;
+            }
+
             float xRaw = Input.GetAxisRaw("Horizontal");
             float yRaw = Input.GetAxisRaw("Vertical");
-            Vector2 dir = new Vector2(x, y);
+            Vector2 dir = new Vector2(x_t, y_t);
 
             Walk(dir);
             anim.SetHorizontalMovement(x, y, rb.velocity.y);
@@ -317,6 +348,7 @@ public class Movement : MonoBehaviour
             isDeath = true;
         }
     }
+
     void GroundTouch()
     {
         hasDashed = false;
@@ -373,7 +405,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = (new Vector2(dir.x * speed+Ho_Speed, rb.velocity.y+Ve_Speed));
         }
-        else if(!isDashing)
+        else if (!isDashing)
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
         }
