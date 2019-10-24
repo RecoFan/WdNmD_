@@ -51,7 +51,6 @@ public class Collision : MonoBehaviour
         int ground_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, coll_onGround,groundLayer);
        // coll_onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
         int right_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointRight1, (Vector2)transform.position + pointRight2, coll_onRightWall,groundLayer);
-        Debug.Log(right_count);
        int left_count = Physics2D.OverlapAreaNonAlloc((Vector2)transform.position + pointLeft1, (Vector2)transform.position + pointLeft2, coll_onLeftWall,groundLayer);
 
         if (ground_count != 0)
