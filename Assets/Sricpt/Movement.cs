@@ -181,7 +181,7 @@ public class Movement : MonoBehaviour
 
             if (Input.GetKeyDown("c"))
                 jumpBufferTimer = jumpBuffer;
-            Debug.Log(jumpBufferTimer);
+
 
             if (coll.onGround)
             {

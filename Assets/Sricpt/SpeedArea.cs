@@ -32,6 +32,7 @@ public class SpeedArea : MonoBehaviour
                 move.Ve_Speed = Up_Speed;
             if (Direction == 4)
                 move.Ve_Speed = Down_Speed;
+            Debug.Log("1");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
