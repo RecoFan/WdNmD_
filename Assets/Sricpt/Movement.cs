@@ -39,6 +39,7 @@ public class Movement : MonoBehaviour
     public bool Str_WallJumped;
     public bool hasDashed;
     public bool isDeath;
+    public bool isBounce;
 
 
     [Space]
@@ -79,6 +80,7 @@ public class Movement : MonoBehaviour
     [Header("ChangeSpeed")]
     public float Ho_Speed;
     public float Ve_Speed;
+    public float Bo_Speed;
 
     
 
@@ -97,6 +99,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isBounce)
+        {
+            GetComponent<Rigidbody2D>().velocity += Vector2.up * Bo_Speed;
+            anim.SetTrigger("jump");
+            isBounce = false;
+        }
+
         if (Ledge_Is != 0)
         {
             Ledge_Timer -= Time.deltaTime;
@@ -346,6 +355,10 @@ public class Movement : MonoBehaviour
         if (other.gameObject.tag == "Deadly")
         {
             isDeath = true;
+        }
+        else if (other.gameObject.tag == "Bouncy")
+        {
+            isBounce = true;
         }
     }
 
