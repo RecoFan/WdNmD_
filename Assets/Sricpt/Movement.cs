@@ -99,12 +99,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isBounce)
-        {
-            GetComponent<Rigidbody2D>().velocity += Vector2.up * Bo_Speed;
-            anim.SetTrigger("jump");
-            isBounce = false;
-        }
+  
 
         if (Ledge_Is != 0)
         {
@@ -285,6 +280,13 @@ public class Movement : MonoBehaviour
                 jumpBufferTimer--;
             }
 
+            if (isBounce)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * Bo_Speed;
+                anim.SetTrigger("jump");
+                isBounce = false;
+            }
 
             if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
             {
