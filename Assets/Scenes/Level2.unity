@@ -2289,6 +2289,21 @@ PrefabInstance:
       propertyPath: SmallerTime
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7076082369342444292, guid: 647193da59c165d41a1f888f665700df,
+        type: 3}
+      propertyPath: is_float
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076082369342444292, guid: 647193da59c165d41a1f888f665700df,
+        type: 3}
+      propertyPath: perRadian
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076082369342444292, guid: 647193da59c165d41a1f888f665700df,
+        type: 3}
+      propertyPath: radius
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 647193da59c165d41a1f888f665700df, type: 3}
 --- !u!1001 &965820711

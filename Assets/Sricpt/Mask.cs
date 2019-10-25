@@ -5,9 +5,12 @@ using UnityEngine.Rendering.PostProcessing;
 using DG.Tweening;
 public class Mask : MonoBehaviour
 {
-  // Animator ani;
+    // Animator ani;
     //PostProcessVolume m_Volume;
     // Bloom b;
+    float radian = 0;
+    Vector3 oldPos;
+
 
     [Space]
     [Header("ExitTime")]
@@ -29,11 +32,19 @@ public class Mask : MonoBehaviour
     [Header("Boolen")]
     public bool is_exit;
     public bool is_bigger;
+    public bool is_float;
 
     [Space]
     [Header("Time")]
     public float BiggerTime;
     public float SmallerTime;
+
+    [Space]
+    [Header("Float")]
+    public float perRadian = 0.03f;
+    public float radius = 0.08f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +54,15 @@ public class Mask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(is_float)
+        {
+            oldPos = transform.position;
+            radian += perRadian;
+            float dy = Mathf.Cos(radian) * radius;
+            transform.position = oldPos + new Vector3(0, dy, 0);
+        }
+
+
         if(is_exit)
         {
             Exit_Time -= Time.deltaTime;
