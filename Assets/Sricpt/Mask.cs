@@ -113,40 +113,49 @@ public class Mask : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-       // Camera.main.transform.DOComplete();
+        // Camera.main.transform.DOComplete();
         //Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-        is_exit = false;
-       // ani.SetBool("InMask", true);
+        if (collision.gameObject.tag == "Untagged")
+        {
+            is_exit = false;
+            // ani.SetBool("InMask", true);
 
-        /*
-       b = ScriptableObject.CreateInstance<Bloom>();
-       b.enabled.Override(true);
-       b.intensity.Override(25f);
-       m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
-       */
+            /*
+           b = ScriptableObject.CreateInstance<Bloom>();
+           b.enabled.Override(true);
+           b.intensity.Override(25f);
+           m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
+           */
 
-            
+
             Sequence quence = DOTween.Sequence();
             quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
-            quence.Append(transform.DOScale(new Vector3(new_x-3, new_y - 3, new_z - 2), 0.05f));
-  
-
-
-        Collider2D[] col;
-        col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
-        foreach(var child in col)
-        {
-            if (child != GetComponent<Collider2D>())
+            quence.Append(transform.DOScale(new Vector3(new_x - 3, new_y - 3, new_z - 2), 0.05f));
+            Collider2D[] col;
+            col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
+            foreach (var child in col)
             {
-                child.enabled = true;
+                if (child != GetComponent<Collider2D>())
+                {
+                    child.enabled = true;
+                }
             }
+        }
+        if (collision.gameObject.tag == "Deadly")
+        {
+            Debug.Log("123");
+            collision.isTrigger = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         //  RuntimeUtilities.DestroyVolume(m_Volume, true, true);
-        is_exit = true;
-
+        if (collision.gameObject.tag == "Untagged")
+            is_exit = true;
+        if (collision.tag == "Deadly")
+        {
+            collision.isTrigger = false;
+        }
     }
 
  
