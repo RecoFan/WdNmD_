@@ -33,6 +33,7 @@ public class Mask : MonoBehaviour
     public bool is_exit;
     public bool is_bigger;
     public bool is_float;
+    public bool is_move;
 
     [Space]
     [Header("Time")]
@@ -44,11 +45,32 @@ public class Mask : MonoBehaviour
     public float perRadian = 0.03f;
     public float radius = 0.08f;
 
+    [Space]
+    [Header("Moving")]
+    public float newposition_x;
+    public float newposition_y;
+    public float oldposition_x;
+    public float oldposition_y;
+
+    public float running_time;
+
+    bool isgoing;
 
     // Start is called before the first frame update
     void Start()
     {
         Exit_Time = Static_Exit_Time;
+
+        if (is_move)
+        {
+            Sequence mySequence = DOTween.Sequence();
+            Tweener moveto = transform.DOLocalMove(new Vector3(newposition_x, newposition_y, transform.localPosition.z), running_time);
+            Tweener moveback = transform.DOLocalMove(new Vector3(oldposition_x, oldposition_y, transform.localPosition.z), running_time);
+            mySequence.Append(moveto);
+            mySequence.Append(moveback);
+            mySequence.SetLoops(-1);
+
+        }
     }
 
     // Update is called once per frame
@@ -62,8 +84,11 @@ public class Mask : MonoBehaviour
             transform.position = oldPos + new Vector3(0, dy, 0);
         }
 
+ 
 
-        if(is_exit)
+
+
+        if (is_exit)
         {
             Exit_Time -= Time.deltaTime;
             if(Exit_Time<=0)
@@ -119,10 +144,10 @@ public class Mask : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-      //  RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+        //  RuntimeUtilities.DestroyVolume(m_Volume, true, true);
         is_exit = true;
 
-
-
     }
+
+ 
 }
