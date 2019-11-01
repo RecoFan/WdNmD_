@@ -50,6 +50,7 @@ public class FallingBrick : MonoBehaviour
             {
                 cd.enabled = true;
                 sr.enabled = true;
+                
                 time_to_back = static_time_to_back;
                 is_back = false;
             }

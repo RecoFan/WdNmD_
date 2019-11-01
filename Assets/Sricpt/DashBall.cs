@@ -42,6 +42,8 @@ public class DashBall : MonoBehaviour
                 recoverTime = static_recoverTime;
                 is_Touch = false;
                 GetComponent<SpriteRenderer>().enabled = true;
+                transform.localScale = new Vector3(0, 0, 0);
+                transform.DOScale(new Vector3(2.572046f, 2.572046f, 2.572046f), 0.2f);
             }
         }
     }

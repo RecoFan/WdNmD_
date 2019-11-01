@@ -82,7 +82,8 @@ public class Movement : MonoBehaviour
     public float Ve_Speed;
     public float Bo_Speed;
 
-    
+  //  float t1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -134,8 +135,14 @@ public class Movement : MonoBehaviour
         }
         if (!HasLedged&&Ledge_Is==0)
         {
-            float x = Input.GetAxis("Horizontal");
-            float y = Input.GetAxis("Vertical");
+            float x=0;
+            float y=0;
+      
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
+           
+      
+  
             float x_t = x;
             float y_t= y;
 
@@ -174,8 +181,7 @@ public class Movement : MonoBehaviour
             Walk(dir);
             anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-            if (Input.GetKeyDown("c"))
-                jumpBufferTimer = jumpBuffer;
+        
 
 
             if (coll.onGround)
@@ -189,21 +195,32 @@ public class Movement : MonoBehaviour
             if (Str_WallJumped && rb.velocity.y <= 0)
                 Str_WallJumped = false;
 
-            if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped && enduranceBar > 0)
+            if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped )
             {
                 if (side != coll.wallSide)
                 {
                     anim.Flip(side * -1);
                 }
-                wallGrab = true;
-                wallSlide = false;
+                if(enduranceBar <= 0)
+                {
+                    wallGrab = false;
+                    wallSlide = true;
+                    WallSlide();
+                }
+                if(enduranceBar>0)
+                {
+                    wallGrab = true;
+                    wallSlide = false;
+                }
             }
 
-            if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove || enduranceBar <= 0)
+            if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove )
             {
                 wallGrab = false;
                 wallSlide = false;
             }
+
+  
 
             if (coll.onGround && !isDashing)
             {
@@ -227,7 +244,7 @@ public class Movement : MonoBehaviour
                 rb.gravityScale = 3;
             }
 
-            if (coll.onWall && !coll.onGround)
+            if (coll.onWall && !coll.onGround&&!isDashing)
             {
                 if (x != 0 && !wallGrab)
                 {
@@ -240,7 +257,7 @@ public class Movement : MonoBehaviour
                 wallSlide = false;
 
 
-            if (Input.GetKeyDown("c") && enduranceBar > 0)
+            if (Input.GetKeyDown("c"))
                 jumpBufferTimer = jumpBuffer;
 
             if (jumpBufferTimer > 0)
@@ -253,14 +270,14 @@ public class Movement : MonoBehaviour
                     jumpBufferTimer = 0;
                 }
 
-                if (coll.onWall && !coll.onGround && !Input.GetButton("Fire3"))
+                if (coll.onWall && !coll.onGround && !wallGrab)
                 {
                     WallJump();
                     enduranceBar -= walljumpDecrease;
                     jumpBufferTimer = 0;
                 }
 
-                if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
+                if (coll.onWall && !coll.onGround && wallGrab &&
                     (Input.GetKey("right") || Input.GetKey("left")))
                 {
                     WallJump();
@@ -268,7 +285,7 @@ public class Movement : MonoBehaviour
                     jumpBufferTimer = 0;
                 }
 
-                if (coll.onWall && !coll.onGround && Input.GetButton("Fire3") &&
+                if (coll.onWall && !coll.onGround && wallGrab &&
                     !(Input.GetKey("right") || Input.GetKey("left")))
                 {
                     wallGrab = false;
@@ -298,6 +315,7 @@ public class Movement : MonoBehaviour
                     wallGrab = false;
                     Str_WallJumped = true;
                     Jump(Vector2.up, true);
+                    anim.SetTrigger("jump");
                     Ledge_Is = 1;
 
                 }
@@ -308,8 +326,10 @@ public class Movement : MonoBehaviour
                     wallGrab = false;
                     Str_WallJumped = true;
                     Jump(Vector2.up, true);
+                    anim.SetTrigger("jump");
                     Ledge_Is = -1;
                 }
+                return;
 
             }
 
@@ -418,12 +438,15 @@ public class Movement : MonoBehaviour
 
         if (!wallJumped)
         {
+           // t1 = 0;
             rb.velocity = (new Vector2(dir.x * speed+Ho_Speed, rb.velocity.y+Ve_Speed));
         }
-        else if (!isDashing)
+        else if(!isDashing)
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
+         //   t1 += 1f * Time.deltaTime;
+            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp*Time.deltaTime);
         }
+    
 
 
     }
@@ -474,6 +497,7 @@ public class Movement : MonoBehaviour
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+    
         ghost.makeGhost = true;
         dashParticle.Play();
       //  dashParticle_2.Play();
@@ -482,6 +506,7 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         GetComponent<BetterJumping>().enabled = true;
+
         wallJumped = false;
         isDashing = false;
         ghost.makeGhost = false;
