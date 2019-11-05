@@ -82,8 +82,15 @@ public class Movement : MonoBehaviour
     public float Ve_Speed;
     public float Bo_Speed;
 
-  //  float t1;
-
+    [Space]
+    [Header("DashState")]
+    public float DargNum;
+    public float TimeForDarg;
+    public float DashTime;
+    public float StartDashTime;
+    public Vector2 savevelocity;
+    //  float t1;
+    Vector2 dir;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +102,8 @@ public class Movement : MonoBehaviour
         anim = GetComponentInChildren<AnimationScript>();
         raw_Color = GetComponent<SpriteRenderer>().color;
         Ledge_judge = GetComponent<raycast>();
+        DashTime = StartDashTime;
+ 
     }
 
     // Update is called once per frame
@@ -112,6 +121,7 @@ public class Movement : MonoBehaviour
                 else if (Ledge_Is < 0) 
                     rb.velocity += Vector2.left * LedgeSpeed;
                 HasLedged = true;
+                Str_WallJumped = false;
                 Ledge_Is = 0;
             }
         }
@@ -122,7 +132,12 @@ public class Movement : MonoBehaviour
 
         if (HasLedged)
         {
+            Debug.Log("enter");
             HasLedged_Time -= Time.deltaTime;
+            if(HasLedged_Time > 0&& HasLedged_Time <= 0.05f)
+            {
+                rb.velocity = Vector2.zero;
+            }
             if (HasLedged_Time <= 0)
             {
                 HasLedged = false;
@@ -131,7 +146,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            HasLedged_Time = 0.1f;
+            HasLedged_Time = 0.15f;
         }
         if (!HasLedged&&Ledge_Is==0)
         {
@@ -176,7 +191,7 @@ public class Movement : MonoBehaviour
 
             float xRaw = Input.GetAxisRaw("Horizontal");
             float yRaw = Input.GetAxisRaw("Vertical");
-            Vector2 dir = new Vector2(x_t, y_t);
+            dir = new Vector2(x_t, y_t);
 
             Walk(dir);
             anim.SetHorizontalMovement(x, y, rb.velocity.y);
@@ -195,7 +210,7 @@ public class Movement : MonoBehaviour
             if (Str_WallJumped && rb.velocity.y <= 0)
                 Str_WallJumped = false;
 
-            if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped )
+            if (coll.onWall && Input.GetButton("Fire3") && canMove && !Str_WallJumped&&!isDashing )
             {
                 if (side != coll.wallSide)
                 {
@@ -224,6 +239,7 @@ public class Movement : MonoBehaviour
 
             if (coll.onGround && !isDashing)
             {
+               // ghost.makeGhost = false;
                 wallJumped = false;
                 GetComponent<BetterJumping>().enabled = true;
             }
@@ -239,10 +255,13 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, y * (speed * speedModifier));
                 enduranceBar -= wallGrabDecrease * Time.deltaTime;
             }
-            else
+            else if(rb.velocity.y>-20)
             {
+
                 rb.gravityScale = 3;
             }
+            else
+                rb.gravityScale = 0;
 
             if (coll.onWall && !coll.onGround&&!isDashing)
             {
@@ -262,6 +281,7 @@ public class Movement : MonoBehaviour
 
             if (jumpBufferTimer > 0)
             {
+              
                 anim.SetTrigger("jump");
                 if (coll.onGround || graceTimer > 0)
                 {
@@ -317,7 +337,7 @@ public class Movement : MonoBehaviour
                     Jump(Vector2.up, true);
                     anim.SetTrigger("jump");
                     Ledge_Is = 1;
-
+                    jumpBufferTimer = 0;
                 }
                 else if (coll.onLeftWall)
                 {
@@ -328,6 +348,7 @@ public class Movement : MonoBehaviour
                     Jump(Vector2.up, true);
                     anim.SetTrigger("jump");
                     Ledge_Is = -1;
+                    jumpBufferTimer = 0;
                 }
                 return;
 
@@ -386,6 +407,7 @@ public class Movement : MonoBehaviour
 
     void GroundTouch()
     {
+        rb.gravityScale = 3;
         hasDashed = false;
         isDashing = false;
         side = anim.sr.flipX ? -1 : 1;
@@ -412,19 +434,29 @@ public class Movement : MonoBehaviour
 
     private void Dash(float x, float y)
     {
+        StartCoroutine(GroundDash());
         Camera.main.transform.DOComplete();
-        Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
+        Camera.main.transform.DOShakePosition(.15f,0.5f, 14, 90, false, true);
         FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
 
         hasDashed = true;
-
+        wallGrab = false;
         anim.SetTrigger("dash");
+
+        savevelocity = rb.velocity;
+
         rb.velocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);
-
         rb.velocity += dir.normalized * dashSpeed;
 
-        StartCoroutine(DashWait());
+        rb.gravityScale = 0;
+        GetComponent<BetterJumping>().enabled = false;
+        wallJumped = true;
+        isDashing = true;
+        ghost.makeGhost = true;
+        dashParticle.Play();
+        //StartCoroutine(DashWait());
+
     }
 
 
@@ -443,10 +475,37 @@ public class Movement : MonoBehaviour
         }
         else if(!isDashing)
         {
-         //   t1 += 1f * Time.deltaTime;
-            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp*Time.deltaTime);
+            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)),wallJumpLerp*Time.deltaTime);
         }
-    
+        if(isDashing)
+        {
+            if(DashTime>0)
+            {
+                DashTime -= Time.deltaTime;
+            }
+        
+            else 
+            {
+                
+                if (rb.velocity.y > 10)
+                {
+                    rb.velocity = new Vector2(0, 5);
+                    //anim.SetTrigger("jump");
+                }
+                
+                else
+                    rb.velocity = new Vector2(0, 0);
+                rb.gravityScale = 3;
+                
+               // rb.velocity = savevelocity;
+                //rb.gravityScale = 3;
+                GetComponent<BetterJumping>().enabled = true;
+                wallJumped = false;
+                isDashing = false;
+                ghost.makeGhost = false;
+                DashTime = StartDashTime;
+            }
+        }
 
 
     }
@@ -487,12 +546,14 @@ public class Movement : MonoBehaviour
         rb.drag = x;
     }
 
+
+
     IEnumerator DashWait()
     {
      //   FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
-        DOVirtual.Float(14, 0, .5f, RigidbodyDrag);
-
+        DOVirtual.Float(DargNum, 0, TimeForDarg, RigidbodyDrag);
+        
         rb.gravityScale = 0;
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
@@ -500,17 +561,24 @@ public class Movement : MonoBehaviour
     
         ghost.makeGhost = true;
         dashParticle.Play();
-      //  dashParticle_2.Play();
+        //  dashParticle_2.Play();
 
 
         yield return new WaitForSeconds(.3f);
+
         rb.gravityScale = 3;
+       
+        //DOVirtual.Float(rb.velocity.x, dir.x * speed, 0.05f, ChangeVelocityX);
+        //DOVirtual.Float(rb.velocity.y, dir.y * speed, 0.051f, ChangeVelocityY);
         GetComponent<BetterJumping>().enabled = true;
+
 
         wallJumped = false;
         isDashing = false;
         ghost.makeGhost = false;
     }
+
+
 
     void WallParticle(float vertical)
     {
@@ -543,7 +611,7 @@ public class Movement : MonoBehaviour
     {
         if (enduranceBar <= 50 && enduranceBar >= 25)
         {
-   
+
             blink_Time_1 += Time.deltaTime;
             if (blink_Time_1 % 0.5f > 0.25f)
                 this.GetComponent<SpriteRenderer>().color = Color.red;
@@ -560,7 +628,10 @@ public class Movement : MonoBehaviour
                 this.GetComponent<SpriteRenderer>().color = raw_Color;
         }
         else
+        {
+            blink_Time_1 = 0;
             this.GetComponent<SpriteRenderer>().color = raw_Color;
+        }
 
     }
 

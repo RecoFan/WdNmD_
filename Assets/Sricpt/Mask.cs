@@ -118,15 +118,12 @@ public class Mask : MonoBehaviour
         if (collision.gameObject.tag == "Untagged")
         {
             is_exit = false;
-            // ani.SetBool("InMask", true);
-
             /*
            b = ScriptableObject.CreateInstance<Bloom>();
            b.enabled.Override(true);
            b.intensity.Override(25f);
            m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
            */
-
 
             Sequence quence = DOTween.Sequence();
             quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
@@ -143,7 +140,6 @@ public class Mask : MonoBehaviour
         }
         if (collision.gameObject.tag == "Deadly")
         {
-            Debug.Log("123");
             collision.isTrigger = true;
         }
     }

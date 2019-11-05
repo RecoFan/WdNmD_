@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Deadly
   - Bouncy
+  - Ground
   layers:
   - Default
   - TransparentFX
