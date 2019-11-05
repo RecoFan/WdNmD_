@@ -6,11 +6,12 @@ using DG.Tweening;
 public class Mask : MonoBehaviour
 {
     // Animator ani;
-    //PostProcessVolume m_Volume;
+    PostProcessVolume m_Volume;
+    ChromaticAberration ca;
     // Bloom b;
     float radian = 0;
     Vector3 oldPos;
-
+    bool Iscreate;
 
     [Space]
     [Header("ExitTime")]
@@ -94,6 +95,9 @@ public class Mask : MonoBehaviour
             if(Exit_Time<=0)
             {
                 transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime);
+               // RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+                DOVirtual.Float(0.30f, 0.15f, SmallerTime, ca.intensity.Override).OnComplete(DestroyVolume);
+
                 is_exit = false;
                 Exit_Time = Static_Exit_Time;
                 Collider2D[] col;
@@ -109,7 +113,16 @@ public class Mask : MonoBehaviour
         }
         else
             Exit_Time = Static_Exit_Time;
+
+
     }
+
+    private void DestroyVolume()
+    {
+        RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+        Iscreate = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -118,13 +131,16 @@ public class Mask : MonoBehaviour
         if (collision.gameObject.tag == "Untagged")
         {
             is_exit = false;
-            /*
-           b = ScriptableObject.CreateInstance<Bloom>();
-           b.enabled.Override(true);
-           b.intensity.Override(25f);
-           m_Volume = PostProcessManager.instance.QuickVolume(11, 0f, b);
-           */
+            if (!Iscreate)
+            {
+                ca = ScriptableObject.CreateInstance<ChromaticAberration>();
+                ca.enabled.Override(true);
 
+                DOVirtual.Float(0.15f, 0.30f, BiggerTime, ca.intensity.Override);
+
+                m_Volume = PostProcessManager.instance.QuickVolume(12, 0f, ca);
+                Iscreate = true;
+            }
             Sequence quence = DOTween.Sequence();
             quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
             quence.Append(transform.DOScale(new Vector3(new_x - 3, new_y - 3, new_z - 2), 0.05f));
@@ -142,16 +158,20 @@ public class Mask : MonoBehaviour
         {
             collision.isTrigger = true;
         }
+        if(collision.gameObject.tag=="Bouncy2"|| collision.tag == "Ground2")
+            collision.isTrigger = false;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //  RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+        
         if (collision.gameObject.tag == "Untagged")
             is_exit = true;
         if (collision.tag == "Deadly")
         {
             collision.isTrigger = false;
         }
+        if (collision.gameObject.tag == "Bouncy2"|| collision.tag == "Ground2")
+            collision.isTrigger = true;
     }
 
  

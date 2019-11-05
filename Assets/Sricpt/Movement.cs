@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
-    public ParticleSystem dashParticle_2;
+    public GameObject dashParticle_2;
     public GhostTrail ghost;
 
     [Space]
@@ -399,7 +399,7 @@ public class Movement : MonoBehaviour
         {
             isDeath = true;
         }
-        else if (other.gameObject.tag == "Bouncy")
+        else if (other.gameObject.tag == "Bouncy"|| other.gameObject.tag == "Bouncy2")
         {
             isBounce = true;
         }
@@ -455,6 +455,7 @@ public class Movement : MonoBehaviour
         isDashing = true;
         ghost.makeGhost = true;
         dashParticle.Play();
+        Instantiate(dashParticle_2, transform.position, Quaternion.identity);
         //StartCoroutine(DashWait());
 
     }
@@ -490,7 +491,7 @@ public class Movement : MonoBehaviour
                 if (rb.velocity.y > 10)
                 {
                     rb.velocity = new Vector2(0, 5);
-                    //anim.SetTrigger("jump");
+                    anim.SetTrigger("jump");
                 }
                 
                 else
