@@ -5435,7 +5435,7 @@ MonoBehaviour:
   half_camera_view_height: 4.9
   frame_between_view: 10
   mapLeftEdge: -13
-  mapRightEdge: 19
+  mapRightEdge: 66
   mapUpEdge: 14
   mapDownEdge: -4
 --- !u!1 &531158240
@@ -16165,20 +16165,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2278509657400572260, guid: df67d73a679285f499af6edfd5c4dcda,
-        type: 3}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2278509657400572256, guid: df67d73a679285f499af6edfd5c4dcda,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.74
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 2278509657400572256, guid: df67d73a679285f499af6edfd5c4dcda,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.03
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2278509657400572256, guid: df67d73a679285f499af6edfd5c4dcda,
         type: 3}
@@ -16224,6 +16219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278509657400572260, guid: df67d73a679285f499af6edfd5c4dcda,
+        type: 3}
+      propertyPath: m_Name
+      value: Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df67d73a679285f499af6edfd5c4dcda, type: 3}

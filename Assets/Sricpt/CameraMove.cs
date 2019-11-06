@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+    [Space]
+    [Header("Player")]
     public Transform player_transform;
+    private Vector3 lastPlayerPosition;
     // Start is called before the first frame update
     [Space]
     [Header("Camera (half) View Size")]
@@ -16,9 +19,12 @@ public class CameraMove : MonoBehaviour
     [Space]
     [Header("Map Size")]
     public float mapLeftEdge = -13f;
-    public float mapRightEdge = 19f;
+    public float mapRightEdge = 66f;
     public float mapUpEdge = 14f;
     public float mapDownEdge = -4f;
+
+    [Space]
+    public int errorReason;
 
     private float esp = 0.001f;
     private Vector3 nowPosition;
@@ -27,6 +33,8 @@ public class CameraMove : MonoBehaviour
     private float xPerDis;
 
     private bool inMoving;
+    private bool isNeedFollow; //weather the camera needs to follow the player
+    private int movingDirection; // 1:left 2:right 3:up 4:d
 
     private float abs(float a)
     {
@@ -76,36 +84,94 @@ public class CameraMove : MonoBehaviour
         half_camera_view_height = GetComponent<Camera>().orthographicSize;
         half_camera_view_width = half_camera_view_height * UnityEngine.Screen.width / UnityEngine.Screen.height;
         inMoving = false;
+
+        isNeedFollow = true;
+        Vector3 playerPos = player_transform.position;
+        playerPos.x = nowPosition.x;
+        player_transform.position = playerPos; //player is located under the camera from the beginning (middle of the map).
+        //lastPlayerPosition = player_transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!inMoving)
+
+        /*if (isNeedFollow == true) 
         {
-            if (!inCameraView())
+            //---------camera needs to follow the player-------
+            Vector3 tempPosition = transform.position;
+            tempPosition.x = player_transform.position.x;
+            transform.position = tempPosition;
+            //------------------------------------------------------
+        }*/
+        if (isNeedFollow == false)
+        {
+            if (!inMoving)
             {
-                getPerDis();
-                inMoving = true;
+                if (!inCameraView())
+                {
+                    getPerDis();
+                    inMoving = true;
+                }
+            }
+            else
+            {
+                if (abs(nowPosition.x - destPosition.x) < esp && abs(nowPosition.y - destPosition.y) < esp)
+                {
+                    inMoving = false;
+                }
+                else
+                {
+                    nowPosition.x += xPerDis;
+                    nowPosition.y += yPerDis;
+                    transform.position = nowPosition;
+                }
             }
         }
         else
         {
-            if (abs(nowPosition.x - destPosition.x) < esp && abs(nowPosition.y - destPosition.y) < esp)
-            {
-                inMoving = false;
-            }
-            else
-            {
-                nowPosition.x += xPerDis;
-                nowPosition.y += yPerDis;
-                transform.position = nowPosition;
-            }
+            nowPosition = transform.position;
+        }
+        if (mapRightEdge - player_transform.position.x < half_camera_view_width || player_transform.position.x - mapLeftEdge < half_camera_view_width)
+        {
+            errorReason = 1;
+            isNeedFollow = false;
+        }
+        else if (player_transform.position.x - half_camera_view_width < mapLeftEdge || player_transform.position.x + half_camera_view_width > mapRightEdge)
+        {
+            errorReason = 2;
+            isNeedFollow = false;
+        }
+        else if (inMoving == true)
+        {
+            errorReason = 3;
+            isNeedFollow = false;
+        }
+        else
+        {
+            errorReason = 5;
+            isNeedFollow = true;
         }
     }
 
     void LateUpdate()
     {
-        
+        /*if (player_transform.position.x - lastPlayerPosition.x > 0)
+        {
+            movingDirection = 2; //Right
+        }
+        else if (player_transform.position.x - lastPlayerPosition.x < 0)
+        {
+            movingDirection = 1; //Left
+        }
+        lastPlayerPosition = player_transform.position;*/
+        if (isNeedFollow == true)
+        {
+            //---------camera needs to follow the player-------
+            Vector3 tempPosition = transform.position;
+            tempPosition.x = player_transform.position.x;
+            transform.position = tempPosition;
+            //------------------------------------------------------
+        }
     }
 }
