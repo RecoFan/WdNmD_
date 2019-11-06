@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: a0462f03f35438a4094d5dede4def2b9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8003053969953453917
+    second: s4m_ur4i-metroidvania-1.4_0
+  - first:
+      213: 4783632621839552504
+    second: s4m_ur4i-metroidvania-1.4_3
+  - first:
+      213: -295534734972675930
+    second: s4m_ur4i-metroidvania-1.4_4
+  - first:
+      213: -8894752861451888336
+    second: s4m_ur4i-metroidvania-1.4_5
+  - first:
+      213: -5182689042769644877
+    second: s4m_ur4i-metroidvania-1.4_6
+  - first:
+      213: -4684469837490589080
+    second: s4m_ur4i-metroidvania-1.4_7
+  - first:
+      213: 8231422734280774482
+    second: s4m_ur4i-metroidvania-1.4_8
+  - first:
+      213: 6067923735543921075
+    second: s4m_ur4i-metroidvania-1.4_9
+  - first:
+      213: 8653171435936975277
+    second: s4m_ur4i-metroidvania-1.4_10
+  - first:
+      213: 1564569329390360587
+    second: s4m_ur4i-metroidvania-1.4_11
+  - first:
+      213: -6159786388115120742
+    second: s4m_ur4i-metroidvania-1.4_12
+  - first:
+      213: 8724885002657728224
+    second: s4m_ur4i-metroidvania-1.4_13
+  - first:
+      213: -1177603879169542701
+    second: s4m_ur4i-metroidvania-1.4_14
+  - first:
+      213: 5555830428026107923
+    second: s4m_ur4i-metroidvania-1.4_15
+  - first:
+      213: -597472837716674046
+    second: s4m_ur4i-metroidvania-1.4_16
+  - first:
+      213: -5007550139274738510
+    second: s4m_ur4i-metroidvania-1.4_17
+  - first:
+      213: 5200419111744946723
+    second: s4m_ur4i-metroidvania-1.4_18
+  - first:
+      213: -5915174653289380855
+    second: s4m_ur4i-metroidvania-1.4_19
+  - first:
+      213: 2283380252129079253
+    second: s4m_ur4i-metroidvania-1.4_20
+  - first:
+      213: -2852010886828370195
+    second: s4m_ur4i-metroidvania-1.4_21
+  - first:
+      213: 170207108395593360
+    second: s4m_ur4i-metroidvania-1.4_22
+  - first:
+      213: 6197595039226286829
+    second: s4m_ur4i-metroidvania-1.4_23
+  - first:
+      213: -3263539982954441570
+    second: s4m_ur4i-metroidvania-1.4_24
+  - first:
+      213: 2203617411571443415
+    second: s4m_ur4i-metroidvania-1.4_25
+  - first:
+      213: -1818494042029579423
+    second: s4m_ur4i-metroidvania-1.4_27
+  - first:
+      213: -2431727904115683105
+    second: s4m_ur4i-metroidvania-1.4_29
+  - first:
+      213: -7057212382942740003
+    second: s4m_ur4i-metroidvania-1.4_30
+  - first:
+      213: 2711241440583827730
+    second: s4m_ur4i-metroidvania-1.4_31
+  - first:
+      213: 3633905095229591744
+    second: s4m_ur4i-metroidvania-1.4_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45fa35ecea414b48aa43b103b6a7709
+      internalID: 8003053969953453917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a136d436f36f746a55636d0a7581ae
+      internalID: 4783632621839552504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce751315656648e41b3c4d5de620c8a4
+      internalID: -295534734972675930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 325
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de64d72d1ec0904ca6c89e437095694
+      internalID: -8894752861451888336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 303
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5ffc8c5f4d96742b76f90a8afd5907
+      internalID: -4684469837490589080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 303
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9e60e98a95e71419f16cfd46e8b670
+      internalID: 8231422734280774482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 314
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b71448102f87da4a83975cb71cd969f
+      internalID: 8653171435936975277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_11
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 311
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc28a6a1b62e724ca22e08ec06b6ad1
+      internalID: 1564569329390360587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 309
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027cd12bf7b40334fbe3f43c78612b4b
+      internalID: -6159786388115120742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 309
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde083d82b2b53f46a1ab9af16e1cc5d
+      internalID: 5555830428026107923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 304
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f0212fe5c7446428dfc078e5e42f10
+      internalID: -597472837716674046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5a70b739e962845818f225cbb769d4
+      internalID: -5007550139274738510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 286
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1837efbb86a0844a8223c25ab5e8b42
+      internalID: 5200419111744946723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 293
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e3f629cf12b424bab948b739fbf2fe
+      internalID: -5915174653289380855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 294
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758257605e6546442908cd63f886f566
+      internalID: 2283380252129079253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 295
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6482b98e4284a45a9b192fe652fd4c
+      internalID: -2852010886828370195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_22
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 301
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805bb99111719404ba03fb4c1c3aae29
+      internalID: 170207108395593360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_23
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 294
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d9a966df1632a4eb4094293f773a12
+      internalID: 6197595039226286829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_24
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 293
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f004eb74030007419b13743e45ad4cc
+      internalID: -3263539982954441570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_25
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 294
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb32ce1c97f33c4bb81ea868c401b5f
+      internalID: 2203617411571443415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107d5c4fe44d94442bfe0ca62de5dac0
+      internalID: -1818494042029579423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fc226123bec9a44a59fb5a6b2a0918
+      internalID: -2431727904115683105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27104e85efc1c96449e5c7eac619a4c3
+      internalID: -7057212382942740003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8afcdac73337cd45af233e26d1d5288
+      internalID: 2711241440583827730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i-metroidvania-1.4_32
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def2dcb85aa0c304f951f74b794dd5b9
+      internalID: 3633905095229591744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
