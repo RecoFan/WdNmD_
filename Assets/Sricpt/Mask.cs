@@ -11,7 +11,6 @@ public class Mask : MonoBehaviour
     // Bloom b;
     float radian = 0;
     Vector3 oldPos;
-    bool Iscreate;
 
     [Space]
     [Header("ExitTime")]
@@ -35,6 +34,8 @@ public class Mask : MonoBehaviour
     public bool is_bigger;
     public bool is_float;
     public bool is_move;
+    public bool is_portal;
+
 
     [Space]
     [Header("Time")]
@@ -52,11 +53,15 @@ public class Mask : MonoBehaviour
     public float newposition_y;
     public float oldposition_x;
     public float oldposition_y;
-
     public float running_time;
 
-    bool isgoing;
+    [Space]
+    [Header("Portals")]
+    public GameObject target;
+    public bool haveEnter;
 
+    bool isgoing;
+    bool Iscreate;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,35 +89,33 @@ public class Mask : MonoBehaviour
             float dy = Mathf.Cos(radian) * radius;
             transform.position = oldPos + new Vector3(0, dy, 0);
         }
-
- 
-
-
-
-        if (is_exit)
+        if (!is_portal)
         {
-            Exit_Time -= Time.deltaTime;
-            if(Exit_Time<=0)
+            if (is_exit)
             {
-                transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime);
-               // RuntimeUtilities.DestroyVolume(m_Volume, true, true);
-                DOVirtual.Float(0.30f, 0.15f, SmallerTime, ca.intensity.Override).OnComplete(DestroyVolume);
-
-                is_exit = false;
-                Exit_Time = Static_Exit_Time;
-                Collider2D[] col;
-                col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
-                foreach (var child in col)
+                Exit_Time -= Time.deltaTime;
+                if (Exit_Time <= 0)
                 {
-                    if (child != GetComponent<Collider2D>())
+                    transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime);
+                    // RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+                    DOVirtual.Float(0.30f, 0.15f, SmallerTime, ca.intensity.Override).OnComplete(DestroyVolume);
+
+                    is_exit = false;
+                    Exit_Time = Static_Exit_Time;
+                    Collider2D[] col;
+                    col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
+                    foreach (var child in col)
                     {
-                        child.enabled = false;
+                        if (child != GetComponent<Collider2D>())
+                        {
+                            child.enabled = false;
+                        }
                     }
                 }
             }
+            else
+                Exit_Time = Static_Exit_Time;
         }
-        else
-            Exit_Time = Static_Exit_Time;
 
 
     }
@@ -130,28 +133,60 @@ public class Mask : MonoBehaviour
         //Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
         if (collision.gameObject.tag == "Untagged")
         {
-            is_exit = false;
-            if (!Iscreate)
+            if (!is_portal)
+            {
+                is_exit = false;
+                if (!Iscreate)
+                {
+                    ca = ScriptableObject.CreateInstance<ChromaticAberration>();
+                    ca.enabled.Override(true);
+
+                    DOVirtual.Float(0.15f, 0.30f, BiggerTime, ca.intensity.Override);
+
+                    m_Volume = PostProcessManager.instance.QuickVolume(12, 0f, ca);
+                    Iscreate = true;
+                }
+                Sequence quence = DOTween.Sequence();
+                quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
+                quence.Append(transform.DOScale(new Vector3(new_x - 3, new_y - 3, new_z), 0.05f));
+                Collider2D[] col;
+                col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
+                foreach (var child in col)
+                {
+                    if (child != GetComponent<Collider2D>())
+                    {
+                        child.enabled = true;
+                    }
+                }
+            }
+            else if(!haveEnter)
             {
                 ca = ScriptableObject.CreateInstance<ChromaticAberration>();
                 ca.enabled.Override(true);
 
-                DOVirtual.Float(0.15f, 0.30f, BiggerTime, ca.intensity.Override);
-
                 m_Volume = PostProcessManager.instance.QuickVolume(12, 0f, ca);
-                Iscreate = true;
+                Camera.main.transform.DOComplete();
+                Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
+                Sequence quence = DOTween.Sequence();
+                Sequence quence2 = DOTween.Sequence();
+                quence2.Append(DOVirtual.Float(0.15f, 0.80f, 0.15f, ca.intensity.Override));
+                quence2.Append(DOVirtual.Float(0.80f, 0.15f, 0.1f, ca.intensity.Override).OnComplete(DestroyVolume));
+
+                //   quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
+                //  quence.Append(transform.DOScale(new Vector3(new_x - 3, new_y - 3, new_z - 2), 0.05f));
+                quence.Append(transform.DOScale(new Vector3(old_x - 5, old_x - 5, old_x - 5), SmallerTime));
+                quence.Append(transform.DOScale(new Vector3(old_x - 3, old_x - 3, old_x - 3), 0.05f));
+                quence.Append(transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime));
+                collision.gameObject.transform.position = target.transform.position;
+               
+                target.GetComponent<Mask>().haveEnter = true; 
             }
-            Sequence quence = DOTween.Sequence();
-            quence.Append(transform.DOScale(new Vector3(new_x, new_y, new_z), BiggerTime));
-            quence.Append(transform.DOScale(new Vector3(new_x - 3, new_y - 3, new_z - 2), 0.05f));
-            Collider2D[] col;
-            col = transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
-            foreach (var child in col)
+            else
             {
-                if (child != GetComponent<Collider2D>())
-                {
-                    child.enabled = true;
-                }
+                Sequence quence = DOTween.Sequence();
+                quence.Append(transform.DOScale(new Vector3(old_x+3, old_x + 3, old_x + 3), BiggerTime));
+                quence.Append(transform.DOScale(new Vector3(old_x+2, old_x +2 , old_x +2), 0.05f));
+                quence.Append(transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime));
             }
         }
         if (collision.gameObject.tag == "Deadly")
@@ -163,9 +198,18 @@ public class Mask : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
-        if (collision.gameObject.tag == "Untagged")
-            is_exit = true;
+      
+            if (collision.gameObject.tag == "Untagged")
+            {
+                if (!is_portal)
+                {
+                    is_exit = true;
+                }
+                else
+                    haveEnter=false;
+            }
+    
+
         if (collision.tag == "Deadly")
         {
             collision.isTrigger = false;
