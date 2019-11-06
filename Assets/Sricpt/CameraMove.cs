@@ -7,10 +7,18 @@ public class CameraMove : MonoBehaviour
     public Transform player_transform;
     // Start is called before the first frame update
     [Space]
+    [Header("Camera (half) View Size")]
     public float half_camera_view_width = 4.9f;
     public float half_camera_view_height = 4.9f;
     [Space]
+    [Header("Camera Move Speed Between Small Part")]
     public int frame_between_view = 10;
+    [Space]
+    [Header("Map Size")]
+    public float mapLeftEdge = -13f;
+    public float mapRightEdge = 19f;
+    public float mapUpEdge = 14f;
+    public float mapDownEdge = -4f;
 
     private float esp = 0.001f;
     private Vector3 nowPosition;
