@@ -12,6 +12,8 @@ public class Mask : MonoBehaviour
     float radian = 0;
     Vector3 oldPos;
 
+  
+
     [Space]
     [Header("ExitTime")]
     public float Static_Exit_Time = 2f;
@@ -184,8 +186,8 @@ public class Mask : MonoBehaviour
             else
             {
                 Sequence quence = DOTween.Sequence();
-                quence.Append(transform.DOScale(new Vector3(old_x+3, old_x + 3, old_x + 3), BiggerTime));
-                quence.Append(transform.DOScale(new Vector3(old_x+2, old_x +2 , old_x +2), 0.05f));
+                quence.Append(transform.DOScale(new Vector3(old_x - 5, old_x - 5, old_x - 5), SmallerTime));
+                quence.Append(transform.DOScale(new Vector3(old_x - 3, old_x - 3, old_x - 3), 0.05f));
                 quence.Append(transform.DOScale(new Vector3(old_x, old_y, old_z), SmallerTime));
             }
         }

@@ -50,15 +50,18 @@ public class DashBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!is_Touch)
+        if (collision.tag != "Mask")
         {
-            disappear.Play();
-            idie.Stop();
-            Camera.main.transform.DOComplete();
-            Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-            GetComponent<SpriteRenderer>().enabled = false;
-            is_Touch = true;
-            move.hasDashed = false;
+            if (!is_Touch)
+            {
+                disappear.Play();
+                idie.Stop();
+                Camera.main.transform.DOComplete();
+                Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
+                GetComponent<SpriteRenderer>().enabled = false;
+                is_Touch = true;
+                move.hasDashed = false;
+            }
         }
     }
 

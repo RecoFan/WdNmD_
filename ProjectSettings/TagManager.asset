@@ -10,6 +10,7 @@ TagManager:
   - Bouncy2
   - Ground2
   - Mask
+  - DashBall
   layers:
   - Default
   - TransparentFX
