@@ -47,8 +47,8 @@ public class NewCameraMove : MonoBehaviour
     void Start()
     {
         stageList = new float[8][];
-        stageList[0] = new float[] { -13f, 32f, 14f, -3f}; //xLeft,xRight,yUp,yDown
-        stageList[1] = new float[] { 30f, 64f, 17f, 0f };
+        stageList[0] = new float[] { -13f, 25f, 14f, -3f}; //xLeft,xRight,yUp,yDown
+        stageList[1] = new float[] { 24f, 64f, 16f, -1f };
         stageList[2] = new float[] { 0, 0, 0, 0 };
         stageList[3] = new float[] { 0, 0, 0, 0 };
         stageList[4] = new float[] { 0, 0, 0, 0 };
