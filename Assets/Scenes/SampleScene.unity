@@ -5411,7 +5411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.46, y: 5.8, z: -10}
+  m_LocalPosition: {x: 3.87, y: 5.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 918027161}
@@ -5427,18 +5427,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2efada6afbff5c142928de9c7b32719c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ee6723be303fe6448def2bf62dce5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_transform: {fileID: 1082624156}
-  half_camera_view_width: 4.9
-  half_camera_view_height: 4.9
-  frame_between_view: 10
-  mapLeftEdge: -13
-  mapRightEdge: 66
-  mapUpEdge: 14
-  mapDownEdge: -4
-  errorReason: 0
+  playerTransform: {fileID: 1082624156}
+  frameBetweenView: 10
+  nowMapIndex: 0
+  lastMapIndex: 0
+  leftUpDis: 0
+  rightUpDis: 0
+  leftDownDis: 0
+  rightDownDis: 0
 --- !u!1 &531158240
 GameObject:
   m_ObjectHideFlags: 0
@@ -12572,7 +12571,7 @@ Tilemap:
   - first: {x: 49, y: -5, z: 0}
     second:
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -15525,13 +15524,13 @@ Tilemap:
   - m_RefCount: 39
     m_Data: {fileID: 3247211480741703121, guid: a6d332b961224ee449f039f8b00d7490,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 8373445603455552533, guid: a6d332b961224ee449f039f8b00d7490,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1794916061462030697, guid: a6d332b961224ee449f039f8b00d7490,
       type: 3}
