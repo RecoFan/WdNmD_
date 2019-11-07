@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Bouncy2
   - Ground2
+  - Mask
   layers:
   - Default
   - TransparentFX
