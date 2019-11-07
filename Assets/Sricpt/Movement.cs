@@ -132,7 +132,7 @@ public class Movement : MonoBehaviour
 
         if (HasLedged)
         {
-            Debug.Log("enter");
+
             HasLedged_Time -= Time.deltaTime;
             if(HasLedged_Time > 0&& HasLedged_Time <= 0.05f)
             {
