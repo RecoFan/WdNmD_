@@ -29,6 +29,8 @@ public class NewCameraMove : MonoBehaviour
     private float halfCameraViewHeight;
     public int nowMapIndex;
     public int lastMapIndex;
+    public int lastCameraMapIndex;
+    public int cameraNowMapIndex;
     private float mapLeftEdge;
     private float mapRightEdge;
     private float mapUpEdge;
@@ -71,6 +73,7 @@ public class NewCameraMove : MonoBehaviour
         if(overlapCount == 1) //must
         {
             lastMapIndex = nowMapIndex;
+            cameraNowMapIndex = lastCameraMapIndex = nowMapIndex;
         }
     }
 
@@ -81,15 +84,16 @@ public class NewCameraMove : MonoBehaviour
         {
             if(isCameraSwitch == false)
             {
+                int tempNowMapIndex = nowMapIndex;
                 int overlapCount = getMapCount(playerTransform.position);
-                if(overlapCount == 2)
+                if (overlapCount == 2)
                 {
-                    if (inMap(lastPlayerPosition, nowMapIndex) && !inMap(lastPlayerPosition, lastMapIndex))
+                    /*if (inMap(lastPlayerPosition, nowMapIndex) && !inMap(lastPlayerPosition, lastMapIndex))
                     {
                         int temp = nowMapIndex;
                         nowMapIndex = lastMapIndex;
                         lastMapIndex = temp;
-                    }
+                    }*/
                     if (!inMap(lastPlayerPosition, nowMapIndex) && inMap(lastPlayerPosition, lastMapIndex))
                     {
                         float leftDis = abs(playerTransform.position.x - stageList[nowMapIndex][0]);
@@ -122,11 +126,55 @@ public class NewCameraMove : MonoBehaviour
                         }
                         xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
                         yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
+                        //--------------camera location------------------
+                        lastCameraMapIndex = getMapIndex(transform.position);
+                        cameraNowMapIndex = getMapIndex(destPosition);
+                        //--------------------------------------------------
                         isCameraSwitch = true;
                     }
                 }
                 else if(overlapCount == 1)
                 {
+                    if (!inMap(playerTransform.position, cameraNowMapIndex))
+                    {
+                       
+                        cameraNowMapIndex = getMapIndex(playerTransform.position);
+                        lastCameraMapIndex = cameraNowMapIndex;
+
+                        float leftDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][0]);
+                        float rightDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][1]);
+                        float upDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][2]);
+                        float downDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][3]);
+                        leftUpDis = leftDis + upDis;
+                        rightUpDis = rightDis + upDis;
+                        leftDownDis = leftDis + downDis;
+                        rightDownDis = rightDis + downDis;
+                        if (leftUpDis <= rightUpDis && leftUpDis <= leftDownDis && leftUpDis <= rightDownDis)
+                        {
+                            destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
+                            destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
+                        }
+                        else if (rightUpDis <= leftUpDis && rightUpDis <= rightDownDis && rightUpDis <= leftDownDis)
+                        {
+                            destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
+                            destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
+                        }
+                        else if (rightDownDis <= leftUpDis && rightDownDis <= rightUpDis && rightDownDis <= leftDownDis)
+                        {
+                            destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
+                            destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
+                        }
+                        else if (leftDownDis <= leftUpDis && leftDownDis <= rightUpDis && leftDownDis <= rightDownDis)
+                        {
+                            destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
+                            destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
+                        }
+                        xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
+                        yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
+                        isCameraSwitch = true;
+
+                        nowMapIndex = cameraNowMapIndex;
+                    }
                     lastMapIndex = nowMapIndex;
                 }
             }
@@ -175,6 +223,18 @@ public class NewCameraMove : MonoBehaviour
         else return -x;
     }
 
+    int getMapIndex(Vector3 nowPos)
+    {
+        for (int i = 0; i < stageCount; i++)
+        {
+            if (nowPos.x >= stageList[i][0] && nowPos.x <= stageList[i][1] && nowPos.y <= stageList[i][2] && nowPos.y >= stageList[i][3])
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     int getMapCount(Vector3 nowPos)
     {
         int overlapCount = 0;
@@ -183,8 +243,21 @@ public class NewCameraMove : MonoBehaviour
             if (nowPos.x >= stageList[i][0] && nowPos.x <= stageList[i][1] && nowPos.y <= stageList[i][2] && nowPos.y >= stageList[i][3])
             {
                 overlapCount++;
-                if (overlapCount == 1) nowMapIndex = i;
-                else if (overlapCount == 2) lastMapIndex = i;
+            }
+        }
+        if (overlapCount == 2)
+        {
+            for (int i = 0; i < stageCount; i++)
+            {
+                if (nowPos.x >= stageList[i][0] && nowPos.x <= stageList[i][1] && nowPos.y <= stageList[i][2] && nowPos.y >= stageList[i][3])
+                {
+                    if (nowMapIndex != i)
+                    {
+                        lastMapIndex = nowMapIndex;
+                        nowMapIndex = i;
+                        break;
+                    }
+                }
             }
         }
         return overlapCount;
