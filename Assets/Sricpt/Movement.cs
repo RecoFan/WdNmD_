@@ -67,7 +67,18 @@ public class Movement : MonoBehaviour
     public float jumpBufferTimer;
     public float jumpBuffer = 5f;
 
-
+    [Space] 
+    [Header("SFX")]
+    public AudioClip SFX_Dash;
+    public AudioClip SFX_Walk;
+    public AudioClip SFX_Walk2;
+    public AudioClip SFX_Jump;
+    public AudioClip SFX_Jump2;
+    public AudioClip SFX_JumpA;
+    public AudioClip SFX_Climb;
+    public AudioClip SFX_WallJump;
+    private AudioSource[] _audioSource;
+     
     [Space]
     [Header("Ledge")]
     public float Ledge_Timer = 0.2f;
@@ -95,6 +106,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponents<AudioSource>();
         graceTimer = graceJumpTime;
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collision>();
@@ -407,6 +419,7 @@ public class Movement : MonoBehaviour
 
     void GroundTouch()
     {
+        Play_SFX_Jump_Over();
         rb.gravityScale = 3;
         hasDashed = false;
         isDashing = false;
@@ -434,6 +447,7 @@ public class Movement : MonoBehaviour
 
     private void Dash(float x, float y)
     {
+        _audioSource[0].PlayOneShot(SFX_Dash,1);
         StartCoroutine(GroundDash());
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.15f,0.5f, 14, 90, false, true);
@@ -491,7 +505,7 @@ public class Movement : MonoBehaviour
                 if (rb.velocity.y > 10)
                 {
                     rb.velocity = new Vector2(0, 5);
-                    anim.SetTrigger("jump");
+                    //anim.SetTrigger("jump");
                 }
                 
                 else
@@ -520,6 +534,7 @@ public class Movement : MonoBehaviour
     }
     private void WallJump()
     {
+        
         if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
         {
             side *= -1;
@@ -551,7 +566,7 @@ public class Movement : MonoBehaviour
 
     IEnumerator DashWait()
     {
-     //   FindObjectOfType<GhostTrail>().ShowGhost();
+        //   FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
         DOVirtual.Float(DargNum, 0, TimeForDarg, RigidbodyDrag);
         
@@ -636,7 +651,39 @@ public class Movement : MonoBehaviour
 
     }
 
+    void Play_SFX_Walk()
+    {
+        _audioSource[0].PlayOneShot(SFX_Walk,1);
+    }
+    void Play_SFX_Walk2()
+    {
+        _audioSource[0].PlayOneShot(SFX_Walk2,1);
+    }
+
+    void Play_SFX_Jump_Begin()
+    {
+        if (!wallJumped)
+        {
+            _audioSource[0].PlayOneShot(SFX_Jump, 1);
+            _audioSource[1].PlayOneShot(SFX_JumpA, 1);
+        }
+        else
+        {
+            _audioSource[0].PlayOneShot(SFX_WallJump,1);
+        }
+    }
+
+    void Play_SFX_Jump_Over()
+    {
+        _audioSource[0].PlayOneShot(SFX_Jump2, 1);
+    }
+
+    void Play_SFX_Climb()
+    {
+        _audioSource[0].PlayOneShot(SFX_Climb,1);
+    }
+
+   
 
 
-  
 }
