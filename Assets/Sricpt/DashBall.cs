@@ -6,7 +6,6 @@ using DG.Tweening;
 public class DashBall : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public bool is_Touch;
     Movement move;
     public ParticleSystem disappear;
@@ -17,8 +16,15 @@ public class DashBall : MonoBehaviour
     Vector3 oldPos;
     public float perRadian = 0.03f;
     public float radius = 0.08f;
+    
+    [Space] [Header("SFX")] public AudioClip DashColl;
+    public AudioClip Dashresp;
+    private AudioSource _audioSource;
+    private bool _SFX_bool = false;
+    
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         oldPos = transform.position;
         idie.Play();
         recoverTime = static_recoverTime;
@@ -35,12 +41,20 @@ public class DashBall : MonoBehaviour
         transform.position = oldPos + new Vector3(0, dy, 0);
         if (is_Touch)
         {
+            if (!_SFX_bool)
+            {
+                _audioSource.PlayOneShot(DashColl,1);
+                _SFX_bool = true;
+            }
+            
             recoverTime -= Time.deltaTime;
             if(recoverTime <=0)
             {
                 idie.Play();
                 recoverTime = static_recoverTime;
                 is_Touch = false;
+                _audioSource.PlayOneShot(Dashresp);
+                _SFX_bool = false;
                 GetComponent<SpriteRenderer>().enabled = true;
                 transform.localScale = new Vector3(0, 0, 0);
                 transform.DOScale(new Vector3(2.572046f, 2.572046f, 2.572046f), 0.2f);

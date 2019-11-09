@@ -62,12 +62,18 @@ public class Mask : MonoBehaviour
     public GameObject target;
     public bool haveEnter;
 
+    [Space] [Header("SFX")] 
+    public AudioClip EnterPortal;
+    public AudioClip OutPortal;
+    private AudioSource _audioSource;
+    
     bool isgoing;
     bool Iscreate;
     // Start is called before the first frame update
     void Start()
     {
         Exit_Time = Static_Exit_Time;
+        _audioSource = GetComponent<AudioSource>();
 
         if (is_move)
         {
@@ -163,6 +169,7 @@ public class Mask : MonoBehaviour
             }
             else if(!haveEnter)
             {
+                _audioSource.PlayOneShot(EnterPortal,1);
                 ca = ScriptableObject.CreateInstance<ChromaticAberration>();
                 ca.enabled.Override(true);
 
@@ -185,6 +192,7 @@ public class Mask : MonoBehaviour
             }
             else
             {
+                _audioSource.PlayOneShot(OutPortal,1);
                 Sequence quence = DOTween.Sequence();
                 quence.Append(transform.DOScale(new Vector3(old_x - 5, old_x - 5, old_x - 5), SmallerTime));
                 quence.Append(transform.DOScale(new Vector3(old_x - 3, old_x - 3, old_x - 3), 0.05f));
