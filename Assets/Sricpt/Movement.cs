@@ -69,6 +69,7 @@ public class Movement : MonoBehaviour
 
     [Space] 
     [Header("SFX")]
+    public AudioClip SFX_Spring;
     public AudioClip SFX_Dash;
     public AudioClip SFX_Walk;
     public AudioClip SFX_Walk2;
@@ -78,6 +79,7 @@ public class Movement : MonoBehaviour
     public AudioClip SFX_Climb;
     public AudioClip SFX_WallJump;
     private AudioSource[] _audioSource;
+    private bool _SFX_Pernament = false;
      
     [Space]
     [Header("Ledge")]
@@ -331,10 +333,12 @@ public class Movement : MonoBehaviour
 
             if (isBounce)
             {
+                _audioSource[0].PlayOneShot(SFX_Spring,1);
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * Bo_Speed;
                 anim.SetTrigger("jump");
                 isBounce = false;
+                _SFX_Pernament = true;
             }
 
             if (Ledge_judge.OnLedge && wallGrab && Input.GetKey("up"))
@@ -448,6 +452,7 @@ public class Movement : MonoBehaviour
     private void Dash(float x, float y)
     {
         _audioSource[0].PlayOneShot(SFX_Dash,1);
+        _SFX_Pernament = true;
         StartCoroutine(GroundDash());
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.15f,0.5f, 14, 90, false, true);
@@ -662,7 +667,12 @@ public class Movement : MonoBehaviour
 
     void Play_SFX_Jump_Begin()
     {
-        if (!wallJumped)
+        if (_SFX_Pernament)
+        {
+            Debug.Log("Bounce Jump");
+            _SFX_Pernament = false;
+        }
+        else if (!wallJumped)
         {
             _audioSource[0].PlayOneShot(SFX_Jump, 1);
             _audioSource[1].PlayOneShot(SFX_JumpA, 1);

@@ -13,9 +13,9 @@ public class Spring : MonoBehaviour {
 	private float rayCastDistance;
 	private GameObject player;
 
-	[Space] [Header("SFX")] public AudioClip SFX_Spring;
+	/*[Space] [Header("SFX")] public AudioClip SFX_Spring;
 
-	private AudioSource _audioSource;
+	private AudioSource _audioSource;*/
 		/*private bool JumpInputActive {
 			get {
 				return Input.GetKeyDown(KeyCode.Space);
@@ -25,7 +25,7 @@ public class Spring : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		_audioSource = GetComponent<AudioSource>();
+		//_audioSource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator>();
 
 		if (rayCastStart != null && rayCastEnd != null) {
@@ -39,7 +39,7 @@ public class Spring : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast(rayCastStart.position, Vector2.right, rayCastDistance, playerLayerMask);
 		if (hit.collider != null && !animator.GetBool("Pressing"))
 		{
-			_audioSource.PlayOneShot(SFX_Spring,1);
+			//_audioSource.PlayOneShot(SFX_Spring,1);
 			animator.SetBool("Pressing", true);
 			animator.SetBool("Releasing", false);
 			player = hit.collider.gameObject;

@@ -186,12 +186,13 @@ MonoBehaviour:
   graceTimer: 0
   jumpBufferTimer: 0
   jumpBuffer: 3
+  SFX_Spring: {fileID: 8300000, guid: d6f6a5567317fb34880ccb264785e0b0, type: 3}
   SFX_Dash: {fileID: 8300000, guid: 13896eae5380cb74d9c5867d2d1b22ca, type: 3}
   SFX_Walk: {fileID: 8300000, guid: 613f166295ddcc3468ae0c0f150bb121, type: 3}
   SFX_Walk2: {fileID: 8300000, guid: 4b34a39801a2f1c47bbe757b912e156c, type: 3}
   SFX_Jump: {fileID: 8300000, guid: 100de29867c54524bb7c460270bbc5b6, type: 3}
-  SFX_Jump2: {fileID: 8300000, guid: 002dd21637bd1b945908d812985fa458, type: 3}
-  SFX_JumpA: {fileID: 8300000, guid: 80289872fa1f4a04fb698c4bd8a10928, type: 3}
+  SFX_Jump2: {fileID: 8300000, guid: 80289872fa1f4a04fb698c4bd8a10928, type: 3}
+  SFX_JumpA: {fileID: 8300000, guid: 002dd21637bd1b945908d812985fa458, type: 3}
   SFX_Climb: {fileID: 8300000, guid: d15acd31837ec8f4f926ca13b703589f, type: 3}
   SFX_WallJump: {fileID: 8300000, guid: daa2174d9bea8244fa7a507c1375322c, type: 3}
   Ledge_Timer: 0.2
