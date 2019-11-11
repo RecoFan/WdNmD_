@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class NewCameraMove : MonoBehaviour
 {
+    public float[][] cameraLocationList;
     public float[][] stageList;
     private int stageCount = 8;
 
@@ -15,8 +16,9 @@ public class NewCameraMove : MonoBehaviour
     [Space]
     [Header("Move Speed between Stage")]
     public int frameBetweenView = 10;
+    public int moveCount = 0;
     //----------Destination------------------
-    private float eps = 0.001f;
+    private float eps = 0.1f;
     private Vector3 destPosition;
     private float xPerStep;
     private float yPerStep;
@@ -48,24 +50,39 @@ public class NewCameraMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
+        halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
+
+        cameraLocationList = new float[8][];
+        cameraLocationList[0] = new float[] {19.7f, 5.19f };
+        cameraLocationList[1] = new float[] {56.48f, 5.19f };
+        cameraLocationList[2] = new float[] {85.4f, 7f };
+
         stageList = new float[8][];
-        stageList[0] = new float[] { -13f, 25f, 14f, -3f}; //xLeft,xRight,yUp,yDown
-        stageList[1] = new float[] { 24f, 64f, 16f, -1f };
+        stageList[0] = new float[] { 0, 0, 0, 0}; //xLeft,xRight,yUp,yDown
+        stageList[1] = new float[] { 0, 0, 0, 0};
         stageList[2] = new float[] { 0, 0, 0, 0 };
         stageList[3] = new float[] { 0, 0, 0, 0 };
         stageList[4] = new float[] { 0, 0, 0, 0 };
         stageList[5] = new float[] { 0, 0, 0, 0 };
         stageList[6] = new float[] { 0, 0, 0, 0 };
         stageList[7] = new float[] { 0, 0, 0, 0 };
-    
-        halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
-        halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
+
+        for (int i = 0; i < 3; i++)
+        {
+            stageList[i][0] = cameraLocationList[i][0] - halfCameraViewWidth;
+            stageList[i][1] = cameraLocationList[i][0] + halfCameraViewWidth;
+            stageList[i][2] = cameraLocationList[i][1] + halfCameraViewHeight;
+            stageList[i][3] = cameraLocationList[i][1] - halfCameraViewHeight;
+        }
+        //stageList[2][0] += 4.9f;
+        //stageList[2][1] += 7f;
 
         isCameraFollowPlayer = true;
         isCameraSwitch = false;
-        Vector3 tempVector = playerTransform.position;
-        tempVector.x = transform.position.x;
-        playerTransform.position = tempVector;
+        //Vector3 tempVector = playerTransform.position;
+        //tempVector.x = transform.position.x;
+        //playerTransform.position = tempVector;
 
         lastPlayerPosition = playerTransform.position;
 
@@ -80,6 +97,7 @@ public class NewCameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(transform.position.x + "," + transform.position.y);
         if (isCameraFollowPlayer == false)
         {
             if(isCameraSwitch == false)
@@ -130,7 +148,12 @@ public class NewCameraMove : MonoBehaviour
                         lastCameraMapIndex = getMapIndex(transform.position);
                         cameraNowMapIndex = getMapIndex(destPosition);
                         //--------------------------------------------------
+                        moveCount = 0;
                         isCameraSwitch = true;
+
+
+                        destPosition.z = -10f;
+                        transform.DOMove(destPosition, 0.2f);
                     }
                 }
                 else if(overlapCount == 1)
@@ -171,7 +194,11 @@ public class NewCameraMove : MonoBehaviour
                         }
                         xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
                         yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
+                        moveCount = 0;
                         isCameraSwitch = true;
+
+                        destPosition.z = -10f;
+                        transform.DOMove(destPosition, 0.2f);
 
                         nowMapIndex = cameraNowMapIndex;
                     }
@@ -180,11 +207,17 @@ public class NewCameraMove : MonoBehaviour
             }
             else
             {
-                Vector3 tempPosition = transform.position;
+                /*Vector3 tempPosition = transform.position;
                 tempPosition.x += xPerStep;
                 tempPosition.y += yPerStep;
-                transform.position = tempPosition;
+                transform.position = tempPosition;*/
                 if (abs(transform.position.x - destPosition.x) < eps && abs(transform.position.y - destPosition.y) < eps) isCameraSwitch = false;
+                /*moveCount++;
+                if (moveCount >= frameBetweenView)
+                {
+                    isCameraSwitch = false;
+                    moveCount = 0;
+                }*/
             }
         }
         if (isCameraSwitch == true)
