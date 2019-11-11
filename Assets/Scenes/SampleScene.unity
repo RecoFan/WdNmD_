@@ -14167,7 +14167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee6723be303fe6448def2bf62dce5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1039363743}
+  playerTransform: {fileID: 1082624156}
   frameBetweenView: 10
   nowMapIndex: 0
   lastMapIndex: 0
@@ -38867,7 +38867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1039363742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38944,7 +38944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4af14b1a4dbbe45a54496770e39a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
 --- !u!1 &1053305904
 GameObject:
   m_ObjectHideFlags: 0
@@ -39026,6 +39026,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!4 &1082624156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2278509657400572256, guid: df67d73a679285f499af6edfd5c4dcda,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132240200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132240200
 PrefabInstance:
   m_ObjectHideFlags: 0
