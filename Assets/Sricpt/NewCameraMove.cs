@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewCameraMove : MonoBehaviour
 {
+    public float[][] cameraLocationList;
     public float[][] stageList;
     private int stageCount = 8;
 
@@ -48,24 +49,39 @@ public class NewCameraMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
+        halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
+
+        cameraLocationList = new float[8][];
+        cameraLocationList[0] = new float[] {19.7f, 5.19f };
+        cameraLocationList[1] = new float[] {56.48f, 5.19f };
+        cameraLocationList[2] = new float[] {85.4f, 7f };
+
         stageList = new float[8][];
-        stageList[0] = new float[] { -13f, 25f, 14f, -3f}; //xLeft,xRight,yUp,yDown
-        stageList[1] = new float[] { 24f, 64f, 16f, -1f };
+        stageList[0] = new float[] { 0, 0, 0, 0}; //xLeft,xRight,yUp,yDown
+        stageList[1] = new float[] { 0, 0, 0, 0};
         stageList[2] = new float[] { 0, 0, 0, 0 };
         stageList[3] = new float[] { 0, 0, 0, 0 };
         stageList[4] = new float[] { 0, 0, 0, 0 };
         stageList[5] = new float[] { 0, 0, 0, 0 };
         stageList[6] = new float[] { 0, 0, 0, 0 };
         stageList[7] = new float[] { 0, 0, 0, 0 };
-    
-        halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
-        halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
+
+        for (int i = 0; i < 3; i++)
+        {
+            stageList[i][0] = cameraLocationList[i][0] - halfCameraViewWidth;
+            stageList[i][1] = cameraLocationList[i][0] + halfCameraViewWidth;
+            stageList[i][2] = cameraLocationList[i][1] + halfCameraViewHeight;
+            stageList[i][3] = cameraLocationList[i][1] - halfCameraViewHeight;
+        }
+        stageList[2][0] += 4.9f;
+        stageList[2][1] += 7f;
 
         isCameraFollowPlayer = true;
         isCameraSwitch = false;
-        Vector3 tempVector = playerTransform.position;
-        tempVector.x = transform.position.x;
-        playerTransform.position = tempVector;
+        //Vector3 tempVector = playerTransform.position;
+        //tempVector.x = transform.position.x;
+        //playerTransform.position = tempVector;
 
         lastPlayerPosition = playerTransform.position;
 
