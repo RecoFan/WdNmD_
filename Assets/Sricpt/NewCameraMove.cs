@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -8,8 +9,7 @@ public class NewCameraMove : MonoBehaviour
     public float[][] stageList;
     private int stageCount = 8;
 
-    [Space]
-    [Header("Player")]
+    [Space] [Header("Player")] 
     public Transform playerTransform;
     private Vector3 lastPlayerPosition;
 
@@ -50,6 +50,7 @@ public class NewCameraMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerTransform = GameObject.FindWithTag("Player").transform;
         halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
         halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
 
@@ -97,7 +98,7 @@ public class NewCameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position.x + "," + transform.position.y);
+        //Debug.Log(transform.position.x + "," + transform.position.y);
         if (isCameraFollowPlayer == false)
         {
             if(isCameraSwitch == false)
@@ -236,6 +237,12 @@ public class NewCameraMove : MonoBehaviour
         }
         else
             isCameraFollowPlayer = false;
+    }
+
+    private void Awake()
+    {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+   //     Debug.Log(playerTransform);
     }
 
     void LateUpdate()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,42 +9,66 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    static LevelManager instance;
+    public int SpawnIndex;
+    public NewCameraMove other;
+    public GameObject[] spawnPosition;
+    public GameObject _player;
     private Animator _anim;
-    public Transform spawnPosition;
-    private GameObject _player;
-    public RawImage rawImage;
-    //private bool _controlFlag = false;
-    
-    private void StartScene()
+    //public RawImage rawImage;
+    private bool _controlFlag = false;
+        
+    void StartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    private void EndScene()
+    void EndScene()
     {
-        _anim.SetTrigger("OUT");
+        //_anim.SetTrigger("OUT");
     }
-    private void Awake()
-    {
-        _player = GameObject.FindWithTag("Player");
-        _player.transform.position = spawnPosition.position;
-    }
-    
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        _anim = GetComponent<Animator>();
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+           
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+
+        other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+        spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //放在重载后太快，无法检测到生成物体
+        if (_controlFlag)
+        {
+            other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+            spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
+            _player = GameObject.FindWithTag("Player");
+            _player.transform.position = spawnPosition[SpawnIndex].transform.position;
+            _controlFlag = false;
+        }
+
         if (_player && _player.GetComponent<Movement>().isDeath)
         {
+            SpawnIndex = other.nowMapIndex;
+            _controlFlag = true;
             Destroy(_player);
             _player = null;
             EndScene();
+            StartScene();
         }
     }
-    
+
 }
