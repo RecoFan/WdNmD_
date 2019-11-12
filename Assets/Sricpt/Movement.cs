@@ -510,7 +510,7 @@ public class Movement : MonoBehaviour
                 if (rb.velocity.y > 10)
                 {
                     rb.velocity = new Vector2(0, 5);
-                    //anim.SetTrigger("jump");
+                    anim.SetTrigger("jump");
                 }
                 
                 else

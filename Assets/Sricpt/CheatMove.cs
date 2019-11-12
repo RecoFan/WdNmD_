@@ -19,3 +19,4 @@ public class CheatMove : MonoBehaviour
         transform.Translate(new Vector3(moveH, moveV, 0)*Time.deltaTime*speed);
     }
 }
+
