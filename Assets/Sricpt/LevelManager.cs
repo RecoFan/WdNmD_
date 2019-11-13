@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public NewCameraMove other;
     public GameObject[] spawnPosition;
     public GameObject _player;
+    public Transform deadPosition;
     private Animator _anim;
     //public RawImage rawImage;
     private bool _controlFlag = false;
@@ -24,7 +25,8 @@ public class LevelManager : MonoBehaviour
     }
     void EndScene()
     {
-        //_anim.SetTrigger("OUT");
+        _anim.gameObject.transform.position = deadPosition.position;
+        _anim.SetTrigger("OUT");
     }
 
     // Start is called before the first frame update
@@ -44,7 +46,7 @@ public class LevelManager : MonoBehaviour
         other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
         spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
-        _anim = GetComponent<Animator>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class LevelManager : MonoBehaviour
         if (_player && _player.GetComponent<Movement>().isDeath)
         {
             SpawnIndex = other.nowMapIndex;
+            deadPosition = _player.transform;
             _controlFlag = true;
             Destroy(_player);
             _player = null;
