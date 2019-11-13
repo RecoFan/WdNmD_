@@ -89,7 +89,7 @@ public class LevelManager : MonoBehaviour
         _player = null;
         _anim[1].SetTrigger("OUT");
         
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.75f);
         _controlFlag = true;
         _hasDead = false; 
         StartScene();
