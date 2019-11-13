@@ -33,8 +33,8 @@ public class raycast : MonoBehaviour
         
         if (coll.onRightWall)
         {
-            
-            hit1 = Physics2D.Raycast(Originpos, ray_drcR, 2, mask);
+            Debug.DrawRay(Originpos,ray_drcR);
+            hit1 = Physics2D.Raycast(Originpos, ray_drcR, 1, mask);
             if (hit1.collider == null)
             {
                 OnLedge = true;
@@ -44,7 +44,8 @@ public class raycast : MonoBehaviour
         }
         else if (coll.onLeftWall)
         {
-            hit1 = Physics2D.Raycast(Originpos, ray_drcL, 2, mask);
+            Debug.DrawRay(Originpos,ray_drcL);
+            hit1 = Physics2D.Raycast(Originpos, ray_drcL, 1, mask);
             if (hit1.collider == null)
             {
                 OnLedge = true;
