@@ -84,9 +84,9 @@ public class LevelManager : MonoBehaviour
         //SpawnIndex = other.nowMapIndex;
         deadPosition = _player.transform;
         EndScene();
-        //yield return new WaitForSeconds(0.3f);
         Destroy(_player);
         _player = null;
+        yield return new WaitForSeconds(0.5f);
         _anim[1].SetTrigger("OUT");
         
         yield return new WaitForSeconds(0.75f);
