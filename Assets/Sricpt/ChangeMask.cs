@@ -21,6 +21,8 @@ public class ChangeMask : MonoBehaviour
     void MaskTrue()
     {
         this.GetComponent<SpriteMask>().enabled = true;
+        Camera.main.transform.DOComplete();
+        Camera.main.transform.DOShakePosition(0.2f, 2f, 14, 90, false, true);
         ca = ScriptableObject.CreateInstance<ChromaticAberration>();
         ca.enabled.Override(true);
 
@@ -30,6 +32,8 @@ public class ChangeMask : MonoBehaviour
     }
     void MaskFalse()
     {
+        Camera.main.transform.DOComplete();
+        Camera.main.transform.DOShakePosition(0.1f, 2f, 14, 90, false, true);
         DOVirtual.Float(0.50f, 0.15f, 0.1f, ca.intensity.Override).OnComplete(DestroyVolume);
         this.GetComponent<SpriteMask>().enabled = false;
     }
