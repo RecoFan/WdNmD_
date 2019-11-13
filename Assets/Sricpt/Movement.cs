@@ -80,6 +80,7 @@ public class Movement : MonoBehaviour
     public AudioClip SFX_WallJump;
     private AudioSource[] _audioSource;
     private bool _SFX_Pernament = false;
+    private bool _SFX_GroundTouchFirst = true;
      
     [Space]
     [Header("Ledge")]
@@ -411,6 +412,7 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Deadly")
         {
             isDeath = true;
@@ -423,7 +425,9 @@ public class Movement : MonoBehaviour
 
     void GroundTouch()
     {
-        Play_SFX_Jump_Over();
+        if (_SFX_GroundTouchFirst)
+            _SFX_GroundTouchFirst = false;
+        else Play_SFX_Jump_Over();
         rb.gravityScale = 3;
         hasDashed = false;
         isDashing = false;

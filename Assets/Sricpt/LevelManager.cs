@@ -10,13 +10,12 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     static LevelManager instance;
-    public int SpawnIndex;
+    public int SpawnIndex = 0;
     public NewCameraMove other;
     public GameObject[] spawnPosition;
     public GameObject _player;
     public Transform deadPosition;
-    private Animator _anim;
-    //public RawImage rawImage;
+    private Animator[] _anim;
     private bool _controlFlag = false;
     private bool _hasDead = false;
     private AudioSource _audioSource;
@@ -24,11 +23,12 @@ public class LevelManager : MonoBehaviour
     void StartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        _anim[1].SetTrigger("IN");
     }
     void EndScene()
     {
-        _anim.gameObject.transform.position = deadPosition.position;
-        _anim.SetTrigger("OUT");
+        _anim[0].gameObject.transform.position = deadPosition.position;
+        _anim[0].SetTrigger("OUT");
         _audioSource.Play();
     }
 
@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
         other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
         spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
-        _anim = GetComponentInChildren<Animator>();
+        _anim = GetComponentsInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -81,15 +81,15 @@ public class LevelManager : MonoBehaviour
     IEnumerator Event()
     {
         _hasDead = true;
-        SpawnIndex = other.nowMapIndex;
+        //SpawnIndex = other.nowMapIndex;
         deadPosition = _player.transform;
         EndScene();
         //yield return new WaitForSeconds(0.3f);
-        
         Destroy(_player);
         _player = null;
+        _anim[1].SetTrigger("OUT");
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         _controlFlag = true;
         _hasDead = false; 
         StartScene();
