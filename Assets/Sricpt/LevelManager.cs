@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    static LevelManager instance;
+    public static LevelManager instance;
     public int SpawnIndex = 0;
     public NewCameraMove other;
     public GameObject[] spawnPosition;
@@ -19,9 +19,10 @@ public class LevelManager : MonoBehaviour
     private bool _controlFlag = false;
     private bool _hasDead = false;
     private AudioSource _audioSource;
-        
+    public bool Move_State;
     void StartScene()
     {
+        Move_State = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         _anim[1].SetTrigger("IN");
     }

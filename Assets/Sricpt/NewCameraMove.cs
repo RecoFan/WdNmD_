@@ -56,8 +56,8 @@ public class NewCameraMove : MonoBehaviour
 
         cameraLocationList = new float[8][];
         cameraLocationList[0] = new float[] {19.7f, 5.19f };
-        cameraLocationList[1] = new float[] {56.48f, 5.19f };
-        cameraLocationList[2] = new float[] {85.4f, 7f };
+        cameraLocationList[1] = new float[] { 58.6f, 5.19f };
+        cameraLocationList[2] = new float[] { 96.7f, 5.19f, 7f };
 
         stageList = new float[8][];
         stageList[0] = new float[] { 0, 0, 0, 0}; //xLeft,xRight,yUp,yDown

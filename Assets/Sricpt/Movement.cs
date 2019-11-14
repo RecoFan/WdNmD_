@@ -109,6 +109,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        New_Can_Move= LevelManager.instance.Move_State;
         _audioSource = GetComponents<AudioSource>();
         graceTimer = graceJumpTime;
         rb = GetComponent<Rigidbody2D>();
