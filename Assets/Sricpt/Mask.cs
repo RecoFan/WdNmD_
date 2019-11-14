@@ -139,7 +139,7 @@ public class Mask : MonoBehaviour
 
         // Camera.main.transform.DOComplete();
         //Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-        if (collision.gameObject.tag == "Untagged")
+        if (collision.gameObject.tag == "Player")
         {
             if (!is_portal)
             {
@@ -209,7 +209,7 @@ public class Mask : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
       
-            if (collision.gameObject.tag == "Untagged")
+            if (collision.gameObject.tag == "Player")
             {
                 if (!is_portal)
                 {

@@ -5,11 +5,10 @@ using UnityEngine;
 public class Ani_Trigger : MonoBehaviour
 {
     public int Ani_Choose;
-    bool HasEnterArea1;
     // Start is called before the first frame update
     void Start()
     {
-        HasEnterArea1 = false;
+
     }
 
     // Update is called once per frame
@@ -23,14 +22,22 @@ public class Ani_Trigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("1");
-            if (Ani_Choose == 0&&HasEnterArea1==false)
+            if (Ani_Choose == 0)
             {
-                HasEnterArea1 = true;
+              
                 Fungus.Flowchart.BroadcastFungusMessage("Area2");
             }
             if (Ani_Choose == 1)
             {
                 Fungus.Flowchart.BroadcastFungusMessage("Area3");
+            }
+            if(Ani_Choose==2)
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("Area4");
+            }
+            if (Ani_Choose == 3)
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("Area5");
             }
         }
 
