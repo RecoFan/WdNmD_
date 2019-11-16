@@ -706,8 +706,10 @@ public class Movement : MonoBehaviour
     }
     void New_Move_Is_False()
     {
-       // ghost.makeGhost = false;
-     //   rb.velocity = Vector3.zero;
+        ghost.makeGhost = false;
+        rb.velocity = Vector3.zero;
+        anim.SetHorizontalMovement(0, 0, rb.velocity.y);
+        isDashing = false;
         New_Can_Move = false;
     }
 
