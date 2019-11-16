@@ -70,7 +70,7 @@ public class PVZ_Infinite_CamFollow : MonoBehaviour {
 			//get the cam's pos & use it to determine offset
 			Vector3 theOffset = (camTransform.localPosition * scrollSpeed); 
 			//set the offset in the texture's material
-			textureMaterial.SetTextureOffset("_MainTex", theOffset);
+			textureMaterial.SetTextureOffset("_MainTex", new Vector3(theOffset.x, 0, 0));
 		}
 	}
 }

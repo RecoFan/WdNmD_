@@ -23,7 +23,8 @@ public class PVZ_Camera_FollowCamForInfinite : MonoBehaviour {
 	void Awake ()
 	{
 		//set this transform to a local variable
-		thisTrans = transform;	
+		thisTrans = transform;
+		target = GameObject.FindGameObjectWithTag("Player").transform;	
 	}
 	
 	void LateUpdate () 
