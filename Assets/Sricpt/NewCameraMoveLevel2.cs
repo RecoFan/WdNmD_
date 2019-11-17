@@ -58,7 +58,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         cameraLocationList[0] = new float[] {42.6f, 9.5f };
         cameraLocationList[1] = new float[] { 81.8f, 25.8f };
         cameraLocationList[2] = new float[] { 112.65f, 48.18f};
-        cameraLocationList[3] = new float[] { 152.04f, 48.18f };
+        cameraLocationList[3] = new float[] { 152.04f, 51.49f };
         cameraLocationList[4] = new float[] { 0f, 0f };
         cameraLocationList[5] = new float[] { 214.2f, 57f };
         cameraLocationList[6] = new float[] { 247.3f, 71.7f };
@@ -90,7 +90,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
             stageList[i][3] = cameraLocationList[i][1] - halfCameraViewHeight;
         }
         stageList[3][1] = 180f + halfCameraViewWidth;
-        stageList[3][2] = 57f + halfCameraViewHeight;
+        //stageList[3][2] = 57f + halfCameraViewHeight;
         stageList[4][0] = stageList[4][1] = stageList[4][2] = stageList[4][3] = 0f;
 
         isCameraFollowPlayer = true;
