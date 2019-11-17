@@ -246,12 +246,12 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         {
             isCameraFollowPlayer = false;
         }
-        else if (playerTransform.position.x - stageList[nowMapIndex][0] > halfCameraViewWidth && stageList[nowMapIndex][1] - playerTransform.position.x > halfCameraViewWidth)
+        else if (playerTransform.position.x - stageList[cameraNowMapIndex][0] > halfCameraViewWidth && stageList[cameraNowMapIndex][1] - playerTransform.position.x > halfCameraViewWidth)
         {
             isCameraFollowPlayer = true;
             moveType = 1;
         }
-        else if (stageList[nowMapIndex][2] - playerTransform.position.y > halfCameraViewHeight && playerTransform.position.y - stageList[nowMapIndex][3] > halfCameraViewHeight)
+        else if (stageList[cameraNowMapIndex][2] - playerTransform.position.y > halfCameraViewHeight && playerTransform.position.y - stageList[cameraNowMapIndex][3] > halfCameraViewHeight)
         {
             isCameraFollowPlayer = true;
             moveType = 2;
