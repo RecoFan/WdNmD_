@@ -89,9 +89,9 @@ public class NewCameraMoveLevel2 : MonoBehaviour
             stageList[i][2] = cameraLocationList[i][1] + halfCameraViewHeight;
             stageList[i][3] = cameraLocationList[i][1] - halfCameraViewHeight;
         }
-        stageList[3][1] = 173.6f;
-        stageList[3][2] = 55.2f;
-        stageList[4][0] = stageList[4][3] = stageList[4][3] = stageList[4][3] = 0f;
+        stageList[3][1] = 175f + halfCameraViewWidth;
+        stageList[3][2] = 55.2f + halfCameraViewHeight;
+        stageList[4][0] = stageList[4][1] = stageList[4][2] = stageList[4][3] = 0f;
 
         isCameraFollowPlayer = true;
         isCameraSwitch = false;
