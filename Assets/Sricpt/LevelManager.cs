@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public int SpawnIndex = 0;
-    public NewCameraMove other;
+    public NewCameraMoveLevel2 other;
     public GameObject[] spawnPosition;
     public GameObject _player;
     public Transform deadPosition;
@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         }
 
         _audioSource = GetComponent<AudioSource>();
-        other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+        other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
         spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
         _anim = GetComponentsInChildren<Animator>();
@@ -60,7 +60,7 @@ public class LevelManager : MonoBehaviour
         //放在重载后太快，无法检测到生成物体
         if (_controlFlag)
         {
-            other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+            other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
             spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
             _player = GameObject.FindWithTag("Player");
             _player.transform.position = spawnPosition[SpawnIndex].transform.position;
@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator Event()
     {
         _hasDead = true;
-        //SpawnIndex = other.nowMapIndex;
+        SpawnIndex = other.cameraNowMapIndex;
         deadPosition = _player.transform;
         EndScene();
         Destroy(_player);
