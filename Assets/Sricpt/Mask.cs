@@ -213,7 +213,7 @@ public class Mask : MonoBehaviour
             {
                 if (!is_portal)
                 {
-                    Debug.Log("1");
+            
                     is_exit = true;
                 }
                 else

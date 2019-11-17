@@ -89,7 +89,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
             stageList[i][2] = cameraLocationList[i][1] + halfCameraViewHeight;
             stageList[i][3] = cameraLocationList[i][1] - halfCameraViewHeight;
         }
-        stageList[3][1] = 175f + halfCameraViewWidth;
+        stageList[3][1] = 180f + halfCameraViewWidth;
         stageList[3][2] = 57f + halfCameraViewHeight;
         stageList[4][0] = stageList[4][1] = stageList[4][2] = stageList[4][3] = 0f;
 
@@ -107,6 +107,9 @@ public class NewCameraMoveLevel2 : MonoBehaviour
             lastMapIndex = nowMapIndex;
             cameraNowMapIndex = lastCameraMapIndex = nowMapIndex;
         }
+
+        Debug.Log(stageList[3][0] + "," + stageList[3][1] + "," + stageList[3][2] + "," + stageList[3][3]);
+        Debug.Log(stageList[5][0] + "," + stageList[5][1] + "," + stageList[5][2] + "," + stageList[5][3]);
     }
 
     // Update is called once per frame
@@ -169,6 +172,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
 
                         destPosition.z = -10f;
                         transform.DOMove(destPosition, 0.2f);
+                        nowMapIndex = cameraNowMapIndex;
                     }
                 }
                 else if(overlapCount == 1)
@@ -226,7 +230,10 @@ public class NewCameraMoveLevel2 : MonoBehaviour
                 tempPosition.x += xPerStep;
                 tempPosition.y += yPerStep;
                 transform.position = tempPosition;*/
-                if (abs(transform.position.x - destPosition.x) < eps && abs(transform.position.y - destPosition.y) < eps) isCameraSwitch = false;
+                if (abs(transform.position.x - destPosition.x) < eps && abs(transform.position.y - destPosition.y) < eps)
+                {
+                    isCameraSwitch = false;
+                }
                 /*moveCount++;
                 if (moveCount >= frameBetweenView)
                 {
@@ -299,6 +306,8 @@ public class NewCameraMoveLevel2 : MonoBehaviour
                 overlapCount++;
             }
         }
+        if (overlapCount == 2)
+            Debug.Log("1");
         if (overlapCount == 2)
         {
             for (int i = 0; i < stageCount; i++)
