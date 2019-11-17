@@ -425,6 +425,19 @@ public class Movement : MonoBehaviour
             isBounce = true;
         }
     }
+    
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        //Debug.Log(other.gameObject);
+        if (other.gameObject.tag == "Deadly")
+        {
+            isDeath = true;
+        }
+        /*else if (other.gameObject.tag == "Bouncy"|| other.gameObject.tag == "Bouncy2")
+        {
+            isBounce = true;
+        }*/
+    }
 
     void GroundTouch()
     {
