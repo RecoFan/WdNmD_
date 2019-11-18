@@ -7,7 +7,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
 {
     public float[][] cameraLocationList;
     public float[][] stageList;
-    private int stageCount = 12;
+    private int stageCount = 15;
 
     [Space] [Header("Player")] 
     public Transform playerTransform;
@@ -54,7 +54,7 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         halfCameraViewHeight = GetComponent<Camera>().orthographicSize;
         halfCameraViewWidth = halfCameraViewHeight * UnityEngine.Screen.width / UnityEngine.Screen.height;
 
-        cameraLocationList = new float[12][];
+        cameraLocationList = new float[15][];
         cameraLocationList[0] = new float[] {42.6f, 9.5f };
         cameraLocationList[1] = new float[] { 81.8f, 25.8f };
         cameraLocationList[2] = new float[] { 112.65f, 48.18f};
@@ -67,8 +67,11 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         cameraLocationList[9] = new float[] { 327.6f, 102.4f };
         cameraLocationList[10] = new float[] { 356.4f, 124.9f };
         cameraLocationList[11] = new float[] { 374.9f, 101.3f };
+        cameraLocationList[12] = new float[] { 416.3f, 103.6f};
+        cameraLocationList[13] = new float[] { 466.1f, 91f};
+        cameraLocationList[14] = new float[] { 504.2f, 99.2f};
 
-        stageList = new float[12][];
+        stageList = new float[15][];
         stageList[0] = new float[] { 0, 0, 0, 0}; //xLeft,xRight,yUp,yDown
         stageList[1] = new float[] { 0, 0, 0, 0};
         stageList[2] = new float[] { 0, 0, 0, 0 };
@@ -81,8 +84,11 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         stageList[9] = new float[] { 0, 0, 0, 0 };
         stageList[10] = new float[] { 0, 0, 0, 0 };
         stageList[11] = new float[] { 0, 0, 0, 0 };
+        stageList[12] = new float[] { 0, 0, 0, 0 };
+        stageList[13] = new float[] { 0, 0, 0, 0 };
+        stageList[14] = new float[] { 0, 0, 0, 0 };
 
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 15; i++)
         {
             stageList[i][0] = cameraLocationList[i][0] - halfCameraViewWidth;
             stageList[i][1] = cameraLocationList[i][0] + halfCameraViewWidth;
@@ -92,6 +98,9 @@ public class NewCameraMoveLevel2 : MonoBehaviour
         stageList[3][1] = 180f + halfCameraViewWidth;
         //stageList[3][2] = 57f + halfCameraViewHeight;
         stageList[4][0] = stageList[4][1] = stageList[4][2] = stageList[4][3] = 0f;
+        stageList[12][1] = 426.2f + halfCameraViewWidth;
+        stageList[13][3] = 74.9f - halfCameraViewHeight;
+        stageList[14][2] = 124.1f + halfCameraViewHeight;
 
         isCameraFollowPlayer = true;
         isCameraSwitch = false;
