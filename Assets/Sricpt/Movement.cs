@@ -399,6 +399,26 @@ public class Movement : MonoBehaviour
 
                 if (wallGrab || wallSlide || !canMove)
                     return;
+                if (!isDashing)
+                {
+                    if (wallGrab && !isDashing)
+                    {
+                    }
+                    else if (rb.velocity.y > -20)
+                    {
+                        rb.gravityScale = 3;
+                    }
+                    else
+                        rb.gravityScale = 0;
+
+                    // rb.velocity = savevelocity;
+                    //rb.gravityScale = 3;
+                    GetComponent<BetterJumping>().enabled = true;
+                    wallJumped = false;
+                    isDashing = false;
+                    ghost.makeGhost = false;
+                    DashTime = StartDashTime;
+                }
                 if (x > 0)
                 {
                     side = 1;
@@ -410,6 +430,7 @@ public class Movement : MonoBehaviour
                     side = -1;
                     anim.Flip(side);
                 }
+
             }
         }
     }
@@ -447,6 +468,7 @@ public class Movement : MonoBehaviour
         rb.gravityScale = 3;
         hasDashed = false;
         isDashing = false;
+        ghost.makeGhost = false;
         side = anim.sr.flipX ? -1 : 1;
         jumpParticle.Play();
     }
