@@ -8,6 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     public Slider Slider_progress;
     public GameObject loadingscene;
+    public LevelManager Manager;
 
     public void LoadScene()
     {
@@ -18,7 +19,7 @@ public class SceneLoader : MonoBehaviour
     {
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneindex);
         loadingscene.SetActive(true);
-        
+        Destroy(Manager.gameObject);
         while (!loading.isDone)
         {
             float progress = Mathf.Clamp01(loading.progress / 0.9f);
@@ -26,13 +27,16 @@ public class SceneLoader : MonoBehaviour
             Debug.Log(loading.progress);
             yield return null;
         }
+        
+        
         loadingscene.SetActive(false);
+        
         
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        Manager = GameObject.FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame

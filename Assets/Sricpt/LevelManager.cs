@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public int SpawnIndex = 0;
+    public NewCameraMove other1;
     public NewCameraMoveLevel2 other;
     public GameObject[] spawnPosition;
     public GameObject _player;
@@ -47,8 +48,11 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+            other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
+        else other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+        
         _audioSource = GetComponent<AudioSource>();
-        other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
         spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
         _anim = GetComponentsInChildren<Animator>();
@@ -60,8 +64,9 @@ public class LevelManager : MonoBehaviour
         //放在重载后太快，无法检测到生成物体
         if (_controlFlag)
         {
-            other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
-            spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+                other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
+            else other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();            spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
             _player = GameObject.FindWithTag("Player");
             _player.transform.position = spawnPosition[SpawnIndex].transform.position;
             _controlFlag = false;
@@ -82,7 +87,10 @@ public class LevelManager : MonoBehaviour
     IEnumerator Event()
     {
         _hasDead = true;
-        SpawnIndex = other.cameraNowMapIndex;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+            SpawnIndex = other.cameraNowMapIndex;        
+        else SpawnIndex = other1.cameraNowMapIndex;
+        
         deadPosition = _player.transform;
         EndScene();
         Destroy(_player);
@@ -94,8 +102,8 @@ public class LevelManager : MonoBehaviour
         _controlFlag = true;
         _hasDead = false; 
         StartScene();
-
-        
     }
 
+    
+    
 }
