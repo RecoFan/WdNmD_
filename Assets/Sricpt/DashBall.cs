@@ -43,7 +43,7 @@ public class DashBall : MonoBehaviour
         {
             if (!_SFX_bool)
             {
-                _audioSource.PlayOneShot(DashColl,0.5f);
+                _audioSource.PlayOneShot(DashColl,0.25f);
                 _SFX_bool = true;
             }
             
@@ -53,7 +53,7 @@ public class DashBall : MonoBehaviour
                 idie.Play();
                 recoverTime = static_recoverTime;
                 is_Touch = false;
-                _audioSource.PlayOneShot(Dashresp,0.5f);
+                _audioSource.PlayOneShot(Dashresp,0.25f);
                 _SFX_bool = false;
                 GetComponent<SpriteRenderer>().enabled = true;
                 transform.localScale = new Vector3(0, 0, 0);

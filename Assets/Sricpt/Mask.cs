@@ -65,6 +65,7 @@ public class Mask : MonoBehaviour
     [Space] [Header("SFX")] 
     public AudioClip EnterPortal;
     public AudioClip OutPortal;
+    public AudioClip EnterMask;
     private AudioSource _audioSource;
     
     bool isgoing;
@@ -143,9 +144,11 @@ public class Mask : MonoBehaviour
         {
             if (!is_portal)
             {
+                _audioSource.PlayOneShot(EnterMask,1f);
                 is_exit = false;
                 if (!Iscreate)
                 {
+                    
                     ca = ScriptableObject.CreateInstance<ChromaticAberration>();
                     ca.enabled.Override(true);
 
@@ -169,7 +172,7 @@ public class Mask : MonoBehaviour
             }
             else if(!haveEnter)
             {
-                _audioSource.PlayOneShot(EnterPortal,1);
+                _audioSource.PlayOneShot(EnterPortal,1f);
                 ca = ScriptableObject.CreateInstance<ChromaticAberration>();
                 ca.enabled.Override(true);
 
@@ -192,7 +195,7 @@ public class Mask : MonoBehaviour
             }
             else
             {
-                _audioSource.PlayOneShot(OutPortal,1);
+                _audioSource.PlayOneShot(OutPortal,1f);
                 Sequence quence = DOTween.Sequence();
                 quence.Append(transform.DOScale(new Vector3(old_x - 5, old_x - 5, old_x - 5), SmallerTime));
                 quence.Append(transform.DOScale(new Vector3(old_x - 3, old_x - 3, old_x - 3), 0.05f));
