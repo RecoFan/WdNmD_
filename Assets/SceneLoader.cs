@@ -12,6 +12,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
+        Debug.Log("Load entered!");
         StartCoroutine(AsyncLoading(1));
     }
 
