@@ -47,6 +47,7 @@ public class NewCameraMove : MonoBehaviour
     private int moveType; //1:Left&Right 2:Up&Down
     private bool isCameraSwitch;
 
+    public bool isdeath = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,144 +100,147 @@ public class NewCameraMove : MonoBehaviour
     void Update()
     {
         //Debug.Log(transform.position.x + "," + transform.position.y);
-        if (isCameraFollowPlayer == false)
+        if (!isdeath)
         {
-            if(isCameraSwitch == false)
+            if (isCameraFollowPlayer == false)
             {
-                int tempNowMapIndex = nowMapIndex;
-                int overlapCount = getMapCount(playerTransform.position);
-                if (overlapCount == 2)
+                if (isCameraSwitch == false)
                 {
-                    /*if (inMap(lastPlayerPosition, nowMapIndex) && !inMap(lastPlayerPosition, lastMapIndex))
+                    int tempNowMapIndex = nowMapIndex;
+                    int overlapCount = getMapCount(playerTransform.position);
+                    if (overlapCount == 2)
                     {
-                        int temp = nowMapIndex;
-                        nowMapIndex = lastMapIndex;
-                        lastMapIndex = temp;
+                        /*if (inMap(lastPlayerPosition, nowMapIndex) && !inMap(lastPlayerPosition, lastMapIndex))
+                        {
+                            int temp = nowMapIndex;
+                            nowMapIndex = lastMapIndex;
+                            lastMapIndex = temp;
+                        }*/
+                        if (!inMap(lastPlayerPosition, nowMapIndex) && inMap(lastPlayerPosition, lastMapIndex))
+                        {
+                            float leftDis = abs(playerTransform.position.x - stageList[nowMapIndex][0]);
+                            float rightDis = abs(playerTransform.position.x - stageList[nowMapIndex][1]);
+                            float upDis = abs(playerTransform.position.y - stageList[nowMapIndex][2]);
+                            float downDis = abs(playerTransform.position.y - stageList[nowMapIndex][3]);
+                            leftUpDis = leftDis + upDis;
+                            rightUpDis = rightDis + upDis;
+                            leftDownDis = leftDis + downDis;
+                            rightDownDis = rightDis + downDis;
+                            if (leftUpDis <= rightUpDis && leftUpDis <= leftDownDis && leftUpDis <= rightDownDis)
+                            {
+                                destPosition.x = stageList[nowMapIndex][0] + halfCameraViewWidth;
+                                destPosition.y = stageList[nowMapIndex][2] - halfCameraViewHeight;
+                            }
+                            else if (rightUpDis <= leftUpDis && rightUpDis <= rightDownDis && rightUpDis <= leftDownDis)
+                            {
+                                destPosition.x = stageList[nowMapIndex][1] - halfCameraViewWidth;
+                                destPosition.y = stageList[nowMapIndex][2] - halfCameraViewHeight;
+                            }
+                            else if (rightDownDis <= leftUpDis && rightDownDis <= rightUpDis && rightDownDis <= leftDownDis)
+                            {
+                                destPosition.x = stageList[nowMapIndex][1] - halfCameraViewWidth;
+                                destPosition.y = stageList[nowMapIndex][3] + halfCameraViewHeight;
+                            }
+                            else if (leftDownDis <= leftUpDis && leftDownDis <= rightUpDis && leftDownDis <= rightDownDis)
+                            {
+                                destPosition.x = stageList[nowMapIndex][0] + halfCameraViewWidth;
+                                destPosition.y = stageList[nowMapIndex][3] + halfCameraViewHeight;
+                            }
+                            xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
+                            yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
+                            //--------------camera location------------------
+                            lastCameraMapIndex = getMapIndex(transform.position);
+                            cameraNowMapIndex = getMapIndex(destPosition);
+                            //--------------------------------------------------
+                            moveCount = 0;
+                            isCameraSwitch = true;
+
+
+                            destPosition.z = -10f;
+                            transform.DOMove(destPosition, 0.2f);
+                        }
+                    }
+                    else if (overlapCount == 1)
+                    {
+                        if (!inMap(playerTransform.position, cameraNowMapIndex))
+                        {
+
+                            cameraNowMapIndex = getMapIndex(playerTransform.position);
+                            lastCameraMapIndex = cameraNowMapIndex;
+
+                            float leftDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][0]);
+                            float rightDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][1]);
+                            float upDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][2]);
+                            float downDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][3]);
+                            leftUpDis = leftDis + upDis;
+                            rightUpDis = rightDis + upDis;
+                            leftDownDis = leftDis + downDis;
+                            rightDownDis = rightDis + downDis;
+                            if (leftUpDis <= rightUpDis && leftUpDis <= leftDownDis && leftUpDis <= rightDownDis)
+                            {
+                                destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
+                                destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
+                            }
+                            else if (rightUpDis <= leftUpDis && rightUpDis <= rightDownDis && rightUpDis <= leftDownDis)
+                            {
+                                destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
+                                destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
+                            }
+                            else if (rightDownDis <= leftUpDis && rightDownDis <= rightUpDis && rightDownDis <= leftDownDis)
+                            {
+                                destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
+                                destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
+                            }
+                            else if (leftDownDis <= leftUpDis && leftDownDis <= rightUpDis && leftDownDis <= rightDownDis)
+                            {
+                                destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
+                                destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
+                            }
+                            xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
+                            yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
+                            moveCount = 0;
+                            isCameraSwitch = true;
+
+                            destPosition.z = -10f;
+                            transform.DOMove(destPosition, 0.2f);
+
+                            nowMapIndex = cameraNowMapIndex;
+                        }
+                        lastMapIndex = nowMapIndex;
+                    }
+                }
+                else
+                {
+                    /*Vector3 tempPosition = transform.position;
+                    tempPosition.x += xPerStep;
+                    tempPosition.y += yPerStep;
+                    transform.position = tempPosition;*/
+                    if (abs(transform.position.x - destPosition.x) < eps && abs(transform.position.y - destPosition.y) < eps) isCameraSwitch = false;
+                    /*moveCount++;
+                    if (moveCount >= frameBetweenView)
+                    {
+                        isCameraSwitch = false;
+                        moveCount = 0;
                     }*/
-                    if (!inMap(lastPlayerPosition, nowMapIndex) && inMap(lastPlayerPosition, lastMapIndex))
-                    {
-                        float leftDis = abs(playerTransform.position.x - stageList[nowMapIndex][0]);
-                        float rightDis = abs(playerTransform.position.x - stageList[nowMapIndex][1]);
-                        float upDis = abs(playerTransform.position.y - stageList[nowMapIndex][2]);
-                        float downDis = abs(playerTransform.position.y - stageList[nowMapIndex][3]);
-                        leftUpDis = leftDis + upDis;
-                        rightUpDis = rightDis + upDis;
-                        leftDownDis = leftDis + downDis;
-                        rightDownDis = rightDis + downDis;
-                        if (leftUpDis <= rightUpDis && leftUpDis <= leftDownDis && leftUpDis <= rightDownDis)
-                        {
-                            destPosition.x = stageList[nowMapIndex][0] + halfCameraViewWidth;
-                            destPosition.y = stageList[nowMapIndex][2] - halfCameraViewHeight;
-                        }
-                        else if (rightUpDis <= leftUpDis && rightUpDis <= rightDownDis && rightUpDis <= leftDownDis)
-                        {
-                            destPosition.x = stageList[nowMapIndex][1] - halfCameraViewWidth;
-                            destPosition.y = stageList[nowMapIndex][2] - halfCameraViewHeight;
-                        }
-                        else if (rightDownDis <= leftUpDis && rightDownDis <= rightUpDis && rightDownDis <= leftDownDis)
-                        {
-                            destPosition.x = stageList[nowMapIndex][1] - halfCameraViewWidth;
-                            destPosition.y = stageList[nowMapIndex][3] + halfCameraViewHeight;
-                        }
-                        else if (leftDownDis <= leftUpDis && leftDownDis <= rightUpDis && leftDownDis <= rightDownDis)
-                        {
-                            destPosition.x = stageList[nowMapIndex][0] + halfCameraViewWidth;
-                            destPosition.y = stageList[nowMapIndex][3] + halfCameraViewHeight;
-                        }
-                        xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
-                        yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
-                        //--------------camera location------------------
-                        lastCameraMapIndex = getMapIndex(transform.position);
-                        cameraNowMapIndex = getMapIndex(destPosition);
-                        //--------------------------------------------------
-                        moveCount = 0;
-                        isCameraSwitch = true;
-
-
-                        destPosition.z = -10f;
-                        transform.DOMove(destPosition, 0.2f);
-                    }
                 }
-                else if(overlapCount == 1)
-                {
-                    if (!inMap(playerTransform.position, cameraNowMapIndex))
-                    {
-                       
-                        cameraNowMapIndex = getMapIndex(playerTransform.position);
-                        lastCameraMapIndex = cameraNowMapIndex;
-
-                        float leftDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][0]);
-                        float rightDis = abs(playerTransform.position.x - stageList[cameraNowMapIndex][1]);
-                        float upDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][2]);
-                        float downDis = abs(playerTransform.position.y - stageList[cameraNowMapIndex][3]);
-                        leftUpDis = leftDis + upDis;
-                        rightUpDis = rightDis + upDis;
-                        leftDownDis = leftDis + downDis;
-                        rightDownDis = rightDis + downDis;
-                        if (leftUpDis <= rightUpDis && leftUpDis <= leftDownDis && leftUpDis <= rightDownDis)
-                        {
-                            destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
-                            destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
-                        }
-                        else if (rightUpDis <= leftUpDis && rightUpDis <= rightDownDis && rightUpDis <= leftDownDis)
-                        {
-                            destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
-                            destPosition.y = stageList[cameraNowMapIndex][2] - halfCameraViewHeight;
-                        }
-                        else if (rightDownDis <= leftUpDis && rightDownDis <= rightUpDis && rightDownDis <= leftDownDis)
-                        {
-                            destPosition.x = stageList[cameraNowMapIndex][1] - halfCameraViewWidth;
-                            destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
-                        }
-                        else if (leftDownDis <= leftUpDis && leftDownDis <= rightUpDis && leftDownDis <= rightDownDis)
-                        {
-                            destPosition.x = stageList[cameraNowMapIndex][0] + halfCameraViewWidth;
-                            destPosition.y = stageList[cameraNowMapIndex][3] + halfCameraViewHeight;
-                        }
-                        xPerStep = (destPosition.x - transform.position.x) / frameBetweenView;
-                        yPerStep = (destPosition.y - transform.position.y) / frameBetweenView;
-                        moveCount = 0;
-                        isCameraSwitch = true;
-
-                        destPosition.z = -10f;
-                        transform.DOMove(destPosition, 0.2f);
-
-                        nowMapIndex = cameraNowMapIndex;
-                    }
-                    lastMapIndex = nowMapIndex;
-                }
+            }
+            if (isCameraSwitch == true)
+            {
+                isCameraFollowPlayer = false;
+            }
+            else if (playerTransform.position.x - stageList[nowMapIndex][0] > halfCameraViewWidth && stageList[nowMapIndex][1] - playerTransform.position.x > halfCameraViewWidth)
+            {
+                isCameraFollowPlayer = true;
+                moveType = 1;
+            }
+            else if (stageList[nowMapIndex][2] - playerTransform.position.y > halfCameraViewHeight && playerTransform.position.y - stageList[nowMapIndex][3] > halfCameraViewHeight)
+            {
+                isCameraFollowPlayer = true;
+                moveType = 2;
             }
             else
-            {
-                /*Vector3 tempPosition = transform.position;
-                tempPosition.x += xPerStep;
-                tempPosition.y += yPerStep;
-                transform.position = tempPosition;*/
-                if (abs(transform.position.x - destPosition.x) < eps && abs(transform.position.y - destPosition.y) < eps) isCameraSwitch = false;
-                /*moveCount++;
-                if (moveCount >= frameBetweenView)
-                {
-                    isCameraSwitch = false;
-                    moveCount = 0;
-                }*/
-            }
+                isCameraFollowPlayer = false;
         }
-        if (isCameraSwitch == true)
-        {
-            isCameraFollowPlayer = false;
-        }
-        else if (playerTransform.position.x - stageList[nowMapIndex][0] > halfCameraViewWidth && stageList[nowMapIndex][1] - playerTransform.position.x > halfCameraViewWidth)
-        {
-            isCameraFollowPlayer = true;
-            moveType = 1;
-        }
-        else if (stageList[nowMapIndex][2] - playerTransform.position.y > halfCameraViewHeight && playerTransform.position.y - stageList[nowMapIndex][3] > halfCameraViewHeight)
-        {
-            isCameraFollowPlayer = true;
-            moveType = 2;
-        }
-        else
-            isCameraFollowPlayer = false;
     }
 
     private void Awake()
@@ -247,14 +251,17 @@ public class NewCameraMove : MonoBehaviour
 
     void LateUpdate()
     {
-        if(isCameraFollowPlayer)
+        if (!isdeath)
         {
-            Vector3 tempPosition = transform.position;
-            if (moveType == 1) tempPosition.x = playerTransform.position.x;
-            if (moveType == 2) tempPosition.y = playerTransform.position.y;
-            transform.position = tempPosition;
+            if (isCameraFollowPlayer)
+            {
+                Vector3 tempPosition = transform.position;
+                if (moveType == 1) tempPosition.x = playerTransform.position.x;
+                if (moveType == 2) tempPosition.y = playerTransform.position.y;
+                transform.position = tempPosition;
+            }
+            lastPlayerPosition = playerTransform.position;
         }
-        lastPlayerPosition = playerTransform.position;
     }
 
     float abs(float x)

@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public NewCameraMove other1;
     public NewCameraMoveLevel2 other;
     public GameObject[] spawnPosition;
+    public GameObject[] spawnPosition1;
+    public GameObject[] spawnPosition2;
     public GameObject _player;
     public Transform deadPosition;
     private Animator[] _anim;
@@ -49,11 +51,18 @@ public class LevelManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
             other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
-        else other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+            spawnPosition = spawnPosition2;
+        }
+        else
+        {
+            other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+            spawnPosition = spawnPosition1;
+        }
         
         _audioSource = GetComponent<AudioSource>();
-        spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
+        //spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
         _player = GameObject.FindWithTag("Player");
         _anim = GetComponentsInChildren<Animator>();
     }
@@ -65,8 +74,16 @@ public class LevelManager : MonoBehaviour
         if (_controlFlag)
         {
             if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
                 other = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMoveLevel2>();
-            else other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();            spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
+                spawnPosition = spawnPosition2;
+            }
+            else
+            {
+                other1 = GameObject.FindWithTag("MainCamera").GetComponent<NewCameraMove>();
+                spawnPosition = spawnPosition1;
+            }
+            //spawnPosition = GameObject.FindGameObjectsWithTag("Respawn");
             _player = GameObject.FindWithTag("Player");
             _player.transform.position = spawnPosition[SpawnIndex].transform.position;
             _controlFlag = false;
@@ -95,6 +112,9 @@ public class LevelManager : MonoBehaviour
         EndScene();
         Destroy(_player);
         _player = null;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+            other.isdeath = true;
+        else other1.isdeath = true;
         yield return new WaitForSeconds(0.5f);
         _anim[1].SetTrigger("OUT");
         

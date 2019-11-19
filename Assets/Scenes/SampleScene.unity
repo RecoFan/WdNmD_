@@ -557,10 +557,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 85647856}
-  selectedCommands:
-  - {fileID: 85647979}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 85647855}
   - {fileID: 85647890}
@@ -14585,6 +14583,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!1 &266281180
 GameObject:
   m_ObjectHideFlags: 0
@@ -14775,6 +14774,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 1
+  fc: {fileID: 85647854}
 --- !u!1 &341243140
 GameObject:
   m_ObjectHideFlags: 0
@@ -15599,6 +15599,7 @@ MonoBehaviour:
   rightUpDis: 0
   leftDownDis: 0
   rightDownDis: 0
+  isdeath: 0
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23035,6 +23036,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 1
+  fc: {fileID: 85647854}
 --- !u!1 &622220594
 GameObject:
   m_ObjectHideFlags: 0
@@ -23965,6 +23967,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!212 &891893723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44313,6 +44316,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!212 &1166271501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45301,6 +45305,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!212 &1303695680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45397,6 +45402,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!212 &1323866771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45480,6 +45486,11 @@ MonoBehaviour:
   other1: {fileID: 0}
   other: {fileID: 0}
   spawnPosition: []
+  spawnPosition1:
+  - {fileID: 1193066398}
+  - {fileID: 176192211}
+  - {fileID: 474901028}
+  spawnPosition2: []
   _player: {fileID: 0}
   deadPosition: {fileID: 0}
   Move_State: 0
@@ -45762,8 +45773,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e8ab00ef0d9684dcb9deb52811d91218, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 57fc179a46b50824b8e06d8728af013e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
@@ -46445,6 +46456,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 0
+  fc: {fileID: 85647854}
 --- !u!212 &1614539942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46722,6 +46734,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 1
+  fc: {fileID: 85647854}
 --- !u!1 &1668408820
 GameObject:
   m_ObjectHideFlags: 0
@@ -47040,6 +47053,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 1
+  fc: {fileID: 85647854}
 --- !u!1 &1754006187
 GameObject:
   m_ObjectHideFlags: 0
@@ -52519,6 +52533,7 @@ MonoBehaviour:
   fade_out: 2
   fade_in: 2
   iscanvas: 1
+  fc: {fileID: 85647854}
 --- !u!1 &1948474592
 GameObject:
   m_ObjectHideFlags: 0

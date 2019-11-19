@@ -39,6 +39,7 @@ public class Spring : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast(rayCastStart.position, Vector2.right, rayCastDistance, playerLayerMask);
 		if (hit.collider != null && !animator.GetBool("Pressing"))
 		{
+            Debug.Log("123");
 			//_audioSource.PlayOneShot(SFX_Spring,1);
 			animator.SetBool("Pressing", true);
 			animator.SetBool("Releasing", false);
