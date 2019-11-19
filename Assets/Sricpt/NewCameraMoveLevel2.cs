@@ -282,8 +282,8 @@ public class NewCameraMoveLevel2 : MonoBehaviour
             Vector3 tempPosition = transform.position;
             if (moveType == 1) tempPosition.x = playerTransform.position.x;
             if (moveType == 2) tempPosition.y = playerTransform.position.y;
-            //transform.position = tempPosition; //old 
-            transform.position = Vector3.Lerp(transform.position, tempPosition, 0.1f);
+            transform.position = tempPosition; //old 
+            //transform.position = Vector3.Lerp(transform.position, tempPosition, 0.1f);
         }
         lastPlayerPosition = playerTransform.position;
     }
