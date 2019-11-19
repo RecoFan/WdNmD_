@@ -59,6 +59,10 @@ public class Ani_Trigger : MonoBehaviour
             {
                 Fungus.Flowchart.BroadcastFungusMessage("Area10");
             }
+            if (Ani_Choose == 9)
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("Area11");
+            }
         }
 
     }
