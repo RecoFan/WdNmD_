@@ -66,7 +66,7 @@ public class DashBall : MonoBehaviour
     {
         if (collision.tag != "Mask")
         {
-            if (!is_Touch)
+            if (!is_Touch&&move.hasDashed==true)
             {
                 disappear.Play();
                 idie.Stop();
@@ -75,6 +75,7 @@ public class DashBall : MonoBehaviour
                 GetComponent<SpriteRenderer>().enabled = false;
                 is_Touch = true;
                 move.hasDashed = false;
+                move.enduranceBar = 100;
             }
         }
     }

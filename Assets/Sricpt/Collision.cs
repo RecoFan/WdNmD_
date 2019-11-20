@@ -60,6 +60,7 @@ public class Collision : MonoBehaviour
                 if (!coll_onGround[i].isTrigger)
                 {
                     //   onGround = Physics2D.OverlapArea((Vector2)transform.position + pointDown1, (Vector2)transform.position + pointDown2, groundLayer);
+                    Debug.Log(coll_onGround[i]);
                     onGround = true;
                     break;
                 }

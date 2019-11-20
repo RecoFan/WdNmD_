@@ -538,7 +538,7 @@ public class Movement : MonoBehaviour
         }
         else if(!isDashing)
         {
-            Debug.Log("1234");
+           // Debug.Log("1234");
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)),wallJumpLerp*Time.deltaTime);
         }
         if(isDashing)

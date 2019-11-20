@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 85647980}
   - component: {fileID: 85647979}
   - component: {fileID: 85647983}
+  - component: {fileID: 85647984}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -547,11 +548,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 153.92169, y: -47.443905}
+  scrollPos: {x: 217.99786, y: -138.913}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 628
-  zoom: 1
+  blockViewHeight: 369
+  zoom: 0.8500001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -561,7 +562,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 85647922}
   selectedCommands:
-  - {fileID: 85647983}
+  - {fileID: 85647940}
   variables:
   - {fileID: 85647855}
   - {fileID: 85647890}
@@ -644,6 +645,7 @@ MonoBehaviour:
   - {fileID: 85647981}
   - {fileID: 85647980}
   - {fileID: 85647979}
+  - {fileID: 85647984}
   - {fileID: 85647889}
   - {fileID: 85647857}
 --- !u!114 &85647857
@@ -726,7 +728,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u8001\u7238\u6211\u4EEC\u4ECA\u5929\u5E72\u561B\u5440\uFF1F"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1086,7 +1088,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u6211\u4EEC\u73A9\u6E38\u620F\u597D\u4E0D\u597D\u5440\uFF1F"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1163,7 +1165,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u597D\u554A\u597D\u554A\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1215,7 +1217,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u90A3\uFF0C\u6211\u4EEC\u73A9\u6349\u8FF7\u85CF\u5427\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1367,7 +1369,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u90A3\u4F60\u8FC7\u6765\u627E\u6211\u54E6\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1848,7 +1850,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u8001\u7238\uFF0C\u4F60\u5728\u54EA\u5440\uFF1F{w=1.5}"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1892,7 +1894,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u6211\u6700\u559C\u6B22\u6349\u8FF7\u85CF\u4E86\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2289,7 +2291,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u8001\u7238\uFF0C\u6211\u770B\u5230\u4F60\u4E86\u54DF!{w=1.5}"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2649,7 +2651,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u627E\u5230\u6211\u5566\uFF01\u5C0F\u7433\u4F60\u771F\u68D2\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2751,7 +2753,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u5C0F\u7433\uFF0C\u5979\u600E\u4E48\u6837\u4E86\uFF1F\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2838,7 +2840,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "(\u5C0F\u7433\uFF0C\u522B\u8FD9\u6837\u5BF9\u6211\uFF0C\u597D\u5417\uFF1F)"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2865,7 +2867,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u6211\u4F1A\u60F3\u529E\u6CD5\u7684\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2892,7 +2894,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u674E\u5148\u751F\uFF0C\u73B0\u5728\u6700\u5173\u952E\u7684\u95EE\u9898\u662F\u6CBB\u7597\u8D39\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1669193092}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2919,7 +2921,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "(\u5C0F\u7433...)"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2946,7 +2948,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2973,7 +2975,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u4F46\u6211\u4EEC\u4F1A\u5168\u529B\u6551\u6CBB\u7684\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1669193092}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3000,7 +3002,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u60C5\u51B5\u4E0D\u662F\u5F88\u4E50\u89C2\uFF0C\u674E\u5148\u751F\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1669193092}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3027,7 +3029,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u4E00\u8A00\u4E3A\u5B9A\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3054,7 +3056,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u4E00\u8A00\u4E3A\u5B9A\u54E6\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3081,7 +3083,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u90A3\u5F53\u7136\uFF01"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 714927141}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3108,7 +3110,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u563B\u563B\uFF0C\u7B49\u8001\u7238\u4E0D\u5FD9\u7684\u65F6\u5019\uFF0C\u8FD8\u8981\u548C\u6211\u73A9\u6349\u8FF7\u85CF\u5440\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1268257581}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3705,6 +3707,33 @@ MonoBehaviour:
   targetObject: {fileID: 1021411330}
   methodName: audiofade
   delay: 0
+--- !u!114 &85647984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85647853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 130
+  indentLevel: 0
+  storyText: "\u770B\u6765\u8001\u674E\u7684\u5185\u5FC3\u4E0D\u592A\u7A33\u5B9A\uFF0C\u5F97\u8D76\u7D27\u524D\u5F80\u8D1F\u4E16\u754C\u3002"
+  description: 
+  character: {fileID: 1484503502}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &91715272
 GameObject:
   m_ObjectHideFlags: 0
@@ -23506,6 +23535,56 @@ Transform:
   m_Father: {fileID: 253739060}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &714927140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714927142}
+  - component: {fileID: 714927141}
+  m_Layer: 0
+  m_Name: Fa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &714927141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714927140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u8001\u674E"
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &714927142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714927140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726203472
 GameObject:
   m_ObjectHideFlags: 0
@@ -23541,7 +23620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -136.5, y: 22.199997}
+  m_AnchoredPosition: {x: -136.5, y: 22.199951}
   m_SizeDelta: {x: 220.06, y: 41.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726203474
@@ -45148,6 +45227,56 @@ Transform:
   m_Father: {fileID: 253739060}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1268257580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268257582}
+  - component: {fileID: 1268257581}
+  m_Layer: 0
+  m_Name: Gi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1268257581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268257580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u5C0F\u7433"
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1268257582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268257580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285686558
 GameObject:
   m_ObjectHideFlags: 0
@@ -46317,6 +46446,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6920395, y: 12.608189}
   m_EdgeRadius: 0
+--- !u!1 &1484503501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484503503}
+  - component: {fileID: 1484503502}
+  m_Layer: 0
+  m_Name: Me
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1484503502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484503501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u6211"
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1484503503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484503501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1490925731
 GameObject:
   m_ObjectHideFlags: 0
@@ -46959,6 +47138,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!1 &1669193091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669193093}
+  - component: {fileID: 1669193092}
+  m_Layer: 0
+  m_Name: Doc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1669193092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669193091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u533B\u751F"
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1669193093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669193091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682072721
 GameObject:
   m_ObjectHideFlags: 0
