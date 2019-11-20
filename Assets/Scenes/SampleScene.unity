@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 85647981}
   - component: {fileID: 85647980}
   - component: {fileID: 85647979}
+  - component: {fileID: 85647983}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -557,8 +558,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 85647922}
+  selectedCommands:
+  - {fileID: 85647983}
   variables:
   - {fileID: 85647855}
   - {fileID: 85647890}
@@ -2392,7 +2395,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 302.4349
-    y: 570.8844
+    y: 574.8844
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2402,6 +2405,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 85647983}
   - {fileID: 85647929}
   - {fileID: 85647930}
   - {fileID: 85647924}
@@ -3683,6 +3687,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1614539939}
   methodName: fadein
+  delay: 0
+--- !u!114 &85647983
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85647853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 129
+  indentLevel: 0
+  targetObject: {fileID: 1021411330}
+  methodName: audiofade
   delay: 0
 --- !u!1 &91715272
 GameObject:
@@ -15319,9 +15340,9 @@ RectTransform:
   m_Father: {fileID: 1594916083}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 243.2, y: -138.8}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -130.8, y: 71.2}
   m_SizeDelta: {x: 213, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484433178
@@ -23518,9 +23539,9 @@ RectTransform:
   m_Father: {fileID: 1594916083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 237.5, y: -187.8}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -136.5, y: 22.199997}
   m_SizeDelta: {x: 220.06, y: 41.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726203474
@@ -23569,7 +23590,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -36993,6 +37014,7 @@ MonoBehaviour:
   Slider_progress: {fileID: 726203474}
   loadingscene: {fileID: 1594916080}
   Manager: {fileID: 0}
+  audiosource: {fileID: 0}
 --- !u!114 &1021411332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37005,11 +37027,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -37025,7 +37047,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -46472,7 +46494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1594916081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53064,7 +53086,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

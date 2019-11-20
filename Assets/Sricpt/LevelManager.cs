@@ -123,7 +123,5 @@ public class LevelManager : MonoBehaviour
         _hasDead = false; 
         StartScene();
     }
-
-    
     
 }
