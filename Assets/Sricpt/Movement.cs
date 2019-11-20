@@ -109,6 +109,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       // Screen.fullScreen = false;
         New_Can_Move= LevelManager.instance.Move_State;
         _audioSource = GetComponents<AudioSource>();
         graceTimer = graceJumpTime;
@@ -414,7 +415,7 @@ public class Movement : MonoBehaviour
                     // rb.velocity = savevelocity;
                     //rb.gravityScale = 3;
                     GetComponent<BetterJumping>().enabled = true;
-                    wallJumped = false;
+                    //wallJumped = false;
                     isDashing = false;
                     ghost.makeGhost = false;
                     DashTime = StartDashTime;
@@ -537,6 +538,7 @@ public class Movement : MonoBehaviour
         }
         else if(!isDashing)
         {
+            Debug.Log("1234");
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)),wallJumpLerp*Time.deltaTime);
         }
         if(isDashing)
